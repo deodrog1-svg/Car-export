@@ -56,4 +56,6 @@ If a file conflicts with another, the higher one on this list wins.
 # Output
 
 Save every deliverable as a new file in `viral-max/tasks/` named `NNN-short-title.md`
-(next number after the highest existing one), then give the user a short summary.
+(next number after the highest existing one). Then **always** turn it into a PDF with
+`python3 viral-max/tools/make_pdf.py viral-max/tasks/NNN-short-title.md` (needs `pip install markdown`)
+and give the user the PDF together with a short summary. The PDF is the main deliverable.

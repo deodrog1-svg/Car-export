@@ -10,6 +10,8 @@
 - Keep videos 15–40 seconds unless told otherwise.
 - Always end with a comment-keyword CTA (e.g. "Comment PRICE + your city").
 - Never use fake prices, fake clients or fake reviews.
+- Every finished task is delivered as a PDF with exact scenarios (`viral-max/tools/make_pdf.py`).
 
 ## Change history
 <!-- Format: - YYYY-MM-DD: what changed and why -->
+- 2026-10-26: Deliver every task as a PDF with exact scenarios (user request).
