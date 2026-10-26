@@ -1,1 +1,2 @@
-date,model,year,engine_hp,price_korea_krw,client_paid_usd,our_profit_usd,country,city,client_type,how_found_us,note
+date,model,trim,year,fuel,engine_cc,power_hp,drive,mileage_km,price_korea_krw,client_paid,currency,terms,our_profit,country,city,client_type,how_found_us,note
+2026-10-26,Hyundai Sonata DN8 (рестайлинг),Exclusive,2023/10,бензин,1999,160,передний,71897,,2350000,RUB,под ключ до Владивостока,,Россия,Владивосток,,,"Объём и л.с. взяты из спецификации модели (2.0 Smartstream ≈160 л.с.), не из сделки. В льготной зоне утильсбора"
