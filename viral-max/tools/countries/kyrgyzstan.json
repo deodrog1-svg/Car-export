@@ -5,6 +5,7 @@
   "currency_symbol": "сом",
   "verified_on": "2026-10-26",
   "sources": [
+    "Решение Совета ЕЭК №107, приложение 2 (таблица ЕТС для физлиц, действует во всём ЕАЭС; таблица казахстанских брокеров от 26.10.2026)",
     "https://ru.sputnik.kg/20260626/kalkulyator-rastamozhki-avto-v-kyrgyzstane-na-2026-god-1102087468.html (ЕТТ ЕАЭС: б/у 2020–2024 г.в. — 20% или 0,32–0,80 €/см³; НДС 12%)",
     "https://garaj.kg/customs (та же логика: до 7 лет % или минимум €/см³)",
     "https://calk.kg/calculator/customs/ (таможенный сбор 0,4%, НДС 12%)",
@@ -12,12 +13,22 @@
   ],
   "route_ru": "Корея → морем в порт Китая → ж/д через Казахстан до Бишкека",
   "transit_days_ru": "35–50 дней",
-  "freight_usd": { "container": 3000, "roro": 3000 },
+  "freight_usd": {
+    "container": 3000,
+    "roro": 3000
+  },
   "freight_check": "estimate",
   "port_charges_usd": 0,
   "cities": {
-    "Бишкек": { "inland_usd": 0, "days_ru": "прибытие в Бишкек" },
-    "Ош": { "inland_usd": 300, "days_ru": "2–3 дня автовозом", "check": "estimate" }
+    "Бишкек": {
+      "inland_usd": 0,
+      "days_ru": "прибытие в Бишкек"
+    },
+    "Ош": {
+      "inland_usd": 300,
+      "days_ru": "2–3 дня автовозом",
+      "check": "estimate"
+    }
   },
   "documents_ru": [
     "Корея: свидетельство о регистрации, справка о снятии с учёта для экспорта, экспортная декларация, инвойс",
@@ -25,19 +36,266 @@
   ],
   "restrictions_ru": [
     "Утильсбор при ввозе в Кыргызстан в открытых источниках не найден (обсуждается проект). Уточнить у брокера.",
-    "Ставка пошлины для машин до 3 лет (15%) — оценка по ЕТТ ЕАЭС, уточнить.",
-    "Ставки для машин старше 7 лет в профиль не внесены: считать вручную."
+    "Расчёт по единой ставке ЕТС для физлиц (как в Казахстане). Вариант на юрлицо показан для сравнения.",
+    "Электромобили: беспошлинная квота для резидентов КР (25 000 шт. с 17.08.2026)."
   ],
   "items": [
-    { "id": "duty", "name_ru": "Таможенная пошлина (ЕТТ ЕАЭС)", "group": "customs", "type": "choose", "currency": "EUR", "check": "sources", "options": [
-      { "when": { "age_max": 3 }, "type": "percent", "rate": 0.15, "base": ["cif"] },
-      { "when": { "age_max": 7 }, "type": "max", "options": [
-        { "type": "percent", "rate": 0.20, "base": ["cif"] },
-        { "type": "per_cc", "rate": 0.44 } ] },
-      { "type": "error", "message_ru": "Машина старше 7 лет: пошлина 1,4–3,2 €/см³, рассчитать вручную у брокера" } ] },
-    { "id": "fee", "name_ru": "Таможенный сбор 0,4%", "group": "customs", "type": "percent", "rate": 0.004, "base": ["cif"], "currency": "USD", "check": "estimate" },
-    { "id": "vat", "name_ru": "НДС 12%", "group": "customs", "type": "percent", "rate": 0.12, "base": ["cif", "duty"], "currency": "USD", "check": "sources" },
-    { "id": "broker", "name_ru": "Брокер, сертификация, СВХ", "group": "local", "type": "fixed", "amount": 250, "currency": "USD", "check": "estimate" },
-    { "id": "registration", "name_ru": "Регистрация и номера", "group": "local", "type": "fixed", "amount": 150, "currency": "USD", "check": "estimate" }
-  ]
+    {
+      "id": "ets",
+      "name_ru": "Единая ставка (пошлина + НДС + акциз), ЕЭК №107",
+      "group": "customs",
+      "type": "choose",
+      "currency": "EUR",
+      "check": "official",
+      "options": [
+        {
+          "when": {
+            "fuel": [
+              "ev"
+            ]
+          },
+          "type": "percent",
+          "rate": 0.31,
+          "base": [
+            "car"
+          ],
+          "check": "sources"
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 8500
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.54,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 2.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 16700
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 3.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 42300
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 5.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 84500
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 7.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 169000
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 15
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 20
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1001
+          },
+          "type": "per_cc",
+          "rate": 1.5
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1501
+          },
+          "type": "per_cc",
+          "rate": 1.7
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1801
+          },
+          "type": "per_cc",
+          "rate": 2.5
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 2301
+          },
+          "type": "per_cc",
+          "rate": 2.7
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 3001
+          },
+          "type": "per_cc",
+          "rate": 3.0
+        },
+        {
+          "when": {
+            "age_max": 5
+          },
+          "type": "per_cc",
+          "rate": 3.6
+        },
+        {
+          "when": {},
+          "type": "choose",
+          "options": [
+            {
+              "when": {
+                "cc_max": 1001
+              },
+              "type": "per_cc",
+              "rate": 3.0
+            },
+            {
+              "when": {
+                "cc_max": 1501
+              },
+              "type": "per_cc",
+              "rate": 3.2
+            },
+            {
+              "when": {
+                "cc_max": 1801
+              },
+              "type": "per_cc",
+              "rate": 3.5
+            },
+            {
+              "when": {
+                "cc_max": 2301
+              },
+              "type": "per_cc",
+              "rate": 4.8
+            },
+            {
+              "when": {
+                "cc_max": 3001
+              },
+              "type": "per_cc",
+              "rate": 5.0
+            },
+            {
+              "type": "per_cc",
+              "rate": 5.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "broker",
+      "name_ru": "Брокер, сертификация, СВХ",
+      "group": "local",
+      "type": "fixed",
+      "amount": 250,
+      "currency": "USD",
+      "check": "estimate"
+    },
+    {
+      "id": "registration",
+      "name_ru": "Регистрация и номера",
+      "group": "local",
+      "type": "fixed",
+      "amount": 150,
+      "currency": "USD",
+      "check": "estimate"
+    }
+  ],
+  "_mode": "Ввоз физлицом для личного пользования: единая ставка ЕТС (Решение Совета ЕЭК №107, приложение 2; Кыргызстан — член ЕАЭС). Альтернатива на юрлицо: kyrgyzstan-dt.json.",
+  "alternative": {
+    "profile": "kyrgyzstan-dt",
+    "name_ru": "растаможка на юрлицо (ДТ: пошлина + НДС 12%)"
+  }
 }

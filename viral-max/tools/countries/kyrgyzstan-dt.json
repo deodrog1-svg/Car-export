@@ -1,0 +1,130 @@
+{
+  "country_ru": "Кыргызстан (ДТ, на юрлицо)",
+  "flag": "🇰🇬",
+  "currency": "KGS",
+  "currency_symbol": "сом",
+  "verified_on": "2026-10-26",
+  "sources": [
+    "https://ru.sputnik.kg/20260626/kalkulyator-rastamozhki-avto-v-kyrgyzstane-na-2026-god-1102087468.html (ЕТТ ЕАЭС: б/у 2020–2024 г.в. — 20% или 0,32–0,80 €/см³; НДС 12%)",
+    "https://garaj.kg/customs (та же логика: до 7 лет % или минимум €/см³)",
+    "https://calk.kg/calculator/customs/ (таможенный сбор 0,4%, НДС 12%)",
+    "https://lysenkoauto.ru/ (с 01.04.2026 новая формула оценки авто из стран ЕАЭС)"
+  ],
+  "route_ru": "Корея → морем в порт Китая → ж/д через Казахстан до Бишкека",
+  "transit_days_ru": "35–50 дней",
+  "freight_usd": {
+    "container": 3000,
+    "roro": 3000
+  },
+  "freight_check": "estimate",
+  "port_charges_usd": 0,
+  "cities": {
+    "Бишкек": {
+      "inland_usd": 0,
+      "days_ru": "прибытие в Бишкек"
+    },
+    "Ош": {
+      "inland_usd": 300,
+      "days_ru": "2–3 дня автовозом",
+      "check": "estimate"
+    }
+  },
+  "documents_ru": [
+    "Корея: свидетельство о регистрации, справка о снятии с учёта для экспорта, экспортная декларация, инвойс",
+    "Кыргызстан: таможенная декларация, сертификат соответствия, регистрация в ЦОН"
+  ],
+  "restrictions_ru": [
+    "Утильсбор при ввозе в Кыргызстан в открытых источниках не найден (обсуждается проект). Уточнить у брокера.",
+    "Ставка пошлины для машин до 3 лет (15%) — оценка по ЕТТ ЕАЭС, уточнить.",
+    "Ставки для машин старше 7 лет в профиль не внесены: считать вручную."
+  ],
+  "items": [
+    {
+      "id": "duty",
+      "name_ru": "Таможенная пошлина (ЕТТ ЕАЭС)",
+      "group": "customs",
+      "type": "choose",
+      "currency": "EUR",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "percent",
+          "rate": 0.15,
+          "base": [
+            "cif"
+          ]
+        },
+        {
+          "when": {
+            "age_max": 7
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.2,
+              "base": [
+                "cif"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 0.44
+            }
+          ]
+        },
+        {
+          "type": "error",
+          "message_ru": "Машина старше 7 лет: пошлина 1,4–3,2 €/см³, рассчитать вручную у брокера"
+        }
+      ]
+    },
+    {
+      "id": "fee",
+      "name_ru": "Таможенный сбор 0,4%",
+      "group": "customs",
+      "type": "percent",
+      "rate": 0.004,
+      "base": [
+        "cif"
+      ],
+      "currency": "USD",
+      "check": "estimate"
+    },
+    {
+      "id": "vat",
+      "name_ru": "НДС 12%",
+      "group": "customs",
+      "type": "percent",
+      "rate": 0.12,
+      "base": [
+        "cif",
+        "duty"
+      ],
+      "currency": "USD",
+      "check": "sources"
+    },
+    {
+      "id": "broker",
+      "name_ru": "Брокер, сертификация, СВХ",
+      "group": "local",
+      "type": "fixed",
+      "amount": 250,
+      "currency": "USD",
+      "check": "estimate"
+    },
+    {
+      "id": "registration",
+      "name_ru": "Регистрация и номера",
+      "group": "local",
+      "type": "fixed",
+      "amount": 150,
+      "currency": "USD",
+      "check": "estimate"
+    }
+  ],
+  "_mode": "Альтернатива: декларация на товары (пошлина ЕТТ + сбор 0,4% + НДС 12%). Основной расчёт для физлиц — kyrgyzstan.json (ЕТС)."
+}

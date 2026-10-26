@@ -1,0 +1,11 @@
+{
+  "model": "Hyundai Grandeur GN7 2.5 Exclusive",
+  "year": 2023, "month": 6, "fuel": "petrol", "engine_cc": 2497, "power_hp": 198, "mileage_km": 18061,
+  "price_krw": 33000000, "shipping": "container",
+  "destinations": [
+    {"country": "kazakhstan", "city": "Алматы"},
+    {"country": "kyrgyzstan", "city": "Бишкек"},
+    {"country": "georgia", "city": "Тбилиси"},
+    {"country": "russia", "city": "Владивосток", "shipping": "roro"}
+  ]
+}
