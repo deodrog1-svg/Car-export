@@ -1,0 +1,241 @@
+{
+  "country_ru": "Казахстан (ДТ, на юрлицо)",
+  "flag": "🇰🇿",
+  "currency": "KZT",
+  "currency_symbol": "₸",
+  "verified_on": "2026-10-26",
+  "_mode": "Альтернатива: растаможка по декларации на товары (ДТ) на юрлицо: пошлина ЕТТ + НДС 16% + утильсбор + регистрация. Основной расчёт для физлиц — kazakhstan.json (ЕТС).",
+  "sources": [
+    "https://prigon.kz/iz-korei (формула ДТ, первичная регистрация, номера, брокер, маршрут, пример $25 000 → 16,1 млн ₸)",
+    "https://kolesa.kz/content/news/razmery-utilsbora-v-kazahstane-v-2026-godu/ (утильсбор 2026: 50 МРП × коэффициент)",
+    "https://kolesa.kz/content/news/rastamozhka-avto-po-novym-usloviyam-skolko-zaplatyat-chastnye-importyory/ (с 28.09.2026 физлица ввозят авто до 5 лет, Евро-5; таможенный сбор 6 МРП)",
+    "https://ru.sputnik.kg/20260626/kalkulyator-rastamozhki-avto-v-kyrgyzstane-na-2026-god-1102087468.html (ЕТТ ЕАЭС: б/у авто 20% или €/см³)",
+    "https://kz.kursiv.media/2025-06-24/zrvl-dostavka-avto-iz-korei/ (маршрут: море до Китая, затем ж/д до Алматы)",
+    "https://hblogistics.kz/dostavka-sbornogo-gruza-iz-korei ($2 500–3 200 за авто, 30–45 дней)"
+  ],
+  "route_ru": "Корея → морем в порт Китая → ж/д контейнер до Алматы",
+  "transit_days_ru": "30–45 дней",
+  "freight_usd": {
+    "container": 2800,
+    "roro": 2800
+  },
+  "freight_check": "estimate",
+  "port_charges_usd": 0,
+  "cities": {
+    "Алматы": {
+      "inland_usd": 0,
+      "days_ru": "прибытие на ж/д терминал Алматы"
+    },
+    "Астана": {
+      "inland_usd": 300,
+      "days_ru": "3–4 дня автовозом",
+      "check": "estimate"
+    },
+    "Шымкент": {
+      "inland_usd": 250,
+      "days_ru": "2–3 дня автовозом",
+      "check": "estimate"
+    }
+  },
+  "documents_ru": [
+    "Корея: свидетельство о регистрации, справка о снятии с учёта для экспорта, экспортная декларация, инвойс",
+    "Казахстан: декларация на товары (ДТ), сертификат/ОТТС, оплата утильсбора, СРТС и номера"
+  ],
+  "restrictions_ru": [
+    "**Главное: машины старше 3 лет платят 500 МРП (≈2,16 млн ₸) за первичную регистрацию, а машины 2–3 лет — 50 МРП. Лучший выбор для Казахстана — машины до 3 лет.**",
+    "С 28.09.2026 физлица в личном порядке ввозят только авто не старше 5 лет и не ниже Евро-5.",
+    "Ставки для машин старше 7 лет в этот профиль не внесены: считать вручную.",
+    "Акциз для двигателей больше 3000 см³ в профиль не внесён: считать вручную."
+  ],
+  "items": [
+    {
+      "id": "duty",
+      "name_ru": "Таможенная пошлина (ЕТТ ЕАЭС)",
+      "group": "customs",
+      "type": "choose",
+      "currency": "EUR",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "fuel": [
+              "ev"
+            ]
+          },
+          "type": "percent",
+          "rate": 0.15,
+          "base": [
+            "cif"
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "percent",
+          "rate": 0.15,
+          "base": [
+            "cif"
+          ]
+        },
+        {
+          "when": {
+            "age_max": 7
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.2,
+              "base": [
+                "cif"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 0.44
+            }
+          ]
+        },
+        {
+          "type": "error",
+          "message_ru": "Машина старше 7 лет: пошлина по €/см³, рассчитать вручную у брокера"
+        }
+      ]
+    },
+    {
+      "id": "excise",
+      "name_ru": "Акциз",
+      "group": "customs",
+      "type": "choose",
+      "currency": "KZT",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "cc_max": 3001
+          },
+          "type": "fixed",
+          "amount": 0
+        },
+        {
+          "type": "error",
+          "message_ru": "Двигатель больше 3000 см³: в Казахстане есть акциз, рассчитать вручную"
+        }
+      ]
+    },
+    {
+      "id": "vat",
+      "name_ru": "НДС 16%",
+      "group": "customs",
+      "type": "percent",
+      "rate": 0.16,
+      "base": [
+        "cif",
+        "duty",
+        "excise"
+      ],
+      "currency": "USD",
+      "check": "sources"
+    },
+    {
+      "id": "fee",
+      "name_ru": "Таможенный сбор (6 МРП)",
+      "group": "customs",
+      "type": "fixed",
+      "amount": 25950,
+      "currency": "KZT",
+      "check": "sources"
+    },
+    {
+      "id": "recycling",
+      "name_ru": "Утильсбор (50 МРП × коэффициент)",
+      "group": "customs",
+      "type": "choose",
+      "currency": "KZT",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "fuel": [
+              "ev"
+            ]
+          },
+          "type": "fixed",
+          "amount": 0
+        },
+        {
+          "when": {
+            "cc_max": 1001
+          },
+          "type": "fixed",
+          "amount": 324375
+        },
+        {
+          "when": {
+            "cc_max": 2001
+          },
+          "type": "fixed",
+          "amount": 756875
+        },
+        {
+          "when": {
+            "cc_max": 3001
+          },
+          "type": "fixed",
+          "amount": 1081250
+        },
+        {
+          "type": "fixed",
+          "amount": 2486875
+        }
+      ]
+    },
+    {
+      "id": "registration",
+      "name_ru": "Первичная регистрация",
+      "group": "local",
+      "type": "choose",
+      "currency": "KZT",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "age_max": 2
+          },
+          "type": "fixed",
+          "amount": 1081
+        },
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "fixed",
+          "amount": 216250
+        },
+        {
+          "type": "fixed",
+          "amount": 2162500
+        }
+      ]
+    },
+    {
+      "id": "plates",
+      "name_ru": "Номера и СРТС",
+      "group": "local",
+      "type": "fixed",
+      "amount": 17516,
+      "currency": "KZT",
+      "check": "sources"
+    },
+    {
+      "id": "broker",
+      "name_ru": "Брокер и СВХ",
+      "group": "local",
+      "type": "fixed",
+      "amount": 45000,
+      "currency": "KZT",
+      "check": "estimate"
+    }
+  ]
+}

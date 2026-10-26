@@ -24,9 +24,15 @@ Default caption countries: Kazakhstan (Алматы), Kyrgyzstan (Бишкек),
 `check`: `official` / `sources` (2+ open sources agree) / `estimate` ⚠️). Uzbekistan is not built yet: sources contradict each other
 (duty 15% vs 40% + $3/cc), so research it properly before adding.
 
-**Key Kazakhstan rule:** first registration is 50 MRP for cars 2–3 years old but **500 MRP (≈2.16M ₸) for cars older than 3 years**, so
-Kazakhstan clients should get cars under 3 years old. Utilsbor jumps above 2000 cc. VAT is 16%. Kazakhstan is usually the most expensive of the 4
-destinations, so always compare with local Kolesa.kz prices to show the saving.
+**Key Kazakhstan rules (corrected 2026-10-26 with the brokers' table from the owner):**
+- Private imports are cleared with the **EAEU single rate (ЕТС, EEC Council Decision 107, annex 2)**. It replaces duty, VAT and excise.
+  Under 3 years: 48–54% of value but at least 2.5–20 €/cc (depending on value). **3–5 years: only per cc** (1.5–3.6 €/cc; 2.7 for 1.8–2.3 L).
+  Over 5 years: personal import is not allowed since 28.09.2026 (legal entity only).
+- So **3–5-year-old cars are usually the cheapest to import**, especially expensive (German) cars, even with the 500 MRP (≈2.16M ₸)
+  first registration fee that applies after 3 years (2–3 years: 50 MRP).
+- Profile `kazakhstan` = ЕТС (default). `kazakhstan-dt` = legal-entity alternative (ETT duty + 16% VAT). The quote shows the alternative total
+  for comparison, which is sometimes cheaper for expensive cars under 3 years.
+- Plus: utilsbor (jumps above 2000 cc), customs fee 6 MRP, plates. Always compare with Kolesa.kz prices.
 
 ## Workflow for every price request
 

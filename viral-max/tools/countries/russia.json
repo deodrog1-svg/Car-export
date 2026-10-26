@@ -6,6 +6,7 @@
   "verified_on": "2026-10-26",
   "_mode": "Ввоз физлицом для личного пользования: единая ставка (ЕТС) + льготный утильсбор (до 160 л.с., до 3000 см³, 1 авто в год).",
   "sources": [
+    "Решение Совета ЕЭК №107, приложение 2 (таблица ЕТС, подтверждена таблицей казахстанских брокеров 26.10.2026)",
     "https://chest-import.com/kalkulyator (ЕТС 3–5 лет: 1,5/1,7/2,5/2,7/3,0/3,6 €/см³)",
     "https://kolesa.kz/content/news/rastamozhka-avto-po-novym-usloviyam-skolko-zaplatyat-chastnye-importyory/ (ЕТС ЕАЭС до 3 лет: 54%/48% с минимумом €/см³ по стоимости)",
     "https://prigon.kz/iz-korei (ЕТС старше 5 лет: 3–5,7 €/см³)",
@@ -17,13 +18,27 @@
   ],
   "route_ru": "Пусан → Владивосток (паром/контейнер)",
   "transit_days_ru": "7–14 дней до Владивостока",
-  "freight_usd": { "container": 1550, "roro": 1000 },
+  "freight_usd": {
+    "container": 1550,
+    "roro": 1000
+  },
   "freight_check": "sources",
   "port_charges_usd": 0,
   "cities": {
-    "Владивосток": { "inland_usd": 0, "days_ru": "выдача во Владивостоке" },
-    "Москва": { "inland_usd": 3125, "days_ru": "12–18 дней автовозом", "check": "estimate" },
-    "Новосибирск": { "inland_usd": 1900, "days_ru": "8–12 дней автовозом", "check": "estimate" }
+    "Владивосток": {
+      "inland_usd": 0,
+      "days_ru": "выдача во Владивостоке"
+    },
+    "Москва": {
+      "inland_usd": 3125,
+      "days_ru": "12–18 дней автовозом",
+      "check": "estimate"
+    },
+    "Новосибирск": {
+      "inland_usd": 1900,
+      "days_ru": "8–12 дней автовозом",
+      "check": "estimate"
+    }
   },
   "documents_ru": [
     "Корея: свидетельство о регистрации, справка о снятии с учёта для экспорта, экспортная декларация, инвойс",
@@ -35,34 +50,269 @@
     "Сбор за оформление и расходы во Владивостоке (СВХ, брокер, лаборатория) — оценка."
   ],
   "items": [
-    { "id": "limits", "name_ru": "Ограничения Кореи", "group": "customs", "type": "choose", "currency": "USD", "check": "sources", "options": [
-      { "when": { "cc_min": 2001 }, "type": "error", "message_ru": "Двигатель больше 2000 см³: экспорт из Кореи в Россию только по разрешению" },
-      { "when": { "price_min_usd": 50000 }, "type": "error", "message_ru": "Дороже $50 000: экспорт из Кореи в Россию запрещён" },
-      { "when": { "hp_min": 160.5 }, "type": "error", "message_ru": "Мощнее 160 л.с.: коммерческий утильсбор, обычно невыгодно. Рассчитать вручную" } ] },
-    { "id": "duty", "name_ru": "Единая ставка (пошлина, ЕТС)", "group": "customs", "type": "choose", "currency": "EUR", "check": "sources", "options": [
-      { "when": { "age_max": 3, "price_max_eur": 8500 }, "type": "max", "options": [ { "type": "percent", "rate": 0.54, "base": ["car"] }, { "type": "per_cc", "rate": 2.5 } ] },
-      { "when": { "age_max": 3, "price_max_eur": 16700 }, "type": "max", "options": [ { "type": "percent", "rate": 0.48, "base": ["car"] }, { "type": "per_cc", "rate": 3.5 } ] },
-      { "when": { "age_max": 3, "price_max_eur": 42300 }, "type": "max", "options": [ { "type": "percent", "rate": 0.48, "base": ["car"] }, { "type": "per_cc", "rate": 5.5 } ] },
-      { "when": { "age_max": 3 }, "type": "max", "options": [ { "type": "percent", "rate": 0.48, "base": ["car"] }, { "type": "per_cc", "rate": 7.5 } ] },
-      { "when": { "age_max": 5, "cc_max": 1001 }, "type": "per_cc", "rate": 1.5 },
-      { "when": { "age_max": 5, "cc_max": 1501 }, "type": "per_cc", "rate": 1.7 },
-      { "when": { "age_max": 5, "cc_max": 1801 }, "type": "per_cc", "rate": 2.5 },
-      { "when": { "age_max": 5, "cc_max": 2301 }, "type": "per_cc", "rate": 2.7 },
-      { "when": { "age_max": 5, "cc_max": 3001 }, "type": "per_cc", "rate": 3.0 },
-      { "when": { "age_max": 5 }, "type": "per_cc", "rate": 3.6 },
-      { "when": { "cc_max": 1001 }, "type": "per_cc", "rate": 3.0 },
-      { "when": { "cc_max": 1501 }, "type": "per_cc", "rate": 3.2 },
-      { "when": { "cc_max": 1801 }, "type": "per_cc", "rate": 3.5 },
-      { "when": { "cc_max": 2301 }, "type": "per_cc", "rate": 4.8 },
-      { "when": { "cc_max": 3001 }, "type": "per_cc", "rate": 5.0 },
-      { "type": "per_cc", "rate": 5.7 } ] },
-    { "id": "recycling", "name_ru": "Утильсбор (льготный, до 160 л.с.)", "group": "customs", "type": "choose", "currency": "RUB", "check": "sources", "options": [
-      { "when": { "age_max": 3 }, "type": "fixed", "amount": 3400 },
-      { "type": "fixed", "amount": 5200 } ] },
-    { "id": "fee", "name_ru": "Таможенный сбор за оформление", "group": "customs", "type": "choose", "currency": "RUB", "check": "estimate", "options": [
-      { "when": { "price_max_usd": 14900 }, "type": "fixed", "amount": 4269 },
-      { "when": { "price_max_usd": 33500 }, "type": "fixed", "amount": 11746 },
-      { "type": "fixed", "amount": 16524 } ] },
-    { "id": "vlad", "name_ru": "СВХ, брокер, СБКТС и ЭПТС во Владивостоке", "group": "local", "type": "fixed", "amount": 100000, "currency": "RUB", "check": "estimate" }
+    {
+      "id": "limits",
+      "name_ru": "Ограничения Кореи",
+      "group": "customs",
+      "type": "choose",
+      "currency": "USD",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "cc_min": 2001
+          },
+          "type": "error",
+          "message_ru": "Двигатель больше 2000 см³: экспорт из Кореи в Россию только по разрешению"
+        },
+        {
+          "when": {
+            "price_min_usd": 50000
+          },
+          "type": "error",
+          "message_ru": "Дороже $50 000: экспорт из Кореи в Россию запрещён"
+        },
+        {
+          "when": {
+            "hp_min": 160.5
+          },
+          "type": "error",
+          "message_ru": "Мощнее 160 л.с.: коммерческий утильсбор, обычно невыгодно. Рассчитать вручную"
+        }
+      ]
+    },
+    {
+      "id": "duty",
+      "name_ru": "Единая ставка (пошлина, ЕТС), ЕЭК №107",
+      "group": "customs",
+      "type": "choose",
+      "currency": "EUR",
+      "check": "official",
+      "options": [
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 8500
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.54,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 2.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 16700
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 3.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3,
+            "price_max_eur": 42300
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 5.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "max",
+          "options": [
+            {
+              "type": "percent",
+              "rate": 0.48,
+              "base": [
+                "car"
+              ]
+            },
+            {
+              "type": "per_cc",
+              "rate": 7.5
+            }
+          ]
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1001
+          },
+          "type": "per_cc",
+          "rate": 1.5
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1501
+          },
+          "type": "per_cc",
+          "rate": 1.7
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 1801
+          },
+          "type": "per_cc",
+          "rate": 2.5
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 2301
+          },
+          "type": "per_cc",
+          "rate": 2.7
+        },
+        {
+          "when": {
+            "age_max": 5,
+            "cc_max": 3001
+          },
+          "type": "per_cc",
+          "rate": 3.0
+        },
+        {
+          "when": {
+            "age_max": 5
+          },
+          "type": "per_cc",
+          "rate": 3.6
+        },
+        {
+          "when": {
+            "cc_max": 1001
+          },
+          "type": "per_cc",
+          "rate": 3.0
+        },
+        {
+          "when": {
+            "cc_max": 1501
+          },
+          "type": "per_cc",
+          "rate": 3.2
+        },
+        {
+          "when": {
+            "cc_max": 1801
+          },
+          "type": "per_cc",
+          "rate": 3.5
+        },
+        {
+          "when": {
+            "cc_max": 2301
+          },
+          "type": "per_cc",
+          "rate": 4.8
+        },
+        {
+          "when": {
+            "cc_max": 3001
+          },
+          "type": "per_cc",
+          "rate": 5.0
+        },
+        {
+          "type": "per_cc",
+          "rate": 5.7
+        }
+      ]
+    },
+    {
+      "id": "recycling",
+      "name_ru": "Утильсбор (льготный, до 160 л.с.)",
+      "group": "customs",
+      "type": "choose",
+      "currency": "RUB",
+      "check": "sources",
+      "options": [
+        {
+          "when": {
+            "age_max": 3
+          },
+          "type": "fixed",
+          "amount": 3400
+        },
+        {
+          "type": "fixed",
+          "amount": 5200
+        }
+      ]
+    },
+    {
+      "id": "fee",
+      "name_ru": "Таможенный сбор за оформление",
+      "group": "customs",
+      "type": "choose",
+      "currency": "RUB",
+      "check": "estimate",
+      "options": [
+        {
+          "when": {
+            "price_max_usd": 14900
+          },
+          "type": "fixed",
+          "amount": 4269
+        },
+        {
+          "when": {
+            "price_max_usd": 33500
+          },
+          "type": "fixed",
+          "amount": 11746
+        },
+        {
+          "type": "fixed",
+          "amount": 16524
+        }
+      ]
+    },
+    {
+      "id": "vlad",
+      "name_ru": "СВХ, брокер, СБКТС и ЭПТС во Владивостоке",
+      "group": "local",
+      "type": "fixed",
+      "amount": 100000,
+      "currency": "RUB",
+      "check": "estimate"
+    }
   ]
 }

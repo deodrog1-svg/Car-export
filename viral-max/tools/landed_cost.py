@@ -170,8 +170,15 @@ def calculate(req, costs=None, profile=None, today=None):
                   check_of(costs, "service_check")))
 
     total = sum(l[2] for l in lines)
+    alt = None
+    if profile.get("alternative") and not req.get("_no_alt"):
+        a = profile["alternative"]
+        try:
+            alt = (a["name_ru"], calculate({**req, "country": a["profile"], "_no_alt": True}, costs, None, today)["total"])
+        except QuoteError as e:
+            alt = (a["name_ru"], str(e))
     return {"car": car, "profile": profile, "costs": costs, "lines": lines, "fob": fob, "cif": cif,
-            "total": total, "today": today}
+            "total": total, "today": today, "alt": alt}
 
 
 def car_table(c):
@@ -219,7 +226,11 @@ def render_ru(q, standalone=True):
             f"| **ИТОГО с доставкой в {c['city']}** | **${money(q['total'])}** |"]
     if local_total(q):
         out.append(f"| **В местной валюте** | **{local_total(q)}** |")
-    out += [f"| В вонах | ₩{money(q['total'] * fx['KRW'])} |", ""]
+    out += [f"| В вонах | ₩{money(q['total'] * fx['KRW'])} |"]
+    if q.get("alt"):
+        name, val = q["alt"]
+        out.append(f"| Для сравнения: {name} | {'$' + money(val) if isinstance(val, float) else val} |")
+    out += [""]
     out += ["## Сроки", "", f"- Маршрут: {p['route_ru']}", f"- Доставка из Кореи: {p['transit_days_ru']}",
             f"- Доставка до города: {p['cities'][c['city']].get('days_ru', '—')}", ""]
     if p.get("documents_ru"):
