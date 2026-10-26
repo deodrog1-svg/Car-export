@@ -1,0 +1,13 @@
+{
+  "model": "Kia Carnival 2.2 Diesel Signature",
+  "year": 2022,
+  "month": 5,
+  "fuel": "diesel",
+  "engine_cc": 2151,
+  "power_hp": 199,
+  "mileage_km": 41000,
+  "price_krw": 32000000,
+  "country": "example",
+  "city": "Пример-город",
+  "shipping": "container"
+}

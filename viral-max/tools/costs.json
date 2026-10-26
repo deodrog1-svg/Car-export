@@ -1,0 +1,14 @@
+{
+  "_note": "YOUR OWN COSTS. Update with real numbers (use /teach). fx = units of each currency per 1 USD; update before every quote.",
+  "fx_date": "2026-10-26",
+  "fx": { "USD": 1, "KRW": 1400, "EUR": 0.92 },
+  "korea_side_krw": {
+    "Комиссия аукциона / дилера": 300000,
+    "Снятие с учёта и экспортные документы": 150000,
+    "Доставка до порта в Корее": 250000,
+    "Экспортная таможня и портовые сборы в Корее": 200000
+  },
+  "insurance_rate": 0.01,
+  "service_fee_usd": 800,
+  "quote_valid_days": 7
+}

@@ -9,7 +9,7 @@ full delivered prices to your clients' cities.
 | Command | What it does |
 |---|---|
 | `/ideas 10 videos about Genesis GV80 for Kazakhstan` | New video ideas with exact scenarios, saved to `viral-max/tasks/` |
-| `/price Carnival 2022 ₩32,000,000 2200cc to Bishkek` | Full delivered-price receipt |
+| `/price Carnival 2022, diesel 2151cc 199hp, 41,000 km, ₩32,000,000 → Kyrgyzstan, Bishkek` | **Broker:** exact itemized delivered price as a Russian PDF |
 | `/teach my clients are mostly in Uzbekistan and Kyrgyzstan` | **Teach him** (saved forever in `viral-max/teach/lessons.md`) |
 | `/improve make all scripts in Russian, max 20 seconds` | **Adjust him** (rules in `viral-max/improve/adjustments.md` override everything) |
 | `/results video 001-#1 TikTok 250k views 3k shares 40 DMs` | Tell him how a video did so he learns |
@@ -28,7 +28,10 @@ viral-max/
   improve/performance-log.md     ← 📊 real results he learns from
   daily-learning/trend-log.md    ← 📈 his daily research
   tasks/                         ← 🎬 his deliverables
-  tools/landed_cost.py           ← 🧮 price calculator (+ destinations.json)
+  tools/landed_cost.py           ← 🧮 broker calculator → PDF quote
+  tools/costs.json               ← your own costs + exchange rates
+  tools/countries/               ← customs rules per country (researched, with sources)
+  quotes/                        ← 💵 finished price quotes (PDF)
 ```
 
 ## First task, done ✅

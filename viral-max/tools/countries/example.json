@@ -1,0 +1,31 @@
+{
+  "_note": "DEMO ONLY: invented numbers to show the format. Never quote a client from this file.",
+  "country_ru": "Пример-страна (ДЕМО)",
+  "currency": "USD",
+  "verified_on": "2026-10-26",
+  "sources": [],
+  "route_ru": "Инчхон → порт назначения (контейнер) → автовоз до города",
+  "transit_days_ru": "35–50 дней",
+  "freight_usd": { "container": 1600, "roro": 1900 },
+  "freight_verified": false,
+  "port_charges_usd": 400,
+  "cities": { "Пример-город": { "inland_usd": 300, "days_ru": "3–5 дней" } },
+  "documents_ru": ["Свидетельство о регистрации (자동차등록증)", "Справка о снятии с учёта для экспорта (수출말소사실증명서)", "Экспортная декларация (수출신고필증)", "Инвойс и упаковочный лист", "Коносамент (B/L)"],
+  "restrictions_ru": ["ДЕМО: возраст авто не более 10 лет"],
+  "items": [
+    { "id": "duty", "name_ru": "Таможенная пошлина", "group": "customs", "type": "choose", "currency": "USD", "verified": false, "options": [
+      { "when": { "fuel": ["ev"] }, "type": "percent", "rate": 0, "base": ["cif"] },
+      { "when": { "age_max": 3 }, "type": "percent", "rate": 0.15, "base": ["cif"] },
+      { "type": "max", "options": [
+        { "type": "percent", "rate": 0.2, "base": ["cif"] },
+        { "type": "per_cc", "rate": 1.5 } ] } ] },
+    { "id": "excise", "name_ru": "Акциз", "group": "customs", "type": "choose", "currency": "USD", "verified": false, "options": [
+      { "when": { "cc_max": 2000 }, "type": "per_cc", "rate": 0.2 },
+      { "type": "per_cc", "rate": 0.5 } ] },
+    { "id": "vat", "name_ru": "НДС", "group": "customs", "type": "percent", "rate": 0.12, "base": ["cif", "duty", "excise"], "currency": "USD", "verified": false },
+    { "id": "recycling", "name_ru": "Утилизационный сбор", "group": "customs", "type": "fixed", "amount": 150, "currency": "USD", "verified": false },
+    { "id": "broker", "name_ru": "Таможенный брокер", "group": "local", "type": "fixed", "amount": 250, "currency": "USD", "verified": false },
+    { "id": "cert", "name_ru": "Сертификация / техосмотр", "group": "local", "type": "fixed", "amount": 200, "currency": "USD", "verified": false },
+    { "id": "registration", "name_ru": "Постановка на учёт и номера", "group": "local", "type": "fixed", "amount": 100, "currency": "USD", "verified": false }
+  ]
+}

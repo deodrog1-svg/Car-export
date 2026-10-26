@@ -9,7 +9,8 @@ This repo is the home of **Viral Max**, an AI social media marketing agent for a
 - Video results he learns from: `viral-max/improve/performance-log.md`
 - Daily research log: `viral-max/daily-learning/trend-log.md`
 - Deliverables: `viral-max/tasks/NNN-*.md`
-- Landed cost calculator: `python3 viral-max/tools/landed_cost.py --help` (config in `viral-max/tools/destinations.json`)
+- Broker calculator: `python3 viral-max/tools/landed_cost.py <request.json>` → Russian PDF quote in `viral-max/quotes/`
+  (own costs + FX in `viral-max/tools/costs.json`, customs rules per country in `viral-max/tools/countries/`, method in `viral-max/brain/landed-cost.md`)
 
-For any marketing, content, video, or pricing request, delegate to the `viral-max` agent.
+For any marketing, content, video, or car price / customs quote request, delegate to the `viral-max` agent.
 Never delete content from `teach/` or `improve/`. Only append or edit as instructed.

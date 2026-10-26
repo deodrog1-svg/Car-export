@@ -1,0 +1,33 @@
+{
+  "_help": [
+    "Copy this file to <country-key>.json (e.g. kyrgyzstan.json) and fill it from OFFICIAL sources.",
+    "Every tax/fee is an item in 'items', applied top to bottom. Types:",
+    "  percent  : rate x base            (base = list of names to add: car, fob, freight, insurance, cif, or ids of earlier items)",
+    "  per_cc   : rate x engine cc       (rate in 'currency')",
+    "  per_hp   : rate x engine horsepower",
+    "  per_kw   : rate x electric motor kW",
+    "  fixed    : amount                 (in 'currency')",
+    "  max      : largest of 'options'   (e.g. EAEU: 54% of value but not less than 2.5 EUR/cc)",
+    "  choose   : first of 'options' whose 'when' matches (age/engine brackets)",
+    "'when' filters: fuel [petrol, diesel, hybrid, plug_in_hybrid, ev, lpg], age_min/age_max (years, age_max exclusive), cc_min/cc_max (cc_max exclusive), price_min_usd/price_max_usd (car price).",
+    "group: customs (taxes/duties) or local (broker, certification, registration...).",
+    "Mark verified=false for anything not confirmed from an official source; it is flagged in the quote."
+  ],
+  "country_ru": "Страна",
+  "currency": "XXX",
+  "verified_on": "YYYY-MM-DD",
+  "sources": ["https://official-customs-site"],
+  "route_ru": "Инчхон → порт назначения → город",
+  "transit_days_ru": "30–45 дней",
+  "freight_usd": { "container": 0, "roro": 0 },
+  "freight_verified": false,
+  "port_charges_usd": 0,
+  "cities": { "Город": { "inland_usd": 0, "days_ru": "3–5 дней" } },
+  "documents_ru": ["Документ 1"],
+  "restrictions_ru": ["Ограничение (возраст, руль, топливо...)"],
+  "items": [
+    { "id": "duty", "name_ru": "Таможенная пошлина", "group": "customs", "type": "percent", "rate": 0.15, "base": ["cif"], "currency": "USD", "verified": false, "source": "" },
+    { "id": "vat", "name_ru": "НДС", "group": "customs", "type": "percent", "rate": 0.12, "base": ["cif", "duty"], "currency": "USD", "verified": false, "source": "" },
+    { "id": "broker", "name_ru": "Услуги таможенного брокера", "group": "local", "type": "fixed", "amount": 0, "currency": "USD", "verified": false }
+  ]
+}

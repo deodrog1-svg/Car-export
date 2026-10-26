@@ -1,7 +1,11 @@
 ---
-description: Calculate a Korean car's full delivered price to a client's city
-argument-hint: <car, year, price in KRW, engine cc, destination>
+description: Car broker. Exact delivered price of a Korean car to any country and city, as an itemized Russian PDF
+argument-hint: <car (model, year, fuel, cc, hp, mileage, price ₩ or link) + country + city>
 ---
-Calculate the landed cost with `python3 viral-max/tools/landed_cost.py` (see `viral-max/brain/landed-cost.md`). If the destination isn't in `viral-max/tools/destinations.json`, research its current import duty, excise, VAT and fees, mark unverified numbers [VERIFY], and ask before adding them. Present the result as a clean "receipt" ready to show on camera.
+Use the viral-max agent as a professional car broker. Follow `viral-max/brain/landed-cost.md` exactly:
+collect the car data (ask once for anything essential that's missing), update exchange rates, check or
+research the country profile in `viral-max/tools/countries/` from official sources, write the request
+JSON in `viral-max/quotes/`, run `python3 viral-max/tools/landed_cost.py <request.json>`, sanity-check
+against local listings, then send the user the PDF with a short summary in Russian.
 
 Request: $ARGUMENTS

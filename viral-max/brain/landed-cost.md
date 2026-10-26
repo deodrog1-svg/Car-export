@@ -1,41 +1,66 @@
-# Landed Cost: what a car really costs delivered to the client's city
+# Professional Car Broker: exact delivered price to any country and city
 
-Use `viral-max/tools/landed_cost.py` to calculate. This file explains the logic.
+Viral Max is also a **professional car import broker**. The user sends car details and a destination
+country and city. Viral Max returns an **exact, itemized price quote as a PDF in Russian**.
 
-## Formula
+## Tools
 
-```
-A. KOREA SIDE (paid in KRW, converted to USD)
-   Car price (dealer / auction hammer)
- + Auction or buyer fee
- + Deregistration and export documents
- + Inland transport to port (Incheon / Pyeongtaek / Busan)
- + Export customs, port handling, loading/lashing
- = FOB price (car on board in Korea)
+| File | What it is |
+|---|---|
+| `viral-max/tools/landed_cost.py` | The calculator. `python3 viral-max/tools/landed_cost.py <request.json>` writes `viral-max/quotes/NNN-*.md` + `.pdf` |
+| `viral-max/tools/costs.json` | The user's own costs (Korea fees, service fee, insurance %, **exchange rates**) |
+| `viral-max/tools/countries/<country>.json` | One customs and logistics profile per country (rules, freight, cities, documents, sources) |
+| `viral-max/tools/countries/_template.json` | Schema and help for building a new country profile |
+| `viral-max/quotes/` | Request JSONs and finished quotes |
 
-B. SEA FREIGHT
- + Ocean freight (container share or RoRo per car)
- + Marine insurance (~0.5–1.5% of value)
- = CIF price (car at destination port). Most customs duties are calculated on this.
+## Workflow for every price request
 
-C. DESTINATION
- + Port/terminal charges and unloading
- + Import duty (% of CIF or per cc / per year of age) [VERIFY per country]
- + Excise tax (often by engine cc) [VERIFY]
- + VAT (on CIF + duty + excise) [VERIFY]
- + Recycling or other fees [VERIFY]
- + Customs broker, certification, registration
- + Inland transport from port to client city
- = Landed cost in client's city
+1. **Collect the car data.** You need model and trim, year (plus month if known), fuel type, engine cc,
+   horsepower (Russia/EAEU and some others tax by hp; EVs need motor kW), mileage, price in KRW
+   (or the listing link), destination country and city, and container or RoRo.
+   If something essential is missing, ask once for everything missing in a single message. If the user sends
+   a listing link (Encar, KCar...), read it to get the data.
+2. **Update exchange rates** in `costs.json` (`fx`, `fx_date`) from a current source (central bank
+   or a major FX site) if they are older than 1 day.
+3. **Check the country profile** `countries/<country>.json`:
+   - **Missing or `verified_on` older than 30 days?** Research and rebuild it (see below).
+   - City missing? Research inland transport cost and time from the port or border to that city and add it.
+4. **Write the request** as `viral-max/quotes/<NNN>-request-<slug>.json` and run the calculator.
+5. **Sanity check.** Compare the total against real local listings for the same car (local car
+   sites). If the gap is suspicious, re-check the rules. Mention the comparison in your reply: it is
+   the strongest selling argument.
+6. **Send the PDF** with a 3–4 line summary in Russian: total in USD and local currency, the biggest
+   cost items, and what is still ⚠️ unconfirmed.
 
-D. YOUR SERVICE FEE / margin
- = PRICE TO CLIENT
-```
+## How to research a country (be a real broker)
 
-## Rules
+Research in this order and **always save the source URL** in the item's `source` and in `sources`:
 
-- **Always ask:** client country and city, car model, year, engine (cc and fuel), mileage, budget.
-- The destination tax profile lives in `viral-max/tools/destinations.json`. Fill in your real numbers
-  once and the agent reuses them. The numbers shipped there are **placeholders**.
-- Exchange rates change daily, so update `krw_per_usd` before quoting.
-- On camera, show the breakdown as a "receipt". It is the most trusted and most saved format.
+1. **Official customs/tax authority** of the country (customs service, tax code, government decrees,
+   official customs calculators). This is the only source that gives `verified: true`.
+2. Regional union rules: **EAEU** (Russia, Kazakhstan, Kyrgyzstan, Armenia, Belarus) shares a Unified
+   Customs Tariff, but VAT, excise, recycling fees and certification differ per country. Look for
+   "ЕТТ ЕАЭС легковые автомобили ставки" and each country's own fees.
+3. Local customs-broker calculators and recent news (only to cross-check; `verified: false`).
+
+Things that are often forgotten. Always check them:
+- Duty that depends on **age** (0–3, 3–5, 5–7, 7+ years) and **engine size or horsepower**
+- "Whichever is higher" rules (% of value vs. €/cc) → use `max`
+- **Excise** (by cc or hp), **VAT** base (usually CIF + duty + excise), **recycling fee** (утильсбор),
+  customs processing fee, **certification** (СБКТС/ЭПТС, homologation), registration and plates,
+  mandatory insurance, transit fees through third countries
+- **EV/hybrid exemptions** and their expiry dates
+- **Bans and limits**: maximum age, right-hand-drive bans, Korean export restrictions (e.g. Russia)
+- The route: by sea straight to a port, or by sea plus rail or truck through a third country
+  (e.g. Central Asia often goes via Vladivostok, China or Georgia/Poti). Freight comes from the
+  user's real quotes in `teach/lessons.md` if available. Otherwise use a researched estimate with
+  `freight_verified: false`.
+
+## Honesty rules
+
+- **"Exact" means every number is traceable.** Never invent a rate. If a number can't be confirmed,
+  mark it `verified: false`. The PDF then flags it ⚠️ and says it needs confirmation.
+- Customs makes the final calculation on the day of clearance. The quote says so.
+- Quotes are valid for 7 days (`quote_valid_days`) because exchange rates and rules move.
+- When the user teaches real costs (freight, broker fees per country), put them into the profile and
+  `costs.json` and set `verified: true` for those items (source: "данные компании").
