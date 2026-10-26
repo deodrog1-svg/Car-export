@@ -7,6 +7,7 @@ Usage:
 
 Needs: pip install markdown, and Node with Playwright (Chromium).
 """
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -57,8 +58,9 @@ def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     src = Path(sys.argv[1]).resolve()
-    # Flag emoji don't render in Chromium PDFs; spell the country code instead.
-    text = src.read_text().replace("\U0001F1F0\U0001F1F7", "(KR)")
+    # Flag emoji don't render in Chromium PDFs; spell the country code instead (🇩🇪 -> (DE)).
+    text = re.sub("([\U0001F1E6-\U0001F1FF])([\U0001F1E6-\U0001F1FF])",
+                  lambda m: "(" + "".join(chr(ord(c) - 0x1F1E6 + 65) for c in m.groups()) + ")", src.read_text())
     body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
     html = src.with_suffix(".print.html")
     html.write_text(f"<!doctype html><html lang='ru'><head><meta charset='utf-8'><style>{CSS}</style>"

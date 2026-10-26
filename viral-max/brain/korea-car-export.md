@@ -26,6 +26,28 @@
    than the same car at the destination.
 5. **Left-hand drive.** This fits most of the world except UK/Japan-style markets.
 
+## Imported cars in Korea (German cars are a major export category)
+
+Korea is one of the biggest import-car markets in Asia. About 280,000 new imported cars were sold in Jan–Sep 2026
+(Tesla #1, then BMW about 58k and Mercedes-Benz about 43k). After 3–5 years they flood the used market.
+([Just Auto](https://www.just-auto.com/newsletters/south-korean-import-sales-rise-6-in-september))
+
+**Why used German cars from Korea sell:**
+- **Fast depreciation:** many Koreans sell German cars when the warranty ends (fear of repair costs), so prices drop hard.
+- **Official dealer service history:** most were serviced at official BMW/Mercedes centres. Show the service printout on camera.
+- **Low mileage, city use, rich options**, and the same Carhistory accident check as Korean cars.
+
+**Popular German models on the Korean used market:** BMW 5 Series (520i/520d/530i), BMW 3 Series, X3, X5;
+Mercedes-Benz E-Class (E250/E300/E220d), C-Class, GLC, GLE; Audi A6, A4, Q5; VW Tiguan, Passat; Porsche Cayenne/Macan; MINI.
+Also Volvo, Lexus, Toyota and Tesla.
+
+**Market fit:**
+- **Russia: limited.** Korea requires an export permit for engines **over 2,000cc** and bans cars valued over **$50,000**
+  ([Gulf Business 2026](https://gulfbusiness.com/en/2026/automotive/south-korea-cracks-down-on-illegal-car-exports-to-russia/),
+  [KED Global](https://www.kedglobal.com/newsView/ked202402200011)), and most German 2.0 turbo engines are **over 160 hp**,
+  which means an expensive recycling fee. Only low-power, at most 2.0 L, under-$50k versions can work. Check the exact hp of the specific car.
+- **Central Asia, Caucasus, Mongolia, Middle East: strong.** There's no 160 hp penalty, and German status cars at Korean prices are a huge price gap.
+
 ## Best cars to export (scoring)
 
 Score each car on: **price gap** (Korea vs destination), **demand** at destination, **parts and service**
@@ -42,6 +64,9 @@ available there, **duty friendliness** (engine size and age brackets), **resale 
 | **Hyundai Avante (Elantra) / Sonata / Kia K5** | Cheap, reliable, LPG versions for taxis | Taxi drivers, first car | ★★★ |
 | **Hyundai Porter II / Kia Bongo** | Small trucks, the workhorse of Central Asia and Africa | Small businesses | ★★★ ("money machine") |
 | **Hyundai Staria / Starex** | Minibus for business | Transfer/tour companies | ★★★ |
+| **BMW 5 Series / Mercedes E-Class** | Status car at a Korean price, official service history | Business owners, status buyers (Central Asia, Caucasus) | ★★★★★ ("German for the price of a Korean") |
+| **BMW X3/X5, Mercedes GLC/GLE, Audi Q5** | Premium SUVs, huge price gap vs destination | Status families | ★★★★★ |
+| **VW Tiguan / Passat, Audi A4/A6** | German quality at a mid price, diesels popular | Families, business | ★★★★ |
 | **Kia Morning / Ray** | Very cheap city cars | Students, delivery | ★★★ ("cheapest car in Korea") |
 | **Ioniq 5 / EV6 / Niro EV / Kona EV** | Used EVs are very cheap in Korea. Great where EV duties are low **[VERIFY]** | Tech buyers, taxi | ★★★★ |
 
@@ -50,8 +75,8 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 
 ## Restrictions to always check
 
-- **Russia**: Korea restricts exports of certain vehicles to Russia (since 2024, cars over a set engine size
-  and all hybrids/EVs, plus higher-value cars) **[VERIFY current rules]**. Russia's recycling fee
+- **Russia**: Korea requires an export permit for cars with engines **over 2,000cc** (since 24.02.2024) and bans cars
+  valued **over $50,000**. Customs is actively prosecuting false declarations via third countries (2026). Russia's recycling fee
   (утильсбор) raises costs sharply. Re-exports through third countries carry legal risk, so don't promote them.
 - **Russia 2026: recycling fee reform (01.01.2026).** Only cars **up to 160 hp** remain profitable
   (e.g. Sorento 2.2D 197 hp to Moscow ≈ 5.27M ₽ vs 3.2–3.8M ₽ market). See `market-intel/insights.md`.
