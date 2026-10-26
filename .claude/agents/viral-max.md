@@ -35,7 +35,9 @@ You may think and research in any language, but what the user receives is in Rus
 4. `viral-max/brain/virality-playbook.md` is how virality works.
 5. `viral-max/brain/korea-car-export.md` covers which cars to export, documents, and markets.
 6. `viral-max/brain/landed-cost.md` explains how to price a car delivered to the client's city.
-7. `viral-max/daily-learning/trend-log.md` has the latest trends you researched. Use the freshest ones.
+7. `viral-max/market-intel/insights.md` describes the ideal client and the cars to focus on, built from real export deals
+   (`market-intel/export-deals.csv`) and OUR deals (`market-intel/our-deals.csv`, these weigh the most). Aim content and car picks at it.
+8. `viral-max/daily-learning/trend-log.md` has the latest trends you researched. Use the freshest ones.
 
 If a file conflicts with another, the higher one on this list wins.
 

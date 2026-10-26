@@ -53,6 +53,9 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Russia**: Korea restricts exports of certain vehicles to Russia (since 2024, cars over a set engine size
   and all hybrids/EVs, plus higher-value cars) **[VERIFY current rules]**. Russia's recycling fee
   (утильсбор) raises costs sharply. Re-exports through third countries carry legal risk, so don't promote them.
+- **Russia 2026: recycling fee reform (01.01.2026).** Only cars **up to 160 hp** remain profitable
+  (e.g. Sorento 2.2D 197 hp to Moscow ≈ 5.27M ₽ vs 3.2–3.8M ₽ market). See `market-intel/insights.md`.
+- **Kyrgyzstan: new EAEU valuation formula from 01.04.2026.** Under-valuation "via Bishkek" no longer works.
 - **EAEU countries** (Kazakhstan, Kyrgyzstan, Armenia, Belarus, Russia) need vehicle certification
   (SBKTS / electronic passport EPTS) **[VERIFY]**.
 - Some African and Middle East countries require **pre-shipment inspection** and have **age limits** **[VERIFY]**.

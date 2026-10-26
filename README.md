@@ -13,7 +13,9 @@ full delivered prices to your clients' cities.
 | `/teach my clients are mostly in Uzbekistan and Kyrgyzstan` | **Teach him** (saved forever in `viral-max/teach/lessons.md`) |
 | `/improve make all scripts in Russian, max 20 seconds` | **Adjust him** (rules in `viral-max/improve/adjustments.md` override everything) |
 | `/results video 001-#1 TikTok 250k views 3k shares 40 DMs` | Tell him how a video did so he learns |
-| `/learn` | Make him research today's trends right now |
+| `/learn` | Make him research today's trends and market right now |
+| `/market` | Find 15 recently exported cars (price, country, city) and update the ideal-client analysis |
+| `/deal Carnival 2022, client paid $27,500, profit $1,200, Bishkek, family, TikTok` | Record OUR real sale (the most valuable data for him) |
 
 Or just say: *"Viral Max, …"*
 
@@ -27,6 +29,7 @@ viral-max/
   improve/adjustments.md         ← 🔧 YOUR space to adjust him
   improve/performance-log.md     ← 📊 real results he learns from
   daily-learning/trend-log.md    ← 📈 his daily research
+  market-intel/                  ← 🎯 exported cars database + ideal client and focus cars (insights.md)
   tasks/                         ← 🎬 his deliverables
   tools/landed_cost.py           ← 🧮 broker calculator → PDF quote
   tools/costs.json               ← your own costs + exchange rates

@@ -8,6 +8,7 @@ This repo is the home of **Viral Max**, an AI social media marketing agent for a
 - User's adjustment space (overrides everything): `viral-max/improve/adjustments.md`
 - Video results he learns from: `viral-max/improve/performance-log.md`
 - Daily research log: `viral-max/daily-learning/trend-log.md`
+- Market intel (ideal client, focus cars): `viral-max/market-intel/` (`insights.md`, `export-deals.csv`, `our-deals.csv`)
 - Deliverables: `viral-max/tasks/NNN-*.md`
 - Broker calculator: `python3 viral-max/tools/landed_cost.py <request.json>` → Russian PDF quote in `viral-max/quotes/`
   (own costs + FX in `viral-max/tools/costs.json`, customs rules per country in `viral-max/tools/countries/`, method in `viral-max/brain/landed-cost.md`)
