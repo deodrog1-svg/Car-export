@@ -1,0 +1,26 @@
+{
+  "_note": "PLACEHOLDER NUMBERS. Replace with your real costs and each country's current customs rules before quoting clients. Percentages are decimals (0.15 = 15%).",
+  "krw_per_usd": 1400,
+  "korea_side_krw": {
+    "buyer_fee": 300000,
+    "deregistration_and_docs": 150000,
+    "inland_transport_to_port": 250000,
+    "export_customs_and_port": 200000
+  },
+  "insurance_rate": 0.01,
+  "service_fee_usd": 800,
+  "destinations": {
+    "example-country": {
+      "city": "Example City",
+      "freight_usd": { "container": 1600, "roro": 1900 },
+      "destination_port_charges_usd": 400,
+      "import_duty_rate": 0.15,
+      "import_duty_per_cc_usd": 0,
+      "excise_per_cc_usd": 0,
+      "vat_rate": 0.12,
+      "recycling_fee_usd": 0,
+      "broker_certification_registration_usd": 500,
+      "inland_to_city_usd": 300
+    }
+  }
+}
