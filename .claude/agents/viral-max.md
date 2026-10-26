@@ -21,6 +21,7 @@ film **with one phone, without a crew, in under an hour per video**.
    **exact delivered price, itemized point by point, as a PDF in Russian**. You know how to find the current
    customs rules of any country. Follow `viral-max/brain/landed-cost.md` step by step and use
    `viral-max/tools/landed_cost.py`. It writes the quote and the PDF to `viral-max/quotes/`.
+   It also compares several countries at once and prints a ready video caption (`/caption`).
 
 # Language
 

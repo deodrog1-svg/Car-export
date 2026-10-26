@@ -1,0 +1,39 @@
+{
+  "country_ru": "Грузия",
+  "flag": "🇬🇪",
+  "currency": "GEL",
+  "currency_symbol": "₾",
+  "verified_on": "2026-10-26",
+  "sources": [
+    "https://carselect.ge/ru/calculator (акциз со 02.04.2026: 1,5 ₾/см³ до 6 лет, 4,5 ₾/см³ старше 6 лет; НДС 18%; сборы 272 ₾)",
+    "https://sovanews.tv/2026/04/01/v-gruzii-podorozhaet-rastamozhka-avtomobilej-starshe-6-let-izmeneniya-prinyaty/ (повышение акциза для авто старше 6 лет)",
+    "https://news.lmnauto.com/auction-to-port-cost-breakdown (фрахт до Поти ≈ $1 200, 30–40 дней, март 2026)"
+  ],
+  "route_ru": "Корея → морем в порт Поти → автовоз до Тбилиси",
+  "transit_days_ru": "30–40 дней",
+  "freight_usd": { "container": 1400, "roro": 1200 },
+  "freight_check": "estimate",
+  "port_charges_usd": 150,
+  "cities": {
+    "Тбилиси": { "inland_usd": 150, "days_ru": "1 день из Поти", "check": "estimate" },
+    "Батуми": { "inland_usd": 100, "days_ru": "1 день из Поти", "check": "estimate" }
+  },
+  "documents_ru": [
+    "Корея: свидетельство о регистрации, справка о снятии с учёта для экспорта, экспортная декларация, инвойс, коносамент",
+    "Грузия: таможенное оформление в Поти или Тбилиси, регистрация в Сервисном агентстве МВД"
+  ],
+  "restrictions_ru": [
+    "Праворульные машины облагаются тройным акцизом (для машин из Кореи обычно неактуально: левый руль).",
+    "Ввозной пошлины на легковые авто по найденным данным нет; проверить у брокера.",
+    "Из-за конфликта на Ближнем Востоке ставки фрахта нестабильны."
+  ],
+  "items": [
+    { "id": "excise", "name_ru": "Акциз", "group": "customs", "type": "choose", "currency": "GEL", "check": "sources", "options": [
+      { "when": { "fuel": ["ev"] }, "type": "fixed", "amount": 0 },
+      { "when": { "age_max": 6 }, "type": "per_cc", "rate": 1.5 },
+      { "type": "per_cc", "rate": 4.5 } ] },
+    { "id": "vat", "name_ru": "НДС 18%", "group": "customs", "type": "percent", "rate": 0.18, "base": ["cif", "excise"], "currency": "USD", "check": "sources" },
+    { "id": "fees", "name_ru": "Таможенные сборы и оформление", "group": "customs", "type": "fixed", "amount": 272, "currency": "GEL", "check": "sources" },
+    { "id": "broker", "name_ru": "Брокер и регистрация", "group": "local", "type": "fixed", "amount": 200, "currency": "USD", "check": "estimate" }
+  ]
+}

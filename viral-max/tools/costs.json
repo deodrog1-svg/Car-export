@@ -1,7 +1,15 @@
 {
-  "_note": "YOUR OWN COSTS. Update with real numbers (use /teach). fx = units of each currency per 1 USD; update before every quote.",
+  "_note": "YOUR OWN COSTS. Update with real numbers (use /teach), then set korea_check/service_check to \"official\". fx = units of each currency per 1 USD; update before every quote.",
   "fx_date": "2026-10-26",
-  "fx": { "USD": 1, "KRW": 1400, "EUR": 0.92 },
+  "fx": {
+    "USD": 1,
+    "KRW": 1335,
+    "EUR": 0.8933,
+    "KZT": 451.05,
+    "KGS": 87.5,
+    "RUB": 80.5,
+    "GEL": 2.7
+  },
   "korea_side_krw": {
     "Комиссия аукциона / дилера": 300000,
     "Снятие с учёта и экспортные документы": 150000,
@@ -10,5 +18,12 @@
   },
   "insurance_rate": 0.01,
   "service_fee_usd": 800,
-  "quote_valid_days": 7
+  "quote_valid_days": 7,
+  "_fx_sources": [
+    "KZT/EUR/RUB/KGS: Нацбанк РК 26.10.2026 (451,05 ₸/$, 504,95 ₸/€, 5,60 ₸/₽, 5,16 ₸/сом) https://airpress.kz/economics/kurs-valyut-na-24-oktyabrya-2026/",
+    "KRW ≈1335: 30rates.com 12.10.2026, Bank Negara cross-rates (оценка)",
+    "GEL ≈2.70: из примера carselect.ge (оценка)"
+  ],
+  "korea_check": "estimate",
+  "service_check": "estimate"
 }

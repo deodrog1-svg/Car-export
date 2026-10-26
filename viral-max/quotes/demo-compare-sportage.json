@@ -1,0 +1,11 @@
+{
+  "model": "Kia Sportage 2.0 (NQ5) — ДЕМО-цена",
+  "year": 2024, "month": 3, "fuel": "petrol", "engine_cc": 1999, "power_hp": 156, "mileage_km": 30000,
+  "price_krw": 24000000, "shipping": "container",
+  "destinations": [
+    {"country": "kazakhstan", "city": "Алматы"},
+    {"country": "kyrgyzstan", "city": "Бишкек"},
+    {"country": "georgia", "city": "Тбилиси"},
+    {"country": "russia", "city": "Владивосток", "shipping": "roro"}
+  ]
+}

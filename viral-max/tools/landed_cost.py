@@ -5,8 +5,11 @@ Usage:
   python3 viral-max/tools/landed_cost.py viral-max/quotes/example-request.json
   python3 viral-max/tools/landed_cost.py request.json --no-pdf
 
+Compare several countries at once (and get a ready caption for videos): put a "destinations" list in the
+request instead of country/city, e.g. "destinations": [{"country": "kazakhstan", "city": "Алматы"}, ...].
+
 Request JSON: model, year, month (optional), fuel (petrol|diesel|hybrid|plug_in_hybrid|ev|lpg),
-engine_cc, power_hp (optional), motor_kw (EV, optional), mileage_km, price_krw, country, city,
+engine_cc, power_hp (needed by countries that tax or limit by hp), motor_kw (EV, optional), mileage_km, price_krw, country, city,
 shipping (container|roro).
 
 Your own costs: viral-max/tools/costs.json
@@ -37,8 +40,18 @@ GROUPS_RU = {
 BASE_RU = {"car": "цена авто", "fob": "FOB", "freight": "фрахт", "insurance": "страховка", "cif": "CIF"}
 
 
+CHECK_MARK = {"official": "", "sources": "", "estimate": " ⚠️"}
+
+
 class QuoteError(Exception):
     pass
+
+
+def check_of(obj, key="check"):
+    """official = official source, sources = 2+ open sources agree, estimate = needs confirmation."""
+    if obj.get(key):
+        return obj[key]
+    return "official" if obj.get("verified") else "estimate"
 
 
 def money(x):
@@ -50,8 +63,12 @@ def matches(when, car):
         return True
     if "fuel" in when and car["fuel"] not in when["fuel"]:
         return False
+    if ("hp_min" in when or "hp_max" in when) and not car.get("power_hp"):
+        raise QuoteError("Для расчёта нужна мощность двигателя (power_hp, л.с.)")
     checks = [("age_min", "age_max", car["age"]), ("cc_min", "cc_max", car["engine_cc"]),
-              ("price_min_usd", "price_max_usd", car["price_usd"])]
+              ("price_min_usd", "price_max_usd", car["price_usd"]),
+              ("price_min_eur", "price_max_eur", car["price_eur"]),
+              ("hp_min", "hp_max", car.get("power_hp") or 0)]
     for lo, hi, v in checks:
         if lo in when and v < when[lo]:
             return False
@@ -68,6 +85,8 @@ def evaluate(item, car, values, fx, currency, labels=BASE_RU):
     if cur not in fx:
         raise QuoteError(f"Нет курса валюты {cur} в costs.json → fx")
     t = item["type"]
+    if t == "error":
+        raise QuoteError(item["message_ru"])
     if t == "percent":
         base = sum(values[b] for b in item["base"])
         return item["rate"] * base, f"{item['rate'] * 100:g}% от ({' + '.join(labels.get(b, b) for b in item['base'])} = ${money(base)})"
@@ -116,24 +135,26 @@ def calculate(req, costs=None, profile=None, today=None):
     today = today or dt.date.today()
     made = dt.date(req["year"], req.get("month", 1), 1)
     price_usd = req["price_krw"] / fx["KRW"]
-    car = {**req, "age": (today - made).days / 365.25, "price_usd": price_usd}
+    car = {**req, "age": (today - made).days / 365.25, "price_usd": price_usd, "price_eur": price_usd * fx["EUR"]}
     if req["city"] not in profile["cities"]:
         raise QuoteError(f"Нет города {req['city']} в профиле. Есть: {', '.join(profile['cities'])}")
     city = profile["cities"][req["city"]]
     mode = req.get("shipping", "container")
 
-    lines = []  # (group, name, usd, detail, verified)
-    lines.append(("korea", "Цена автомобиля в Корее", price_usd, f"₩{money(req['price_krw'])}", True))
+    lines = []  # (group, name, usd, detail, check)
+    lines.append(("korea", "Цена автомобиля в Корее", price_usd, f"₩{money(req['price_krw'])}", "official"))
     for name, krw in costs["korea_side_krw"].items():
-        lines.append(("korea", name, krw / fx["KRW"], f"₩{money(krw)}", True))
+        lines.append(("korea", name, krw / fx["KRW"], f"₩{money(krw)}", check_of(costs, "korea_check")))
     fob = sum(l[2] for l in lines)
     freight = profile["freight_usd"][mode]
     insurance = (fob + freight) * costs["insurance_rate"]
-    lines.append(("logistics", f"Морской фрахт ({'контейнер' if mode == 'container' else 'RoRo'})", freight,
-                  profile["route_ru"], profile.get("freight_verified", False)))
-    lines.append(("logistics", "Страховка груза", insurance, f"{costs['insurance_rate'] * 100:g}% от FOB + фрахт", True))
+    freight_check = profile.get("freight_check") or ("official" if profile.get("freight_verified") else "estimate")
+    lines.append(("logistics", f"Доставка ({'контейнер' if mode == 'container' else 'RoRo'})", freight,
+                  profile["route_ru"], freight_check))
+    lines.append(("logistics", "Страховка груза", insurance, f"{costs['insurance_rate'] * 100:g}% от FOB + фрахт", "official"))
     cif = fob + freight + insurance
-    lines.append(("logistics", "Портовые сборы и выгрузка", profile["port_charges_usd"], "", profile.get("freight_verified", False)))
+    if profile["port_charges_usd"]:
+        lines.append(("logistics", "Портовые сборы и выгрузка", profile["port_charges_usd"], "", freight_check))
 
     values = {"car": price_usd, "fob": fob, "freight": freight, "insurance": insurance, "cif": cif}
     labels = {**BASE_RU, **{i["id"]: i["name_ru"].lower() for i in profile["items"]}}
@@ -141,25 +162,20 @@ def calculate(req, costs=None, profile=None, today=None):
         r = evaluate(item, car, values, fx, profile["currency"], labels)
         values[item["id"]] = r[0] if r else 0
         if r:
-            lines.append((item["group"], item["name_ru"], r[0], r[1], item.get("verified", False)))
-    lines.append(("local", f"Доставка до города {req['city']}", city["inland_usd"], city.get("days_ru", ""),
-                  city.get("verified", False)))
-    lines.append(("service", "Услуги компании (подбор, проверка, выкуп, сопровождение)", costs["service_fee_usd"], "", True))
+            lines.append((item["group"], item["name_ru"], r[0], r[1], check_of(item)))
+    if city["inland_usd"]:
+        lines.append(("local", f"Доставка до города {req['city']}", city["inland_usd"], city.get("days_ru", ""),
+                      check_of(city)))
+    lines.append(("service", "Услуги компании (подбор, проверка, выкуп, сопровождение)", costs["service_fee_usd"], "",
+                  check_of(costs, "service_check")))
 
     total = sum(l[2] for l in lines)
     return {"car": car, "profile": profile, "costs": costs, "lines": lines, "fob": fob, "cif": cif,
             "total": total, "today": today}
 
 
-def render_ru(q):
-    c, p, costs = q["car"], q["profile"], q["costs"]
-    fx, cur = costs["fx"], p["currency"]
-    valid = q["today"] + dt.timedelta(days=costs.get("quote_valid_days", 7))
-    unverified = [l for l in q["lines"] if not l[4]]
-    out = [f"# Расчёт стоимости: {c['model']} → {c['city']}", "",
-           f"**Дата расчёта:** {q['today']:%d.%m.%Y} · **Действителен до:** {valid:%d.%m.%Y} · "
-           f"**Страна:** {p['country_ru']}", ""]
-    out += ["## Автомобиль", "", "| Параметр | Значение |", "|---|---|",
+def car_table(c):
+    return ["## Автомобиль", "", "| Параметр | Значение |", "|---|---|",
             f"| Модель | {c['model']} |",
             f"| Год выпуска | {c['year']}{'/' + str(c['month']).zfill(2) if c.get('month') else ''} (возраст {c['age']:.1f} г.) |",
             f"| Топливо | {FUEL_RU.get(c['fuel'], c['fuel'])} |",
@@ -167,39 +183,116 @@ def render_ru(q):
             f"| Мощность | {c.get('power_hp') or '—'} л.с. |",
             f"| Пробег | {money(c['mileage_km'])} км |" if c.get("mileage_km") else "| Пробег | — |",
             f"| Цена в Корее | ₩{money(c['price_krw'])} (${money(c['price_usd'])}) |", ""]
+
+
+def local_total(q):
+    p, fx = q["profile"], q["costs"]["fx"]
+    cur = p["currency"]
+    if cur == "USD" or cur not in fx:
+        return None
+    return f"{money(q['total'] * fx[cur])} {p.get('currency_symbol', cur)}"
+
+
+def render_ru(q, standalone=True):
+    c, p, costs = q["car"], q["profile"], q["costs"]
+    fx = costs["fx"]
+    valid = q["today"] + dt.timedelta(days=costs.get("quote_valid_days", 7))
+    estimates = [l for l in q["lines"] if l[4] == "estimate"]
+    sourced = [l for l in q["lines"] if l[4] == "sources"]
+    if standalone:
+        out = [f"# Расчёт стоимости: {c['model']} → {c['city']}", "",
+               f"**Дата расчёта:** {q['today']:%d.%m.%Y} · **Действителен до:** {valid:%d.%m.%Y} · "
+               f"**Страна:** {p['country_ru']}", ""] + car_table(c)
+    else:
+        out = []
     for group, title in GROUPS_RU.items():
         rows = [l for l in q["lines"] if l[0] == group]
         if not rows:
             continue
         out += [f"## {title}", "", "| № | Статья | Как считается | Сумма, $ |", "|---|---|---|---|"]
-        for i, (_, name, usd, detail, ok) in enumerate(rows, 1):
-            out.append(f"| {i} | {name}{'' if ok else ' ⚠️'} | {detail} | {money(usd)} |")
+        for i, (_, name, usd, detail, chk) in enumerate(rows, 1):
+            out.append(f"| {i} | {name}{CHECK_MARK[chk]} | {detail} | {money(usd)} |")
         out += [f"| | **Итого по разделу** | | **{money(sum(r[2] for r in rows))}** |", ""]
     out += ["## ИТОГО", "", "| | Сумма |", "|---|---|",
             f"| Цена FOB Корея | ${money(q['fob'])} |",
             f"| Цена CIF порт назначения | ${money(q['cif'])} |",
             f"| **ИТОГО с доставкой в {c['city']}** | **${money(q['total'])}** |"]
-    if cur != "USD" and cur in fx:
-        out.append(f"| **В местной валюте** | **{money(q['total'] * fx[cur])} {cur}** |")
+    if local_total(q):
+        out.append(f"| **В местной валюте** | **{local_total(q)}** |")
     out += [f"| В вонах | ₩{money(q['total'] * fx['KRW'])} |", ""]
-    out += ["## Сроки", "", f"- Маршрут: {p['route_ru']}", f"- Морская доставка: {p['transit_days_ru']}",
+    out += ["## Сроки", "", f"- Маршрут: {p['route_ru']}", f"- Доставка из Кореи: {p['transit_days_ru']}",
             f"- Доставка до города: {p['cities'][c['city']].get('days_ru', '—')}", ""]
     if p.get("documents_ru"):
         out += ["## Документы", ""] + [f"- {d}" for d in p["documents_ru"]] + [""]
     if p.get("restrictions_ru"):
         out += ["## Ограничения и важно знать", ""] + [f"- {r}" for r in p["restrictions_ru"]] + [""]
     out += ["## Точность расчёта", ""]
-    if unverified:
-        out += ["> ⚠️ **Требует подтверждения:** " + ", ".join(l[1] for l in unverified) +
-                ". Эти суммы взяты из открытых источников или оценки и должны быть подтверждены перед оплатой.", ""]
-    else:
+    if estimates:
+        out += ["> ⚠️ **Оценка, требует подтверждения:** " + ", ".join(l[1] for l in estimates) +
+                ". Уточняется у перевозчика или брокера перед оплатой.", ""]
+    if sourced:
+        out += ["- По данным нескольких открытых источников (калькуляторы, СМИ): " + ", ".join(l[1] for l in sourced) + ".", ""]
+    if not estimates and not sourced:
         out += ["> ✅ Все статьи подтверждены по официальным источникам.", ""]
     fx_list = ", ".join(f"1 USD = {money(v) if v >= 100 else f'{v:g}'} {k}" for k, v in fx.items() if k != "USD")
+    if not standalone:
+        out = [l.replace("## ", "### ", 1) if l.startswith("## ") else l for l in out]
     out += [f"- Курсы валют на {costs.get('fx_date', '—')}: {fx_list}",
             f"- Правила страны проверены: {p.get('verified_on', '—')}",
             "- Окончательная сумма таможенных платежей определяется таможней страны назначения в день оформления.", ""]
     if p.get("sources"):
         out += ["**Источники:**", ""] + [f"- {s}" for s in p["sources"]] + [""]
+    return "\n".join(out)
+
+
+def compare(req):
+    """Run the quote for every destination; failures become a reason instead of stopping the rest."""
+    results = []
+    for d in req["destinations"]:
+        r = {k: v for k, v in req.items() if k != "destinations"}
+        r.update(d)
+        try:
+            results.append((d, calculate(r), None))
+        except QuoteError as e:
+            results.append((d, None, str(e)))
+    return results
+
+
+def caption_ru(results, today):
+    lines = [f"💰 Цена под ключ из Кореи (расчёт на {today:%d.%m.%Y}):"]
+    for d, q, err in results:
+        flag = ""
+        path = TOOLS / "countries" / f"{d['country']}.json"
+        if path.exists():
+            flag = json.loads(path.read_text()).get("flag", "")
+        if err:
+            lines.append(f"{flag} {d['city']}: ❌ {err.split(':')[0].lower()}")
+            continue
+        approx = "≈ " if any(l[4] == "estimate" for l in q["lines"]) else ""
+        loc = local_total(q)
+        lines.append(f"{flag} {d['city']}: {approx}${money(q['total'])}" + (f" ({loc})" if loc else ""))
+    lines.append("Точный расчёт под твою машину — пиши в директ 📩")
+    return lines
+
+
+def render_compare_ru(req, results):
+    ok = [(d, q) for d, q, e in results if q]
+    if not ok:
+        raise QuoteError("Ни одна страна не рассчитана: " + "; ".join(e for _, _, e in results))
+    today, c = ok[0][1]["today"], ok[0][1]["car"]
+    out = [f"# Сравнение: {req['model']} — {len(results)} страны", "",
+           f"**Дата расчёта:** {today:%d.%m.%Y}", ""] + car_table(c)
+    out += ["## Итог по странам", "", "| Страна | Город | Итого, $ | В местной валюте | Точность |", "|---|---|---|---|---|"]
+    for d, q, err in results:
+        if err:
+            out.append(f"| {d['country']} | {d['city']} | — | — | ❌ {err} |")
+        else:
+            n_est = sum(1 for l in q["lines"] if l[4] == "estimate")
+            out.append(f"| {q['profile']['country_ru']} | {d['city']} | **{money(q['total'])}** | {local_total(q) or '—'} | "
+                       f"{'⚠️ оценок: ' + str(n_est) if n_est else '✅'} |")
+    out += ["", "## Готовый текст для описания видео", "", "```"] + caption_ru(results, today) + ["```", ""]
+    for d, q in ok:
+        out += [f"## {q['profile']['country_ru']}, {d['city']}", ""] + render_ru(q, standalone=False).split("\n")
     return "\n".join(out)
 
 
@@ -217,14 +310,22 @@ def main():
     a = ap.parse_args()
     req = json.loads(Path(a.request).read_text())
     try:
-        q = calculate(req)
+        if "destinations" in req:
+            results = compare(req)
+            text = render_compare_ru(req, results)
+            md = next_path(req["model"], "сравнение")
+            today = next(q["today"] for _, q, _ in results if q)
+            print("\n".join(caption_ru(results, today)))
+        else:
+            q = calculate(req)
+            text = render_ru(q)
+            md = next_path(req["model"], req["city"])
+            for g, name, usd, _, chk in q["lines"]:
+                print(f"{'⚠ ' if chk == 'estimate' else ''}{name:<55}${money(usd):>9}")
+            print(f"{'ИТОГО':<55}${money(q['total']):>9}")
     except QuoteError as e:
         sys.exit(f"ОШИБКА: {e}")
-    md = next_path(req["model"], req["city"])
-    md.write_text(render_ru(q))
-    for g, name, usd, _, ok in q["lines"]:
-        print(f"{'' if ok else '⚠ '}{name:<55}${money(usd):>9}")
-    print(f"{'ИТОГО':<55}${money(q['total']):>9}")
+    md.write_text(text)
     print(md)
     if not a.no_pdf:
         subprocess.run([sys.executable, str(TOOLS / "make_pdf.py"), str(md)], check=True)

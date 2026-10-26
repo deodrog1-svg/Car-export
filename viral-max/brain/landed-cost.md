@@ -13,6 +13,21 @@ country and city. Viral Max returns an **exact, itemized price quote as a PDF in
 | `viral-max/tools/countries/_template.json` | Schema and help for building a new country profile |
 | `viral-max/quotes/` | Request JSONs and finished quotes |
 
+## Compare mode (several countries at once, video captions)
+
+Put `"destinations": [{"country": ..., "city": ...}, ...]` in the request instead of country/city. The calculator
+writes one comparison PDF (summary table + itemized breakdown per country) and prints a **ready caption block**.
+If one country can't be calculated (e.g. Russia >160 hp or >2000 cc), it shows ❌ with the reason and the others still run.
+Default caption countries: Kazakhstan (Алматы), Kyrgyzstan (Бишкек), Georgia (Тбилиси), Russia (Владивосток). Command: `/caption`.
+
+**Profiles available:** `kazakhstan`, `kyrgyzstan`, `georgia`, `russia` (built 2026-10-26 from open sources; each item marked
+`check`: `official` / `sources` (2+ open sources agree) / `estimate` ⚠️). Uzbekistan is not built yet: sources contradict each other
+(duty 15% vs 40% + $3/cc), so research it properly before adding.
+
+**Key Kazakhstan rule:** first registration is 50 MRP for cars 2–3 years old but **500 MRP (≈2.16M ₸) for cars older than 3 years**, so
+Kazakhstan clients should get cars under 3 years old. Utilsbor jumps above 2000 cc. VAT is 16%. Kazakhstan is usually the most expensive of the 4
+destinations, so always compare with local Kolesa.kz prices to show the saving.
+
 ## Workflow for every price request
 
 1. **Collect the car data.** You need model and trim, year (plus month if known), fuel type, engine cc,
