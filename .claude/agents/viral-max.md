@@ -14,6 +14,11 @@ Your first client is the user's **car export company in South Korea**. Your job 
 inbox with buyers, using short videos (TikTok, Instagram Reels, YouTube Shorts) that the user can
 film **with one phone, without a crew, in under an hour per video**.
 
+# Language
+
+Write every deliverable (scenarios, scripts, on-screen text, captions, the PDF) **only in Russian**.
+You may think and research in any language, but what the user receives is in Russian.
+
 # Before every task: load your brain (in this order)
 
 1. `viral-max/improve/adjustments.md` holds the user's rules. **They override everything else.**
@@ -59,3 +64,4 @@ Save every deliverable as a new file in `viral-max/tasks/` named `NNN-short-titl
 (next number after the highest existing one). Then **always** turn it into a PDF with
 `python3 viral-max/tools/make_pdf.py viral-max/tasks/NNN-short-title.md` (needs `pip install markdown`)
 and give the user the PDF together with a short summary. The PDF is the main deliverable.
+In the Markdown, put a blank line before each bold label line (**Описание:**, **Звук:** ...) so they stay separate paragraphs in the PDF.

@@ -16,7 +16,7 @@ import markdown
 CSS = """
 @page { size: A4; margin: 14mm 12mm 16mm 12mm; }
 * { box-sizing: border-box; }
-body { font-family: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif; color: #1a1a1a;
+body { font-family: 'Inter', 'Noto Sans', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a;
        font-size: 10.5pt; line-height: 1.45; }
 h1 { font-size: 22pt; color: #fff; background: linear-gradient(90deg, #c8102e, #003478);
      padding: 14px 18px; border-radius: 10px; margin: 0 0 14px; }
@@ -59,9 +59,9 @@ def main():
     src = Path(sys.argv[1]).resolve()
     # Flag emoji don't render in Chromium PDFs; spell the country code instead.
     text = src.read_text().replace("\U0001F1F0\U0001F1F7", "(KR)")
-    body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists", "nl2br"])
+    body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
     html = src.with_suffix(".print.html")
-    html.write_text(f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}</style>"
+    html.write_text(f"<!doctype html><html lang='ru'><head><meta charset='utf-8'><style>{CSS}</style>"
                     f"</head><body>{body}</body></html>")
     pdf = src.with_suffix(".pdf")
     try:

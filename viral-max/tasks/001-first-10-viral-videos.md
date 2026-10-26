@@ -1,278 +1,282 @@
-# Task 001: First 10 Viral Videos for the Korea Car Export Company
+# Задача 001: Первые 10 вирусных видео для компании по экспорту авто из Кореи
 
-**By Viral Max, 2026-10-26**
+**Автор: Viral Max, 26.10.2026**
 
-**The strategy in one line:** make *you* the "Korea Car Guy", the person who shows the world what
-Koreans hide: how cheap and how clean cars are here, and exactly what it costs to get one home.
-Every video is filmed on **one phone**, mostly **by you alone**, in places you already go
-(dealer lots, auctions, the port, the street).
+**Стратегия в одной строке:** сделать *тебя* «Тем самым парнем с авто из Кореи», который показывает миру то,
+что корейцы скрывают: насколько дешёвые и чистые здесь машины и сколько точно стоит пригнать такую домой.
+Каждое видео снимается **на один телефон**, в основном **тобой одним**, в местах, где ты и так бываешь
+(авторынки, аукционы, порт, улица).
 
-> **Before filming:** fill in your client countries in `viral-max/teach/lessons.md` and your real costs in
-> `viral-max/tools/destinations.json`. Every price on screen should come from
-> `python3 viral-max/tools/landed_cost.py` for that exact car. Replace `[CITY]`, `[COUNTRY]`, and the
-> `₩ / $` numbers below with real ones from the day you film. **Never show fake prices.**
+> **Перед съёмкой:** впиши страны своих клиентов в `viral-max/teach/lessons.md`, а реальные расходы в
+> `viral-max/tools/destinations.json`. Каждая цена в кадре должна быть рассчитана через
+> `python3 viral-max/tools/landed_cost.py` для конкретной машины. Замени `[ГОРОД]`, `[СТРАНА]` и
+> цифры `₩ / $` ниже на реальные в день съёмки. **Никогда не показывай фейковые цены.**
 
-**Gear:** phone (4K 30fps, vertical 9:16), a clip-on wireless mic (about $20–40), a small phone gimbal (optional).
-**Edit in:** CapCut (auto-captions, trending sounds, templates).
-**Post to:** TikTok, Instagram Reels, and YouTube Shorts, same video with a different caption.
+**Техника:** телефон (4K 30fps, вертикально 9:16), петличка-беспроводной микрофон (около $20–40), небольшой стабилизатор (по желанию).
+
+**Монтаж:** CapCut (автосубтитры, трендовые звуки, шаблоны).
+
+**Публикация:** TikTok, Instagram Reels и YouTube Shorts, одно и то же видео, разное описание.
 
 ---
 
-## Shooting-day checklist (film all 10 in 2–3 days)
+## Чек-лист съёмочного дня (все 10 видео за 2–3 дня)
 
-| Location | Videos you can shoot there |
+| Локация | Какие видео там снимать |
 |---|---|
-| Used-car dealer complex (e.g. Incheon Songdo/Ongnam, Seoul Janganpyeong, Suwon) | #1, #2, #4, #5, #6, #9 |
-| Car auction (Lotte, Hyundai Glovis, K Car) | #3 |
-| Port / container yard (Incheon) | #7, #8 |
-| Street / parking lot / your office | #10, #9 |
+| Авторынок / комплекс дилеров (напр. Инчхон Сондо/Оннам, Сеул Чанъанпён, Сувон) | №1, №2, №4, №5, №6, №9 |
+| Автоаукцион (Lotte, Hyundai Glovis, K Car) | №3 |
+| Порт / контейнерный терминал (Инчхон) | №7, №8 |
+| Улица / парковка / твой офис | №10, №9 |
 
-**B-roll to always collect (5 seconds each, you'll reuse it forever):** rows of cars from above, key in
-hand, engine start, odometer close-up, Korean Carhistory report on a phone, door closing, seat
-ventilation button, container doors closing, ship horn, a Korean street at night with cars, and you
-walking toward the camera.
+**Фоновые кадры, которые нужно снимать всегда (по 5 секунд, будешь использовать их всегда):** ряды машин сверху,
+ключ в руке, запуск двигателя, крупно одометр, корейский отчёт Carhistory на телефоне, хлопок двери,
+кнопка вентиляции сиденья, закрытие дверей контейнера, гудок корабля, корейская улица ночью с машинами,
+ты идёшь в камеру.
 
 ---
 
-## 🎬 VIDEO 1: "Guess the Price" (your signature series)
+## 🎬 ВИДЕО 1: «Угадай цену» (твоя фирменная рубрика)
 
-**Length:** 20–25s | **People:** just you | **Filming time:** 10 min per episode | **Series potential:** ∞
+**Длина:** 20–25 сек | **Люди:** только ты | **Время съёмки:** 10 мин на выпуск | **Потенциал серии:** бесконечный
 
-**Why it goes viral:** guessing games make people comment, comments push the video, and the price
-reveal at the end keeps people watching to 100%. People argue about the price in the comments, which
-gives you free reach.
+**Почему залетит:** игра «угадай» заставляет комментировать, комментарии толкают видео, а раскрытие цены
+в конце держит до 100% просмотра. Люди спорят о цене в комментах, и это бесплатный охват.
 
-**Shot list and script:**
+**Раскадровка и текст:**
 
-| Time | Shot | You say (voiceover or on camera) | On-screen text |
+| Время | Кадр | Ты говоришь (закадр или в камеру) | Текст на экране |
 |---|---|---|---|
-| 0–1s | Fast push-in toward a shiny Palisade / Carnival at a lot | "Guess how much this costs in Korea." | **GUESS THE PRICE 🇰🇷 #1** |
-| 1–5s | Quick cuts: wheels, interior, panoramic roof, odometer | "2022, 38,000 km, full options, no accidents." | 2022 · 38,000 km · 0 accidents |
-| 5–10s | Show the Carhistory report on a phone | "Here's the official accident history. Clean." | ✅ Official history: CLEAN |
-| 10–14s | Close-up of your face | "Write your guess in the comments. In your country it costs around $___." | 🤔 Your guess? |
-| 14–18s | Turn the price tag / phone screen toward the camera | "In Korea? ₩___. That's $___." | **KOREA: $___** |
-| 18–22s | Point to camera | "Delivered to [CITY] with everything included? $___. Comment PRICE and I'll send you the full breakdown." | 📦 Delivered to [CITY]: $___ · Comment **PRICE** |
+| 0–1с | Быстрый наезд на блестящий Palisade / Carnival на площадке | «Угадай, сколько стоит эта машина в Корее.» | **УГАДАЙ ЦЕНУ 🇰🇷 #1** |
+| 1–5с | Быстрые склейки: диски, салон, панорама, одометр | «2022 год, 38 000 км, полная комплектация, без ДТП.» | 2022 · 38 000 км · 0 ДТП |
+| 5–10с | Показываешь отчёт Carhistory на телефоне | «Вот официальная история ДТП. Чистая.» | ✅ Официальная история: ЧИСТАЯ |
+| 10–14с | Крупно твоё лицо | «Пиши свою версию в комментариях. У вас она стоит примерно $___.» | 🤔 Твоя версия? |
+| 14–18с | Разворачиваешь ценник / экран телефона в камеру | «В Корее? ₩___. Это $___.» | **КОРЕЯ: $___** |
+| 18–22с | Показываешь пальцем в камеру | «С доставкой в [ГОРОД] и всеми расходами: $___. Напиши ЦЕНА, и я пришлю полный расчёт.» | 📦 С доставкой в [ГОРОД]: $___ · Пиши **ЦЕНА** |
 
-**Caption:** Guess the price before the end 👀 Korea vs [COUNTRY] #korea #carsfromkorea #palisade #carexport #guesstheprice
-**Sound:** trending suspense sound at low volume plus real lot sounds.
-**Pro tip:** in the next episode, reply to the comment that guessed closest. It builds community.
+**Описание:** Угадай цену до конца видео 👀 Корея vs [СТРАНА] #автоизкореи #корея #palisade #пригонавто #угадайцену
+
+**Звук:** трендовый «саспенс»-звук на низкой громкости плюс живые звуки площадки.
+
+**Фишка:** в следующем выпуске ответь на комментарий того, кто угадал точнее всех. Это строит сообщество.
 
 ---
 
-## 🎬 VIDEO 2: "The Receipt" (where the money goes)
+## 🎬 ВИДЕО 2: «Чек» (куда уходят деньги)
 
-**Length:** 25–30s | **People:** just you | **Filming time:** 15 min
+**Длина:** 25–30 сек | **Люди:** только ты | **Время съёмки:** 15 мин
 
-**Why it goes viral:** people *save* this (saves are a strong ranking signal), and it destroys the #1
-objection ("import is complicated and expensive"). Transparency builds trust.
+**Почему залетит:** такое *сохраняют* (сохранения сильно влияют на продвижение), и это убивает главное
+возражение («пригон — это сложно и дорого»). Прозрачность строит доверие.
 
-**Shot list and script:**
+**Раскадровка и текст:**
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–2s | You holding a long paper receipt that unrolls to the floor (print it from `landed_cost.py`) | "This is EVERYTHING it costs to bring this car from Korea to [CITY]." | **REAL COST: KOREA ➜ [CITY]** |
-| 2–6s | Car behind you | "Car price in Korea: $___" | line 1 highlights |
-| 6–10s | Finger slides down the receipt | "Documents and truck to the port: $___. Ship: $___." | lines 2–3 |
-| 10–16s | Keep sliding | "Customs, taxes, certification: $___. Delivery to your city: $___." | lines 4–6 |
-| 16–20s | Tap the total | "Total: $___." | **TOTAL: $___** |
-| 20–25s | Show the same car's local market price on your phone (screenshot of a local listing site) | "Same car in [COUNTRY]: $___. You save $___." | 💰 **YOU SAVE $___** |
-| 25–28s | Point | "Comment your city and I'll calculate yours." | Comment your **CITY** 👇 |
+| 0–2с | Ты держишь длинный бумажный чек, он разворачивается до пола (распечатай из `landed_cost.py`) | «Это ВСЁ, что стоит пригнать эту машину из Кореи в [ГОРОД].» | **РЕАЛЬНАЯ ЦЕНА: КОРЕЯ ➜ [ГОРОД]** |
+| 2–6с | Машина у тебя за спиной | «Цена машины в Корее: $___» | подсвечивается строка 1 |
+| 6–10с | Палец ведёт вниз по чеку | «Документы и доставка до порта: $___. Корабль: $___.» | строки 2–3 |
+| 10–16с | Продолжаешь вести | «Растаможка, налоги, сертификация: $___. Доставка до твоего города: $___.» | строки 4–6 |
+| 16–20с | Стучишь по итоговой сумме | «Итого: $___.» | **ИТОГО: $___** |
+| 20–25с | Показываешь цену такой же машины у вас на телефоне (скрин местного сайта объявлений) | «Такая же машина в [СТРАНА]: $___. Экономия $___.» | 💰 **ЭКОНОМИЯ $___** |
+| 25–28с | Указываешь в камеру | «Напиши свой город, и я посчитаю для тебя.» | Пиши свой **ГОРОД** 👇 |
 
-**Caption:** Every dollar, no hidden fees. Save this before you buy a car 📌
-**Series:** one receipt per popular model and country.
+**Описание:** Каждый доллар, без скрытых платежей. Сохрани, пока не купил машину 📌
+
+**Серия:** один чек на каждую популярную модель и страну.
 
 ---
 
-## 🎬 VIDEO 3: "10 Seconds to Bid" (Korean car auction POV)
+## 🎬 ВИДЕО 3: «10 секунд на ставку» (корейский автоаукцион от первого лица)
 
-**Length:** 20s | **People:** just you | **Filming time:** 20 min at an auction (check filming rules, film your own screen or the hall if allowed)
+**Длина:** 20 сек | **Люди:** только ты | **Время съёмки:** 20 мин на аукционе (уточни правила съёмки, снимай свой экран или зал, если разрешено)
 
-**Why it goes viral:** pressure, countdown, and an exotic world most people never see. Wins and losses are dramatic.
+**Почему залетит:** давление, обратный отсчёт и экзотический мир, который мало кто видел. Победы и проигрыши — это драма.
 
-**Shot list and script:**
+**Раскадровка и текст:**
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–1s | Auction screen / hall, beeping | "I have 10 seconds to buy this Sorento for my client." | ⏱️ **10 SECONDS** |
-| 1–6s | Car photos on screen, fast cuts | "Client in [CITY], budget $___. Market says ₩___." | Budget: $___ |
-| 6–12s | Your finger hovering, price climbing (real-time) | "Come on, come on…" (heartbeat sound) | ₩ climbing… |
-| 12–15s | The win/lose moment | "WON IT!" / "Too expensive, I walk away. Never overpay for a client." | ✅ WON / ❌ TOO HIGH |
-| 15–20s | Your face, relieved | "Want me to hunt one for you? Comment AUCTION." | Comment **AUCTION** |
+| 0–1с | Экран аукциона / зал, пиканье | «У меня 10 секунд, чтобы купить этот Sorento для клиента.» | ⏱️ **10 СЕКУНД** |
+| 1–6с | Фото машины на экране, быстрые склейки | «Клиент в [ГОРОД], бюджет $___. Рынок говорит ₩___.» | Бюджет: $___ |
+| 6–12с | Палец над кнопкой, цена растёт (в реальном времени) | «Давай, давай…» (звук сердцебиения) | ₩ растёт… |
+| 12–15с | Момент победы/проигрыша | «ВЗЯЛ!» / «Слишком дорого, ухожу. Никогда не переплачиваю за клиента.» | ✅ ВЗЯЛ / ❌ ДОРОГО |
+| 15–20с | Твоё лицо, облегчение | «Хочешь, найду такую для тебя? Напиши АУКЦИОН.» | Пиши **АУКЦИОН** |
 
-**Pro tip:** losing videos work as well as winning ones. Walking away shows you protect clients' money.
+**Фишка:** видео, где ты проиграл, работают так же хорошо, как победные. Ты уходишь, значит, бережёшь деньги клиента.
 
 ---
 
-## 🎬 VIDEO 4: "Korean Grandpa's Car" (why Korean used cars look new)
+## 🎬 ВИДЕО 4: «Машина корейского дедушки» (почему корейские б/у выглядят как новые)
 
-**Length:** 20–25s | **People:** just you | **Filming time:** 10 min
+**Длина:** 20–25 сек | **Люди:** только ты | **Время съёмки:** 10 мин
 
-**Why it goes viral:** it breaks a belief ("used = destroyed"). Viewers can't believe a 4-year-old car looks this new.
+**Почему залетит:** ломает убеждение («б/у = убитая»). Зрители не верят, что 4-летняя машина может так выглядеть.
 
-**Script:**
+**Текст:**
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–2s | Peel the plastic still on the seat / show a spotless trunk | "This car is 4 years old. In Korea, this is USED." | **"USED" in Korea 😳** |
-| 2–8s | Odometer, untouched pedals, seat, engine bay | "14,000 km. One owner. Driven to church on Sundays." (only if true. Say what the history shows) | 14,000 km · 1 owner |
-| 8–14s | Carhistory report on phone | "Korea has an official database. Every accident, every owner. You can't hide anything." | 📄 Official history |
-| 14–20s | Wide shot of the dealer complex, thousands of cars | "And there are thousands like this. Koreans change cars every 3–4 years." | Thousands like this 👇 |
-| 20–24s | You to camera | "Want one? Comment KOREA." | Comment **KOREA** |
+| 0–2с | Снимаешь плёнку, которая ещё на сиденье / показываешь идеальный багажник | «Этой машине 4 года. В Корее это считается Б/У.» | **«Б/У» в Корее 😳** |
+| 2–8с | Одометр, нетронутые педали, сиденье, моторный отсек | «14 000 км. Один владелец. Ездил в церковь по воскресеньям.» (только если правда. Говори то, что показывает история) | 14 000 км · 1 владелец |
+| 8–14с | Отчёт Carhistory на телефоне | «В Корее есть официальная база. Каждое ДТП, каждый владелец. Скрыть ничего нельзя.» | 📄 Официальная история |
+| 14–20с | Общий план авторынка, тысячи машин | «И таких здесь тысячи. Корейцы меняют машины каждые 3–4 года.» | Таких тысячи 👇 |
+| 20–24с | Ты в камеру | «Хочешь такую? Напиши КОРЕЯ.» | Пиши **КОРЕЯ** |
 
 ---
 
-## 🎬 VIDEO 5: "Your Budget, Korea's Answer"
+## 🎬 ВИДЕО 5: «Твой бюджет — ответ Кореи»
 
-**Length:** 30s | **People:** just you | **Filming time:** 20 min at one big lot
+**Длина:** 30 сек | **Люди:** только ты | **Время съёмки:** 20 мин на одной большой площадке
 
-**Why it goes viral:** everyone instantly checks their own budget. It's personal, watched to the end, and gets saved.
+**Почему залетит:** каждый сразу примеряет свой бюджет. Это лично, досматривают до конца и сохраняют.
 
-**Script:** walk past 4 cars and stop at each one.
+**Текст:** идёшь мимо 4 машин и останавливаешься у каждой.
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–2s | You walking, cars around | "What does Korea give you for your money? Delivered to [CITY]." | **YOUR BUDGET = ?** |
-| 2–8s | Kia Morning / Ray / Avante | "$10,000: …" | **$10K** ➜ model, year, km |
-| 8–14s | Tucson / Sportage / K5 | "$20,000: …" | **$20K** ➜ … |
-| 14–20s | Sorento Hybrid / Santa Fe / Carnival | "$30,000: …" | **$30K** ➜ … |
-| 20–26s | Genesis GV80 / Palisade top trim | "$45,000: a Korean Mercedes." | **$45K** ➜ GV80 👑 |
-| 26–30s | You to camera | "What's your budget? Comment it, and I'll find your car." | Comment your **BUDGET** |
+| 0–2с | Ты идёшь, вокруг машины | «Что Корея даёт за твои деньги? С доставкой в [ГОРОД].» | **ТВОЙ БЮДЖЕТ = ?** |
+| 2–8с | Kia Morning / Ray / Avante | «$10 000: …» | **$10K** ➜ модель, год, пробег |
+| 8–14с | Tucson / Sportage / K5 | «$20 000: …» | **$20K** ➜ … |
+| 14–20с | Sorento Hybrid / Santa Fe / Carnival | «$30 000: …» | **$30K** ➜ … |
+| 20–26с | Genesis GV80 / Palisade в топе | «$45 000: корейский Мерседес.» | **$45K** ➜ GV80 👑 |
+| 26–30с | Ты в камеру | «Какой у тебя бюджет? Напиши, и я найду тебе машину.» | Пиши свой **БЮДЖЕТ** |
 
-All prices must be **delivered prices** from `landed_cost.py`.
+Все цены должны быть **с доставкой**, рассчитанные через `landed_cost.py`.
 
 ---
 
-## 🎬 VIDEO 6: "3 Traps When Buying a Car from Korea" (authority and fear)
+## 🎬 ВИДЕО 6: «3 ловушки при покупке авто из Кореи» (экспертность и страх)
 
-**Length:** 30–35s | **People:** just you | **Filming time:** 15 min
+**Длина:** 30–35 сек | **Люди:** только ты | **Время съёмки:** 15 мин
 
-**Why it goes viral:** fear gets shares ("send this to your brother who's importing a car"), and it
-positions you as the honest expert.
+**Почему залетит:** страх заставляет делиться («скинь брату, который хочет пригнать машину»), и это
+делает тебя честным экспертом.
 
-**Script:**
+**Текст:**
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–2s | You, serious, hand up to stop | "Don't buy a car from Korea until you watch this." | ⚠️ **3 TRAPS** |
-| 2–10s | Show a car with repainted panels and a paint thickness gauge (about $30 tool) | "Trap 1: 'no accidents', but the paint gauge says repainted. Always measure." | Trap 1: hidden repaint |
-| 10–18s | Water lines / rust under seats (or a photo) | "Trap 2: flood cars. Check under the carpet and the seat rails." | Trap 2: flood car 🌊 |
-| 18–26s | Carhistory report: owners, insurance payouts | "Trap 3: no official history check. In Korea it costs a few dollars. If the seller refuses, run." | Trap 3: no history check |
-| 26–33s | You | "I check all three before every car. Comment CHECK and I'll check any Korean car for you." | Comment **CHECK** |
+| 0–2с | Ты, серьёзно, рука вперёд «стоп» | «Не покупай машину из Кореи, пока не посмотришь это.» | ⚠️ **3 ЛОВУШКИ** |
+| 2–10с | Машина с перекрашенными деталями и толщиномер (около $30) | «Ловушка 1: «без ДТП», а толщиномер показывает перекрас. Всегда меряй.» | Ловушка 1: скрытый перекрас |
+| 10–18с | Следы воды / ржавчина под сиденьями (или фото) | «Ловушка 2: утопленники. Проверяй под ковриком и полозья сидений.» | Ловушка 2: утопленник 🌊 |
+| 18–26с | Отчёт Carhistory: владельцы, страховые выплаты | «Ловушка 3: нет проверки официальной истории. В Корее она стоит пару долларов. Продавец отказывает? Беги.» | Ловушка 3: нет проверки истории |
+| 26–33с | Ты | «Я проверяю все три перед каждой машиной. Напиши ПРОВЕРКА, и я проверю любую корейскую машину для тебя.» | Пиши **ПРОВЕРКА** |
 
 ---
 
-## 🎬 VIDEO 7: "POV: Your Car Is Leaving Korea" (satisfying ASMR)
+## 🎬 ВИДЕО 7: «POV: твоя машина уезжает из Кореи» (залипательное ASMR)
 
-**Length:** 15–20s | **People:** just you (filming) | **Filming time:** 30 min at the port/container yard during a loading
+**Длина:** 15–20 сек | **Люди:** только ты (снимаешь) | **Время съёмки:** 30 мин в порту/на терминале во время погрузки
 
-**Why it goes viral:** satisfying process videos (loading, strapping, doors closing) loop endlessly,
-and the "POV" format is evergreen.
+**Почему залетит:** «залипательные» процессы (погрузка, крепление, закрытие дверей) смотрят по кругу,
+а формат «POV» вечный.
 
-**Script:** almost no talking. Natural sounds plus a soft trending sound.
+**Текст:** почти без слов. Живые звуки плюс тихий трендовый звук.
 
-| Time | Shot | On-screen |
+| Время | Кадр | На экране |
 |---|---|---|
-| 0–2s | Car slowly driving into the container | **POV: your car is leaving Korea 🇰🇷** |
-| 2–6s | Close-ups: wheel straps tightened, ratchet clicks | 🔒 strapped in |
-| 6–10s | Second car lifted on the rack above (4 cars per 40ft) | 4 cars · 1 container |
-| 10–13s | Container doors close, seal clicked | 🔐 sealed |
-| 13–17s | Wide shot: the container on a truck/crane, ship in background | Next stop: [CITY] 🚢 |
-| 17–19s | Text only | Want yours on the next one? Comment **SHIP** |
+| 0–2с | Машина медленно заезжает в контейнер | **POV: твоя машина уезжает из Кореи 🇰🇷** |
+| 2–6с | Крупно: затягивают ремни на колёсах, щелчки трещотки | 🔒 закреплена |
+| 6–10с | Вторую машину поднимают на стеллаж сверху (4 машины в 40-футовом) | 4 машины · 1 контейнер |
+| 10–13с | Закрываются двери контейнера, щёлкает пломба | 🔐 опломбирован |
+| 13–17с | Общий план: контейнер на тягаче/кране, на фоне корабль | Следующая остановка: [ГОРОД] 🚢 |
+| 17–19с | Только текст | Хочешь свою в следующий? Пиши **КОРАБЛЬ** |
 
-**Caption:** Next container leaves [date]. Want a spot? 🚢
-
----
-
-## 🎬 VIDEO 8: "Delivering [Client]'s Car: Day 1 / Day 30" (journey series)
-
-**Length:** 20–30s per part | **People:** you plus the client on video call (with permission) | **Filming time:** 5–10 min per step
-
-**Why it goes viral:** serialized stories bring followers back ("Part 2 when?"). It's real social proof
-from a real client and a real car. It's the strongest trust video you can make.
-
-**Parts** (film whenever it happens, 5–7 parts):
-1. **"I'm buying a car for a stranger in [CITY]"**: show the car, voice note or video call with the client (face or voice only, with permission). On-screen: *Budget $___ · Part 1*.
-2. **Inspection**: paint gauge, history report, test drive. *"Would you buy it? I'm sending it."*
-3. **Paperwork**: show the export deregistration doc being stamped (blur personal info). *"Car officially leaves the Korean system."*
-4. **Loading**: reuse the #7 footage.
-5. **Ship tracking**: map on your phone. *"Day 12: somewhere in the ocean."*
-6. **Delivery**: the client films the unboxing/handover (ask them to film it vertically). Their reaction is gold.
-7. **Final receipt**: total paid vs local price.
-
-**CTA on every part:** "Follow so you see it arrive. Comment NEXT if you want to be the next client."
+**Описание:** Следующий контейнер уходит [дата]. Хочешь место? 🚢
 
 ---
 
-## 🎬 VIDEO 9: "Korean Spec Features You Don't Get at Home"
+## 🎬 ВИДЕО 8: «Везу машину [Клиента]: День 1 / День 30» (сериал о пути машины)
 
-**Length:** 20–25s | **People:** just you | **Filming time:** 10 min inside one loaded car (Genesis / Palisade / Sorento)
+**Длина:** 20–30 сек на серию | **Люди:** ты плюс клиент по видеосвязи (с его разрешения) | **Время съёмки:** 5–10 мин на каждый этап
 
-**Why it goes viral:** "wow" moments. Viewers tag friends ("we need this"), and it makes Korean cars feel premium.
+**Почему залетит:** сериалы возвращают зрителей («когда 2 часть?»). Это настоящее социальное доказательство:
+реальный клиент и реальная машина. Самое сильное видео на доверие, которое можно сделать.
 
-**Script:**
+**Серии** (снимай, когда это происходит, 5–7 серий):
+1. **«Покупаю машину незнакомцу из [ГОРОД]»**: показываешь машину, голосовое или видеозвонок с клиентом (лицо или только голос, с разрешения). На экране: *Бюджет $___ · Часть 1*.
+2. **Осмотр**: толщиномер, отчёт истории, тест-драйв. *«Ты бы купил? Отправляю.»*
+3. **Документы**: показываешь, как ставят печать на документ о снятии с учёта для экспорта (личные данные размыть). *«Машина официально покидает корейскую систему.»*
+4. **Погрузка**: используй кадры из видео №7.
+5. **Отслеживание корабля**: карта на телефоне. *«День 12: где-то в океане.»*
+6. **Выдача**: клиент снимает получение машины (попроси снимать вертикально). Его реакция — золото.
+7. **Итоговый чек**: сколько заплатил vs местная цена.
 
-| Time | Shot | Script | On-screen |
+**Призыв в каждой серии:** «Подпишись, чтобы увидеть, как она приедет. Напиши СЛЕДУЮЩИЙ, если хочешь быть следующим клиентом.»
+
+---
+
+## 🎬 ВИДЕО 9: «Корейские опции, которых нет у вас»
+
+**Длина:** 20–25 сек | **Люди:** только ты | **Время съёмки:** 10 мин в одной полностью заряженной машине (Genesis / Palisade / Sorento)
+
+**Почему залетит:** моменты «вау». Зрители отмечают друзей («нам такое надо»), и корейские машины выглядят премиально.
+
+**Текст:**
+
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–1s | Your hand presses a button and the seat starts blowing air on your face | "Korean cars have features you've never seen." | 🤯 **KOREAN SPEC** |
-| 1–5s | Ventilated seats | "Air-conditioned seats." | ❄️ cooled seats |
-| 5–9s | Blind-spot camera appears in the cluster when signaling | "Turn signal shows a live camera." | 📷 blind-spot view |
-| 9–13s | HUD on windshield, 360 camera | "Head-up display. 360 camera." | HUD · 360° |
-| 13–17s | Rear seats: massage / sunshades / relaxation seat | "Massage seats in the back." | 💆 massage |
-| 17–22s | You | "This full-option car delivered to [CITY]: $___. Comment SPEC for the list." | Comment **SPEC** |
+| 0–1с | Нажимаешь кнопку, и сиденье начинает дуть тебе в лицо | «В корейских машинах есть опции, которых ты никогда не видел.» | 🤯 **КОРЕЙСКАЯ КОМПЛЕКТАЦИЯ** |
+| 1–5с | Вентиляция сидений | «Сиденья с кондиционером.» | ❄️ вентиляция сидений |
+| 5–9с | При включении поворотника на приборке появляется камера слепой зоны | «Включаешь поворотник, и видишь живую картинку с камеры.» | 📷 камера слепой зоны |
+| 9–13с | Проекция на лобовое, камера 360 | «Проекция на лобовое. Камера 360.» | HUD · 360° |
+| 13–17с | Задние сиденья: массаж / шторки / сиденье-релакс | «Массаж на заднем ряду.» | 💆 массаж |
+| 17–22с | Ты | «Эта машина в полной комплектации с доставкой в [ГОРОД]: $___. Напиши ОПЦИИ, пришлю список.» | Пиши **ОПЦИИ** |
 
-(Show only features the actual car has.)
+(Показывай только те опции, которые реально есть в этой машине.)
 
 ---
 
-## 🎬 VIDEO 10: "Asking Koreans: Which Car Would You Never Buy?" (street interview)
+## 🎬 ВИДЕО 10: «Спрашиваю корейцев: какую машину вы никогда не купите?» (уличный опрос)
 
-**Length:** 25–35s | **People:** you plus strangers (or your colleagues / dealers if you're shy) | **Filming time:** 1 hour for 6–8 good answers
+**Длина:** 25–35 сек | **Люди:** ты плюс прохожие (или коллеги / дилеры, если стесняешься) | **Время съёмки:** 1 час на 6–8 хороших ответов
 
-**Why it goes viral:** street interviews are one of the most viral formats. Korean faces and reactions
-are exotic to foreign audiences, and the answers start debates.
+**Почему залетит:** уличные опросы — один из самых вирусных форматов. Корейские лица и реакции экзотичны
+для зарубежной аудитории, а ответы вызывают споры.
 
-**Questions to rotate (one per episode):**
-- "Which car would you never buy?"
-- "How much did you pay for your car?"
-- "Why do Koreans sell cars after 3 years?"
-- "Hyundai or Kia?"
-- (to dealers) "Which car do foreigners buy most?"
+**Вопросы по очереди (один на выпуск):**
+- «Какую машину вы никогда не купите?»
+- «Сколько вы заплатили за свою машину?»
+- «Почему корейцы продают машины через 3 года?»
+- «Hyundai или Kia?»
+- (дилерам) «Какую машину чаще всего покупают иностранцы?»
 
-**Script:**
+**Текст:**
 
-| Time | Shot | Script | On-screen |
+| Время | Кадр | Текст | На экране |
 |---|---|---|---|
-| 0–2s | Mic toward the first person, strongest answer first | Answer first, no intro | Subtitles plus **Asking Koreans 🇰🇷** |
-| 2–25s | 4–6 quick answers, cut tight, subtitled | (their answers) | subtitles, emojis |
-| 25–30s | You | "So which one would YOU buy? I can send any of these to [CITY]. Comment CAR." | Comment **CAR** |
+| 0–2с | Микрофон к первому человеку, самый сильный ответ первым | Сразу ответ, без вступления | Субтитры плюс **Спрашиваю корейцев 🇰🇷** |
+| 2–25с | 4–6 быстрых ответов, плотная склейка, с субтитрами | (их ответы, перевод в субтитрах на русский) | субтитры, эмодзи |
+| 25–30с | Ты | «А какую купил бы ТЫ? Любую из них могу отправить в [ГОРОД]. Напиши МАШИНА.» | Пиши **МАШИНА** |
 
-**Tips:** ask permission. Dealers in car complexes are easy, friendly targets. Use a handheld mic with a
-logo cube, since people react to a "real" mic.
+**Советы:** спрашивай разрешение. Дилеры на авторынках — лёгкие и дружелюбные собеседники. Возьми ручной
+микрофон с кубиком-логотипом: люди реагируют на «настоящий» микрофон.
 
 ---
 
-## Posting plan: first 2 weeks
+## План публикаций: первые 2 недели
 
-| Day | Post |
+| День | Публикация |
 |---|---|
-| 1 | #1 Guess the Price (Palisade) |
-| 2 | #4 Korean Grandpa's Car |
-| 3 | #7 POV Leaving Korea |
-| 4 | #5 Your Budget |
-| 5 | #6 3 Traps |
-| 6 | #9 Korean Spec |
-| 7 | #10 Street Interview |
-| 8 | #2 The Receipt |
-| 9 | #1 Guess the Price #2 (Carnival), reply to top comment |
-| 10 | #3 Auction |
-| 11+ | #8 client journey parts as they happen, plus repeat whatever performed best |
+| 1 | №1 Угадай цену (Palisade) |
+| 2 | №4 Машина корейского дедушки |
+| 3 | №7 POV: уезжает из Кореи |
+| 4 | №5 Твой бюджет |
+| 5 | №6 3 ловушки |
+| 6 | №9 Корейские опции |
+| 7 | №10 Уличный опрос |
+| 8 | №2 Чек |
+| 9 | №1 Угадай цену #2 (Carnival), ответ на топ-комментарий |
+| 10 | №3 Аукцион |
+| 11+ | Серии №8 о клиенте по мере событий, плюс повторяй то, что зашло лучше всего |
 
-**Rule:** after 7 days, whatever got the most views and shares becomes a daily series.
-Report results with `/results` so I can learn which ones win.
+**Правило:** через 7 дней то, что набрало больше всего просмотров и репостов, становится ежедневной рубрикой.
+Присылай результаты через `/results`, чтобы я понял, что работает.
 
-## Comment-to-DM sales machine
+## Воронка «комментарий → директ → продажа»
 
-1. Every comment with the keyword gets an auto-reply or a quick reply: "Sent you a DM 🔥"
-2. DM: "Hi! Which car and which city? I'll send you the full delivered price today."
-3. Send the receipt (from `landed_cost.py`) plus a 10-second personal video of a matching car.
-4. Close: deposit, then start the journey series with them (they become content, Video 8).
+1. На каждый комментарий с кодовым словом — автоответ или быстрый ответ: «Написал тебе в директ 🔥»
+2. В директ: «Привет! Какая машина и какой город? Сегодня же пришлю полную цену с доставкой.»
+3. Отправляешь чек (из `landed_cost.py`) плюс 10-секундное личное видео подходящей машины.
+4. Закрытие: предоплата, и с этим клиентом начинаешь сериал (он становится контентом, видео №8).
