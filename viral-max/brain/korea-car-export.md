@@ -81,6 +81,12 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Russia 2026: recycling fee reform (01.01.2026).** Only cars **up to 160 hp** remain profitable
   (e.g. Sorento 2.2D 197 hp to Moscow ≈ 5.27M ₽ vs 3.2–3.8M ₽ market). See `market-intel/insights.md`.
 - **Kyrgyzstan: new EAEU valuation formula from 01.04.2026.** Under-valuation "via Bishkek" no longer works.
+- **Kyrgyzstan EVs (29.09.2026):** the 2026 duty-free EV quota (25,000 units) is exhausted; EVs now pay 15% duty
+  (economist.kg). Don't promise duty-free EVs to Bishkek.
+- **Kazakhstan personal import (from 22/28.09.2026):** individuals import only cars up to 5 years old, Euro-5+; recycling
+  fee must be confirmed before release; SBKTS for personal import from third countries at most once per calendar year
+  (bank.kz, Gov. decree No. 808 of 10.09.2026) **[VERIFY details]**.
+- **Georgia hybrids:** importer listings show ≈60% reduced excise for 1.6 HEV (960 ₾ vs 2,397 ₾) **[VERIFY]**.
 - **EAEU countries** (Kazakhstan, Kyrgyzstan, Armenia, Belarus, Russia) need vehicle certification
   (SBKTS / electronic passport EPTS) **[VERIFY]**.
 - Some African and Middle East countries require **pre-shipment inspection** and have **age limits** **[VERIFY]**.
