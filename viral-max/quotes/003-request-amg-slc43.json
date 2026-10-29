@@ -1,0 +1,11 @@
+{
+  "model": "Mercedes-AMG SLC 43 (R172)",
+  "year": 2017, "month": 6, "fuel": "petrol", "engine_cc": 2996, "power_hp": 367, "mileage_km": 56133,
+  "price_krw": 35790000, "shipping": "container",
+  "destinations": [
+    {"country": "kazakhstan", "city": "Алматы"},
+    {"country": "kyrgyzstan", "city": "Бишкек"},
+    {"country": "georgia", "city": "Тбилиси"},
+    {"country": "russia", "city": "Владивосток", "shipping": "roro"}
+  ]
+}

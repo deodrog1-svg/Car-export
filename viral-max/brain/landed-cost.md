@@ -33,6 +33,10 @@ Default caption countries: Kazakhstan (Алматы), Kyrgyzstan (Бишкек),
 - Profile `kazakhstan` = ЕТС (default). `kazakhstan-dt` = legal-entity alternative (ETT duty + 16% VAT). The quote shows the alternative total
   for comparison, which is sometimes cheaper for expensive cars under 3 years.
 - Plus: utilsbor (jumps above 2000 cc), customs fee 6 MRP, plates. Always compare with Kolesa.kz prices.
+- **Cheapest legal route is chosen automatically:** for Kazakhstan and Kyrgyzstan the calculator runs both the private-import ETS and the
+  legal-entity route (`*-dt` profiles), quotes the cheaper one, and shows the other for comparison. If private import is not allowed
+  (Kazakhstan: car older than 5 years), it switches to the legal-entity route and the caption says "через юрлицо".
+- Legal-entity duty for cars older than 7 years: 1.4–3.2 €/cc by engine size (range from sputnik.kg; the per-bracket split is an estimate, so confirm with a broker).
 
 ## Workflow for every price request
 

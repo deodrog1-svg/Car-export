@@ -159,7 +159,16 @@ def calculate(req, costs=None, profile=None, today=None):
     values = {"car": price_usd, "fob": fob, "freight": freight, "insurance": insurance, "cif": cif}
     labels = {**BASE_RU, **{i["id"]: i["name_ru"].lower() for i in profile["items"]}}
     for item in profile["items"]:
-        r = evaluate(item, car, values, fx, profile["currency"], labels)
+        try:
+            r = evaluate(item, car, values, fx, profile["currency"], labels)
+        except QuoteError as e:
+            # e.g. private import not allowed for this age: clear it through the legal-entity alternative instead
+            if not profile.get("alternative") or req.get("_no_alt"):
+                raise
+            alt = profile["alternative"]
+            q = calculate({**req, "country": alt["profile"], "_no_alt": True}, costs, None, today)
+            q["fallback"] = (str(e), alt["name_ru"])
+            return q
         values[item["id"]] = r[0] if r else 0
         if r:
             lines.append((item["group"], item["name_ru"], r[0], r[1], check_of(item)))
@@ -174,9 +183,16 @@ def calculate(req, costs=None, profile=None, today=None):
     if profile.get("alternative") and not req.get("_no_alt"):
         a = profile["alternative"]
         try:
-            alt = (a["name_ru"], calculate({**req, "country": a["profile"], "_no_alt": True}, costs, None, today)["total"])
+            aq = calculate({**req, "country": a["profile"], "_no_alt": True}, costs, None, today)
         except QuoteError as e:
             alt = (a["name_ru"], str(e))
+        else:
+            if aq["total"] < total:
+                # a broker would pick the cheaper legal route, so quote that one and show ours for comparison
+                aq["fallback"] = ("через юрлицо дешевле", a["name_ru"])
+                aq["alt"] = (f"ввоз на физлицо ({profile['country_ru']}, ЕТС)", total)
+                return aq
+            alt = (a["name_ru"], aq["total"])
     return {"car": car, "profile": profile, "costs": costs, "lines": lines, "fob": fob, "cif": cif,
             "total": total, "today": today, "alt": alt}
 
@@ -227,6 +243,8 @@ def render_ru(q, standalone=True):
     if local_total(q):
         out.append(f"| **В местной валюте** | **{local_total(q)}** |")
     out += [f"| В вонах | ₩{money(q['total'] * fx['KRW'])} |"]
+    if q.get("fallback"):
+        out.append(f"| Способ растаможки | {q['fallback'][1]}: {q['fallback'][0][0].lower() + q['fallback'][0][1:]} |")
     if q.get("alt"):
         name, val = q["alt"]
         out.append(f"| Для сравнения: {name} | {'$' + money(val) if isinstance(val, float) else val} |")
@@ -281,7 +299,8 @@ def caption_ru(results, today):
             continue
         approx = "≈ " if any(l[4] == "estimate" for l in q["lines"]) else ""
         loc = local_total(q)
-        lines.append(f"{flag} {d['city']}: {approx}${money(q['total'])}" + (f" ({loc})" if loc else ""))
+        lines.append(f"{flag} {d['city']}: {approx}${money(q['total'])}" + (f" ({loc})" if loc else "")
+                     + (" — через юрлицо" if q.get("fallback") else ""))
     lines.append("Точный расчёт под твою машину — пиши в директ 📩")
     return lines
 
