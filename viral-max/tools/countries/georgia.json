@@ -3,11 +3,12 @@
   "flag": "🇬🇪",
   "currency": "GEL",
   "currency_symbol": "₾",
-  "verified_on": "2026-10-26",
+  "verified_on": "2026-10-31",
   "sources": [
     "https://carselect.ge/ru/calculator (акциз со 02.04.2026: 1,5 ₾/см³ до 6 лет, 4,5 ₾/см³ старше 6 лет; НДС 18%; сборы 272 ₾)",
     "https://sovanews.tv/2026/04/01/v-gruzii-podorozhaet-rastamozhka-avtomobilej-starshe-6-let-izmeneniya-prinyaty/ (повышение акциза для авто старше 6 лет)",
-    "https://news.lmnauto.com/auction-to-port-cost-breakdown (фрахт до Поти ≈ $1 200, 30–40 дней, март 2026)"
+    "https://news.lmnauto.com/auction-to-port-cost-breakdown (фрахт до Поти ≈ $1 200, 30–40 дней, март 2026)",
+    "https://data.autobridge.ge/en/reports/hybrid-break (скидка 60% на акциз для гибридов младше 6 лет, 16.06.2026)"
   ],
   "route_ru": "Корея → морем в порт Поти → автовоз до Тбилиси",
   "transit_days_ru": "30–40 дней",
@@ -26,11 +27,12 @@
     "Праворульные машины облагаются тройным акцизом (для машин из Кореи обычно неактуально: левый руль).",
     "Ввозной пошлины на легковые авто по найденным данным нет; проверить у брокера.",
     "Из-за конфликта на Ближнем Востоке ставки фрахта нестабильны.",
-    "Гибриды: в объявлениях autobridge.ge (2026) для Kia Sportage / Hyundai Tucson 1.6 HEV 2022 акциз 960 ₾ вместо 2 397 ₾ по общей ставке (скидка ≈60%) + пошлина ≈96 ₾ + сбор 150 ₾. Калькулятор этого пока не учитывает [VERIFY у брокера]."
+    "Гибриды младше 6 лет (левый руль): скидка 60% на акциз — 0,6 ₾/см³ вместо 1,5 ₾/см³ (1.6 HEV ≈ 960 ₾ вместо 2 397 ₾). Гибриды старше 6 лет — без скидки. Учтено в калькуляторе с 31.10.2026 (источники: data.autobridge.ge/en/reports/hybrid-break от 16.06.2026, guazi.com, объявления autobridge.ge). Плагин-гибриды не включены — уточнять у брокера."
   ],
   "items": [
     { "id": "excise", "name_ru": "Акциз", "group": "customs", "type": "choose", "currency": "GEL", "check": "sources", "options": [
       { "when": { "fuel": ["ev"] }, "type": "fixed", "amount": 0 },
+      { "when": { "fuel": ["hybrid"], "age_max": 6 }, "type": "per_cc", "rate": 0.6, "check": "sources" },
       { "when": { "age_max": 6 }, "type": "per_cc", "rate": 1.5 },
       { "type": "per_cc", "rate": 4.5 } ] },
     { "id": "vat", "name_ru": "НДС 18%", "group": "customs", "type": "percent", "rate": 0.18, "base": ["cif", "excise"], "currency": "USD", "check": "sources" },

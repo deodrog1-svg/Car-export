@@ -83,10 +83,16 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Kyrgyzstan: new EAEU valuation formula from 01.04.2026.** Under-valuation "via Bishkek" no longer works.
 - **Kyrgyzstan EVs (29.09.2026):** the 2026 duty-free EV quota (25,000 units) is exhausted; EVs now pay 15% duty
   (economist.kg). Don't promise duty-free EVs to Bishkek.
-- **Kazakhstan personal import (from 22/28.09.2026):** individuals import only cars up to 5 years old, Euro-5+; recycling
-  fee must be confirmed before release; SBKTS for personal import from third countries at most once per calendar year
-  (bank.kz, Gov. decree No. 808 of 10.09.2026) **[VERIFY details]**.
-- **Georgia hybrids:** importer listings show ≈60% reduced excise for 1.6 HEV (960 ₾ vs 2,397 ₾) **[VERIFY]**.
+- **Kazakhstan personal import (from 22/28.09.2026):** individuals get EPTS (first registration) only for cars up to 5 years old;
+  one car per person per year; recycling fee must be confirmed before release; SBKTS for personal import from third countries
+  at most once per calendar year (bank.kz, Gov. decree No. 808 of 10.09.2026; inform.kz, azh.kz).
+  **Update 2026-10-31:** the **Euro-5 requirement is still a DRAFT** (passed public discussion, not yet signed; Kursiv 09.10.2026,
+  Kolesa.kz). Legal entities / sole proprietors keep Euro-4+ with **no age limit** → older cars go "через юрлицо".
+  FinRatings warns the rule is about first registration, not a total import ban **[VERIFY final text when signed]**.
+- **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
+  (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
+  16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
+  by sources — confirm with the Revenue Service calculator for a real quote.
 - **EAEU countries** (Kazakhstan, Kyrgyzstan, Armenia, Belarus, Russia) need vehicle certification
   (SBKTS / electronic passport EPTS) **[VERIFY]**.
 - Some African and Middle East countries require **pre-shipment inspection** and have **age limits** **[VERIFY]**.
