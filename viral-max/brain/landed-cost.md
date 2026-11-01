@@ -89,3 +89,14 @@ Things that are often forgotten. Always check them:
 - Quotes are valid for 7 days (`quote_valid_days`) because exchange rates and rules move.
 - When the user teaches real costs (freight, broker fees per country), put them into the profile and
   `costs.json` and set `verified: true` for those items (source: "данные компании").
+
+## Calibration log
+
+- **2026-11-02, Kazakhstan (Almaty):** checked against a competitor's itemized turnkey card (youcar.kz, Carnival 2022 2.2D,
+  $20 363 in Korea → 18 690 000 ₸). Our calculator gives 17 483 208 ₸ (−6%). ETS, recycling fee and the 500 MRP registration
+  match to the tenge. The whole gap is in the estimated items: freight ($2 500 sedan/SUV, $4 000 minivan at youcar vs our $2 800)
+  and local services (≈$1 600: broker, SBKTS + GLONASS, temporary storage, EPTS etc. vs our 45 000 ₸). Until the user teaches real
+  costs, tell clients the local-services line is an estimate and may be ≈$1 500 higher. Details: `countries/kazakhstan.json`
+  → `_calibration_2026_11_02`.
+- **2026-11-02, Russia:** recycling fee indexation +10–20% from 01.01.2027 (decree №1255). Personal-use rate ≤160 hp stays.
+  Re-check commercial rates in `countries/russia.json` after 01.01.2027.
