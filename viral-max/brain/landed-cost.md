@@ -100,3 +100,8 @@ Things that are often forgotten. Always check them:
   → `_calibration_2026_11_02`.
 - **2026-11-02, Russia:** recycling fee indexation +10–20% from 01.01.2027 (decree №1255). Personal-use rate ≤160 hp stays.
   Re-check commercial rates in `countries/russia.json` after 01.01.2027.
+- **2026-11-03, Kazakhstan (upcoming, draft):** the 2027–2029 budget bill proposes MRP = 4 693 ₸ from 01.01.2027 (now 4 325 ₸, +8.5%).
+  Every MRP-based line grows: registration >3 yrs 500 MRP = 2 346 500 ₸ (+184 000), ≤3 yrs 50 MRP = 234 650 ₸; recycling fee
+  1.0–2.0 L 821 275 ₸, 2.0–3.0 L 1 173 250 ₸, >3 L 2 698 475 ₸; customs fee 6 MRP ≈ 28 158 ₸ (kolesa.kz, 01.09.2026). Not law yet:
+  do NOT change `countries/kazakhstan.json` amounts until the budget law is signed; for cars cleared after 01.01.2027 warn the client
+  (≈+280 000 ₸ on a 2.2 L car older than 3 years). Note stored in `countries/kazakhstan.json` → `_upcoming_2027`.
