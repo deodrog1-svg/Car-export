@@ -105,3 +105,13 @@ Things that are often forgotten. Always check them:
   1.0–2.0 L 821 275 ₸, 2.0–3.0 L 1 173 250 ₸, >3 L 2 698 475 ₸; customs fee 6 MRP ≈ 28 158 ₸ (kolesa.kz, 01.09.2026). Not law yet:
   do NOT change `countries/kazakhstan.json` amounts until the budget law is signed; for cars cleared after 01.01.2027 warn the client
   (≈+280 000 ₸ on a 2.2 L car older than 3 years). Note stored in `countries/kazakhstan.json` → `_upcoming_2027`.
+- **2026-11-04, Kazakhstan EVs (resolves the 03.11 [VERIFY] contradiction):** the EEC duty-free EV quota ended 01.01.2026 (that part
+  of our data was right). prigon.kz/kolesa.kz were also right in a narrower sense: under Kazakhstan's WTO exemption list an individual
+  can clear an EV at **0% duty + 16% VAT**, but the car may not be sold or transferred to other EAEU states. The default EAEU route is
+  **15% duty + 16% VAT ≈ 31%** (what the calculator uses). EVs pay no recycling fee, and first registration of a used EV is **half**
+  the ICE rate (≈1 081 250 ₸ for EVs over 3 years, 108 125 ₸ for 2–3 years) — now built into `countries/kazakhstan.json`
+  (finance.kz updated 03.11.2026; kolesa.kz 11.09.2025). Quote both regimes to EV clients and confirm the WTO regime with the broker
+  **[VERIFY]**. Test (scratch): Niro EV 2022 ₩22M → Almaty $28 655 (registration $2 397 instead of $4 794).
+- **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
+  FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
+  freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.

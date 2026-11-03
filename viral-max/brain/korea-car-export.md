@@ -83,6 +83,12 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Kyrgyzstan: new EAEU valuation formula from 01.04.2026.** Under-valuation "via Bishkek" no longer works.
 - **Kyrgyzstan EVs (29.09.2026):** the 2026 duty-free EV quota (25,000 units) is exhausted; EVs now pay 15% duty
   (economist.kg). Don't promise duty-free EVs to Bishkek.
+- **Kazakhstan EVs (checked 2026-11-04):** EEC duty-free quota ended 01.01.2026. Default: 15% duty + 16% VAT (≈31%);
+  alternative under Kazakhstan's WTO list: 0% duty + 16% VAT, but no resale/transfer to other EAEU states [VERIFY with broker].
+  No recycling fee; first registration of a used EV is half the ICE rate (finance.kz 03.11.2026, kolesa.kz).
+- **Mongolia (new market signal, 26.09.2026):** Korea–Mongolia EPA agreed in principle in July 2026; once in force, tariffs on Korean
+  used cars aged 4–6 years are phased out over 5 years. Korean exporters see Mongolia as the most promising replacement for the
+  Middle East (Korea JoongAng Daily). No profile in `tools/countries/` yet.
 - **Kazakhstan personal import (from 22/28.09.2026):** individuals get EPTS (first registration) only for cars up to 5 years old;
   one car per person per year; recycling fee must be confirmed before release; SBKTS for personal import from third countries
   at most once per calendar year (bank.kz, Gov. decree No. 808 of 10.09.2026; inform.kz, azh.kz).
