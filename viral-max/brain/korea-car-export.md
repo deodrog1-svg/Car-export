@@ -89,6 +89,13 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Mongolia (new market signal, 26.09.2026):** Korea–Mongolia EPA agreed in principle in July 2026; once in force, tariffs on Korean
   used cars aged 4–6 years are phased out over 5 years. Korean exporters see Mongolia as the most promising replacement for the
   Middle East (Korea JoongAng Daily). No profile in `tools/countries/` yet.
+  **Update 2026-11-05 (KOTRA Ulaanbaatar, 12.10.2026):** 2025 passenger-car imports $1.21 bn; Japan 74.8%; **Korea only $42.5 m /
+  3,856 units (−25.9%, 5th place)**; Germany is 15.4% of the 1.5–3.0 L petrol segment (+42.5%). Taxes: duty 5%, VAT 10%, excise by
+  engine and age (MNT): 1,501–2,500 cc — 2.3 m (0–3 y) / 3.2 m (4–6 y) / 5.0 m (7–9 y) / 11.7 m (10+ y); 2,501–3,500 cc — 3.05 m /
+  4.0 m / 6.7 m / 13.35 m. Top models: Land Cruiser 300, Prius, Prado, Lexus RX/LX, **Mercedes G-Class (3%)**. CEPA still not in force.
+  Commercial exporter guides (SH GLOBAL) use different excise numbers → build a profile only from KOTRA/customs tables **[VERIFY]**.
+- **Uzbekistan (checked 2026-11-05):** the decree of 27.08.2026 cutting the personal-import "customs payment" from 30% to 20% from
+  01.01.2027 is about **personal goods, not cars** (economist.kg 03.09.2026). Don't use it in car videos.
 - **Kazakhstan personal import (from 22/28.09.2026):** individuals get EPTS (first registration) only for cars up to 5 years old;
   one car per person per year; recycling fee must be confirmed before release; SBKTS for personal import from third countries
   at most once per calendar year (bank.kz, Gov. decree No. 808 of 10.09.2026; inform.kz, azh.kz).
