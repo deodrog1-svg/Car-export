@@ -102,6 +102,11 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   **Update 2026-10-31:** the **Euro-5 requirement is still a DRAFT** (passed public discussion, not yet signed; Kursiv 09.10.2026,
   Kolesa.kz). Legal entities / sole proprietors keep Euro-4+ with **no age limit** → older cars go "через юрлицо".
   FinRatings warns the rule is about first registration, not a total import ban **[VERIFY final text when signed]**.
+  **Update 2026-11-06: Euro-5 is now ADOPTED.** A Ministry of Transport order was officially published (~31.10.2026) and takes
+  effect 60 days later, on **30.12.2026**: cars imported by individuals for personal use are released only if **Euro-5 or higher**
+  and **no more than 5 years from the manufacture date** (Interfax 02.11.2026; profile.ru, investfuture.ru 02.11.2026). Order number
+  not given in sources **[VERIFY on adilet.zan.kz]**. Sales angle: cars bought now for personal import must clear before 30.12;
+  older/Euro-4 cars go only via legal entity / sole proprietor.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
