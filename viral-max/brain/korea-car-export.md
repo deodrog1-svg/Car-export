@@ -107,6 +107,14 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   and **no more than 5 years from the manufacture date** (Interfax 02.11.2026; profile.ru, investfuture.ru 02.11.2026). Order number
   not given in sources **[VERIFY on adilet.zan.kz]**. Sales angle: cars bought now for personal import must clear before 30.12;
   older/Euro-4 cars go only via legal entity / sole proprietor.
+  **Update 2026-11-07: order number found.** Order of the acting Minister of Transport **No. 293 of 28.10.2026**; it adds
+  **clause 19-1** to Order **No. 342 of 26.03.2015** (permissible vehicle parameters for Kazakhstan roads). Clause 19-1: first
+  release into circulation of cars for personal use only if age ≤ 5 years from manufacture date and eco-class ≥ Euro-5
+  (Kursiv 02.11.2026; Tarantas 03.11.2026). The EPTS limit since 28.09.2026 is Minpromstroy Order No. 474 (Tarantas). Not yet
+  indexed on adilet.zan.kz as of 07.11 **[VERIFY full text on adilet]**. **How Euro-5 is proven for a Korean car:** in the
+  eco-class table (country of origin × production year) Korea has a row for Class 4 ("2007 and later") but **no year for
+  Class 5**; a dash means the class is confirmed by the **SBKTS** (lab certificate), not by the table (kolesa.kz 09.10.2026).
+  So every Korean car for personal import needs an SBKTS that states Euro-5 **[VERIFY with an SBKTS lab before buying]**.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
