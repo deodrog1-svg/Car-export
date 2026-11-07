@@ -115,6 +115,9 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   eco-class table (country of origin × production year) Korea has a row for Class 4 ("2007 and later") but **no year for
   Class 5**; a dash means the class is confirmed by the **SBKTS** (lab certificate), not by the table (kolesa.kz 09.10.2026).
   So every Korean car for personal import needs an SBKTS that states Euro-5 **[VERIFY with an SBKTS lab before buying]**.
+  **Update 2026-11-08: effective date differs between sources.** Kursiv and investfuture say **30.12.2026**; lada.kz (02.11.2026)
+  says **31.12.2026**. The order text is still not found on adilet.zan.kz **[VERIFY]**. Plan client cars to be released by
+  **29.12.2026** and in videos say "до конца декабря" rather than a single exact day.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
