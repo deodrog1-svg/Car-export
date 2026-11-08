@@ -1,14 +1,14 @@
 {
   "_note": "YOUR OWN COSTS. Update with real numbers (use /teach), then set korea_check/service_check to \"official\". fx = units of each currency per 1 USD; update before every quote.",
-  "fx_date": "2026-10-27",
+  "fx_date": "2026-11-09",
   "fx": {
     "USD": 1,
-    "KRW": 1335,
-    "EUR": 0.8933,
-    "KZT": 451.05,
-    "KGS": 87.5,
-    "RUB": 80.5,
-    "GEL": 2.7
+    "KRW": 1359,
+    "EUR": 0.8957,
+    "KZT": 447.14,
+    "KGS": 87.4478,
+    "RUB": 82.14,
+    "GEL": 2.5949
   },
   "korea_side_krw": {
     "Комиссия аукциона / дилера": 300000,
@@ -20,9 +20,11 @@
   "service_fee_usd": 800,
   "quote_valid_days": 7,
   "_fx_sources": [
-    "KZT/RUB: Нацбанк РК 27.10.2026 (451,05 ₸/$, 5,60 ₸/₽; https://mybuh.kz/news/kursy-valyut-na-27-oktyabrya-2026-g/), EUR/KGS по курсам НБ РК 26.10.2026",
-    "KRW ≈1335: 30rates.com 12.10.2026, Bank Negara cross-rates (оценка)",
-    "GEL ≈2.70: из примера carselect.ge (оценка)"
+    "KZT: Нацбанк РК, официальный курс на 07–09.11.2026 — 447,14 ₸/$ (https://nationalbank.kz/rss/get_rates.cfm?fdate=09.11.2026; там же EUR 499,54 ₸, RUB 5,46 ₸, KRW 33,01 ₸ за 100)",
+    "KRW ≈1359 и EUR 0,8957: кросс по референсным курсам ЕЦБ на 06.11.2026 (1 € = 1,1165 $ = 1 517,02 ₩; https://www.banque-france.fr/en/statistics/rates-and-prices/exchange-rates-daily-parities-2026-11-06). Кроссы НБГ и НБ РК на 07.11 дают ≈1 354 ₩/$",
+    "KGS: НБКР, официальный курс на 09.11.2026 — 87,4478 сом/$ (https://www.nbkr.kg/XML/daily.xml)",
+    "RUB: ЦБ РФ, официальный курс на 07.11.2026 — 82,1386 ₽/$ (https://www.cbr-xml-daily.ru/daily_json.js, данные cbr.ru)",
+    "GEL: Нацбанк Грузии, официальный курс на 07.11.2026 — 2,5949 ₾/$ (https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD)"
   ],
   "korea_check": "estimate",
   "service_check": "estimate"

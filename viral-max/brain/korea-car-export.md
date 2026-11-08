@@ -118,6 +118,10 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   **Update 2026-11-08: effective date differs between sources.** Kursiv and investfuture say **30.12.2026**; lada.kz (02.11.2026)
   says **31.12.2026**. The order text is still not found on adilet.zan.kz **[VERIFY]**. Plan client cars to be released by
   **29.12.2026** and in videos say "до конца декабря" rather than a single exact day.
+  **Update 2026-11-09: 30.12.2026 is the best-supported date.** Interfax (02.11.2026) quotes the mechanism: the order "вступает
+  в силу по истечении 60 календарных дней после дня первого официального опубликования, то есть 30 декабря 2026 года"
+  (same date in RG.ru, investfuture, CentralAsia.media; 31.12 only at lada.kz). Full text on adilet still not found **[VERIFY]**;
+  some outlets name the Ministry of Industry and Construction instead of the Ministry of Transport. Keep the 29.12 release target.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
