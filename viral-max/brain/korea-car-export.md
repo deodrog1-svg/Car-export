@@ -122,6 +122,12 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   в силу по истечении 60 календарных дней после дня первого официального опубликования, то есть 30 декабря 2026 года"
   (same date in RG.ru, investfuture, CentralAsia.media; 31.12 only at lada.kz). Full text on adilet still not found **[VERIFY]**;
   some outlets name the Ministry of Industry and Construction instead of the Ministry of Transport. Keep the 29.12 release target.
+  **Update 2026-11-10: no change.** Order text still not found on adilet.zan.kz **[VERIFY]**; nur.kz (03.11.2026, citing KTK) names
+  the Ministry of Transport, says "in December", and lists cars, motorcycles, mopeds, trucks and trailers; companies and sole
+  proprietors follow separate rules. Budget 2027–2029 (MRP 4,693 ₸) still has no second reading as of 10.11 **[VERIFY]**.
+  **Customs check on calculators:** youcar.kz cards for brand-new 2026 BMW G60 (520i $41,254 and 530i $58,505) both show the same
+  ETPS $14,218 labelled "48% of value", i.e. not 48% of the Korean price. Our calculator for the 520i gives ≈$67.7k on the
+  personal ETS route vs ≈$62.9k via legal entity (youcar $62.8k). For cars under 3 years always show the ETS line explicitly.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
@@ -138,6 +144,12 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 4. **Commercial invoice** and **packing list**
 5. **Bill of Lading (B/L)** from the shipping line or forwarder
 6. **Insurance certificate** (if CIF)
+
+**Hidden body damage check (added 2026-11-10):** Blik.kg study (02.11.2026, republished by economist.kg 03.11.2026): of 209
+Korean-VIN cars in Kyrgyzstan with auction history, **26% (55) had structural body damage or repair** (side members, pillars,
+floor), but only ~10% carried an accident mark, so 39 cars had hidden structural repair. Kyrgyzstan registered 50,287
+Korean-VIN vehicles in Jan–Sep 2026 (≈35% of all). Always pull the Korean performance-inspection record (성능점검기록부) and
+auction history before purchase and show it to the client. This is a trust angle for videos.
 7. **Performance inspection report** and **Carhistory accident report** (for trust, show them in videos)
 8. Destination-specific: certificate of origin, pre-shipment inspection, translation, certification **[VERIFY]**
 
