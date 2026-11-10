@@ -128,6 +128,12 @@ Many countries tax by **age** and **engine size**, so check the destination brac
   **Customs check on calculators:** youcar.kz cards for brand-new 2026 BMW G60 (520i $41,254 and 530i $58,505) both show the same
   ETPS $14,218 labelled "48% of value", i.e. not 48% of the Korean price. Our calculator for the 520i gives ≈$67.7k on the
   personal ETS route vs ≈$62.9k via legal entity (youcar $62.8k). For cars under 3 years always show the ETS line explicitly.
+  **Update 2026-11-11: order registered.** base.spinform.ru (card of Order No. 293 of 28.10.2026): registered with the Ministry of
+  Justice on **29.10.2026 under No. 40257**, published in the Reference Control Bank on **30.10.2026**, status "not yet in force",
+  effective **30.12.2026**. The order also rewrites **clause 19** (emission norms for vehicles released by **legal entities and
+  sole proprietors**), so the ИП route has its own emission rule too — check the eco-class for every car, not only personal imports.
+  Text of clause 19-1 is still behind a paywall / not on open adilet **[VERIFY]**. youcar.kz cards on 11.11 (rate 444.94 ₸/$) show
+  the add-on is almost fixed: Sorento HEV 2025 +40%, X5 40i 2024 +51%, K5 2024 +100% — favour fresh (≤2 years) or expensive cars.
 - **Georgia hybrids (confirmed 2026-10-31 by 3 sources):** hybrids **under 6 years old** pay excise with a **60% discount**
   (1.6 HEV: 1598 cc × 1.5 ₾ × 0.4 ≈ 960 ₾ vs 2,397 ₾); hybrids 6+ years get no discount (autobridge.ge "Hybrid Break" report
   16.06.2026, guazi.com guide: LHD only, autobridge listings). Built into `tools/countries/georgia.json`. Legal article not cited
