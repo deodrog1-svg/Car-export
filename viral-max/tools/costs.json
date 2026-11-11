@@ -1,13 +1,13 @@
 {
   "_note": "YOUR OWN COSTS. Update with real numbers (use /teach), then set korea_check/service_check to \"official\". fx = units of each currency per 1 USD; update before every quote.",
-  "fx_date": "2026-11-09",
+  "fx_date": "2026-11-12",
   "fx": {
     "USD": 1,
-    "KRW": 1359,
-    "EUR": 0.8957,
-    "KZT": 447.14,
-    "KGS": 87.4478,
-    "RUB": 82.14,
+    "KRW": 1337,
+    "EUR": 0.8987,
+    "KZT": 444.76,
+    "KGS": 87.4496,
+    "RUB": 82.66,
     "GEL": 2.5949
   },
   "korea_side_krw": {
@@ -20,11 +20,11 @@
   "service_fee_usd": 800,
   "quote_valid_days": 7,
   "_fx_sources": [
-    "KZT: Нацбанк РК, официальный курс на 07–09.11.2026 — 447,14 ₸/$ (https://nationalbank.kz/rss/get_rates.cfm?fdate=09.11.2026; там же EUR 499,54 ₸, RUB 5,46 ₸, KRW 33,01 ₸ за 100)",
-    "KRW ≈1359 и EUR 0,8957: кросс по референсным курсам ЕЦБ на 06.11.2026 (1 € = 1,1165 $ = 1 517,02 ₩; https://www.banque-france.fr/en/statistics/rates-and-prices/exchange-rates-daily-parities-2026-11-06). Кроссы НБГ и НБ РК на 07.11 дают ≈1 354 ₩/$",
-    "KGS: НБКР, официальный курс на 09.11.2026 — 87,4478 сом/$ (https://www.nbkr.kg/XML/daily.xml)",
-    "RUB: ЦБ РФ, официальный курс на 07.11.2026 — 82,1386 ₽/$ (https://www.cbr-xml-daily.ru/daily_json.js, данные cbr.ru)",
-    "GEL: Нацбанк Грузии, официальный курс на 07.11.2026 — 2,5949 ₾/$ (https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD)"
+    "KZT: Нацбанк РК, официальный курс на 12.11.2026 — 444,76 ₸/$ (https://nationalbank.kz/rss/get_rates.cfm?fdate=12.11.2026; там же KRW 33,34 ₸ за 100 → кросс ≈1 334 ₩/$)",
+    "KRW ≈1337 и EUR 0,8987: кросс по референсным курсам ЕЦБ на 11.11.2026 (1 € = 1,1127 $ = 1 487,57 ₩; https://data-api.ecb.europa.eu/service/data/EXR/D.KRW+USD.EUR.SP00.A). Вона укрепилась на ≈1,6% к 06.11 (1 359). Кросс ЦБ РФ на 12.11 даёт ≈1 343 ₩/$, НБ РК — ≈1 334 ₩/$",
+    "KGS: НБКР, официальный курс на 12.11.2026 — 87,4496 сом/$ (https://www.nbkr.kg/XML/daily.xml)",
+    "RUB: ЦБ РФ, официальный курс на 12.11.2026 — 82,6617 ₽/$ (https://www.cbr-xml-daily.ru/daily_json.js, данные cbr.ru)",
+    "GEL: Нацбанк Грузии, официальный курс на 07.11.2026 — 2,5949 ₾/$ (https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD; 12.11 сайт НБГ не ответил, кросс ЦБ РФ на 12.11 — 2,594 ₾/$, изменение <0,1%)"
   ],
   "korea_check": "estimate",
   "service_check": "estimate"

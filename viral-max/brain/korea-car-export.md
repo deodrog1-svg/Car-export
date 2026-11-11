@@ -83,6 +83,9 @@ Many countries tax by **age** and **engine size**, so check the destination brac
 - **Kyrgyzstan: new EAEU valuation formula from 01.04.2026.** Under-valuation "via Bishkek" no longer works.
 - **Kyrgyzstan EVs (29.09.2026):** the 2026 duty-free EV quota (25,000 units) is exhausted; EVs now pay 15% duty
   (economist.kg). Don't promise duty-free EVs to Bishkek.
+- **Kyrgyzstan car-body import ban (checked 2026-11-12):** import of passenger-car bodies (HS 8707 10 900 0) is banned until
+  22.11.2026 (Resolution No. 357, 20.05.2026); the Ministry of Economy proposed another 6 months (draft 20.10.2026, economist.kg).
+  Whole cars are not affected. Angle: a whole car from Korea with full papers vs a "constructor" built from a body [VERIFY extension].
 - **Kazakhstan EVs (checked 2026-11-04):** EEC duty-free quota ended 01.01.2026. Default: 15% duty + 16% VAT (≈31%);
   alternative under Kazakhstan's WTO list: 0% duty + 16% VAT, but no resale/transfer to other EAEU states [VERIFY with broker].
   No recycling fee; first registration of a used EV is half the ICE rate (finance.kz 03.11.2026, kolesa.kz).
