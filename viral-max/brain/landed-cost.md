@@ -112,6 +112,15 @@ Things that are often forgotten. Always check them:
   the ICE rate (≈1 081 250 ₸ for EVs over 3 years, 108 125 ₸ for 2–3 years) — now built into `countries/kazakhstan.json`
   (finance.kz updated 03.11.2026; kolesa.kz 11.09.2025). Quote both regimes to EV clients and confirm the WTO regime with the broker
   **[VERIFY]**. Test (scratch): Niro EV 2022 ₩22M → Almaty $28 655 (registration $2 397 instead of $4 794).
+- **2026-11-13, Kazakhstan registration fee (no rule change, [VERIFY]):** kolesa.kz's 2026 table (24.12.2025, updated 10.09.2026)
+  labels the age bands by **year of manufacture**: in 2026, 2025–2026 cars pay 0.25 MRP, **2024 cars 50 MRP**, 2023 and older 500 MRP;
+  the EV half rate (25/250 MRP) explicitly **excludes hybrids**. youcar.kz cards (11–12.11) differ in two ways: hybrids get the EV rate
+  (Tucson HEV 2025 → 108 125 ₸, Tucson/Carnival HEV 2023–2024 → 1 081 250 ₸) and the bands look shifted by one year (diesel 2024 → 500 MRP),
+  as if registration happened in 2027. Our profile follows kolesa.kz on hybrids. **Known gap:** `landed_cost.py` measures age in days from
+  the manufacture month, not by calendar year, so a 2024/12 car gets 1 081 ₸ (table: 216 250 ₸) and a 2023/12 car gets 216 250 ₸
+  (table: 2 162 500 ₸). Not changed: the official Tax Code text (НК РК № 214-VIII) was not readable on adilet. Since 12.10.2026 the fee is
+  paid before customs release, so the release date decides the band. For 2023–2024 cars, tell the client the registration line may jump
+  to 500 MRP if release slips into 2027, and confirm with the broker.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
