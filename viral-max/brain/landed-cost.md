@@ -121,6 +121,21 @@ Things that are often forgotten. Always check them:
   (table: 2 162 500 ₸). Not changed: the official Tax Code text (НК РК № 214-VIII) was not readable on adilet. Since 12.10.2026 the fee is
   paid before customs release, so the release date decides the band. For 2023–2024 cars, tell the client the registration line may jump
   to 500 MRP if release slips into 2027, and confirm with the broker.
+- **2026-11-14, Kazakhstan registration fee: calendar-year counting is backed by an official KGD answer ([VERIFY] for the new code text):**
+  the KGD chairman's answer of 27.12.2021 (prg.kz doc 37683384, old Tax Code art. 553 p. 4) writes every band as
+  "до 2 лет, **включая год выпуска**" (0.25 MRP), "от 2 до 3 лет, включая год выпуска" (50 MRP), "от 3 лет и выше" (500 MRP);
+  EVs "за исключением гибридных" 0.25/25/250 MRP. calk.kz (updated 04.11.2026) cites the new code as **art. 615 p. 3, lines 4.1–4.4**
+  and computes age = current calendar year − model year. So the band is set by **(year of registration − year of manufacture)**:
+  in 2026 → 2025–2026 cars 0.25 MRP, 2024 cars 50 MRP, ≤2023 cars 500 MRP; on 01.01.2027 every car moves up one band.
+  The day/month count in `landed_cost.py` is the outlier (2024/12 → 0.25 MRP instead of 50; 2023/12 → 50 instead of 500).
+  **Code not changed — owner decision pending.** youcar.kz cards of 13.11 charge 500 MRP to 2024 cars (G80 2024, K3 2024) with
+  "30–45 days" delivery, i.e. they price registration in 2027 — a defensible, conservative choice for cars ordered now.
+  Until the code is fixed: for 2024 cars quote both 50 MRP (release ≤ 31.12.2026) and 500 MRP (release in 2027); for 2025 cars
+  0.25 MRP in 2026 vs 50 MRP in 2027. The new code's own text was still not readable on adilet (JS-only page).
+- **2026-11-14, Russia (draft, no profile change):** Minpromtorg's draft of new recycling-fee rules (regulation.gov.ru
+  02/07/11-26/00172688, published 10.11.2026; autonews.ru 11.11) keeps base rates but makes the personal-use rate conditional:
+  GIBDD registration within 1 calendar month of the TPO and 12 months of ownership, otherwise the fee is recalculated to the
+  commercial rate. Mention it to Russian clients who plan to resell; update `russia.json` only once adopted.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
