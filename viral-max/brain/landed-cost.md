@@ -136,6 +136,17 @@ Things that are often forgotten. Always check them:
   02/07/11-26/00172688, published 10.11.2026; autonews.ru 11.11) keeps base rates but makes the personal-use rate conditional:
   GIBDD registration within 1 calendar month of the TPO and 12 months of ownership, otherwise the fee is recalculated to the
   commercial rate. Mention it to Russian clients who plan to resell; update `russia.json` only once adopted.
+- **2026-11-15, Kazakhstan: competitor ETS base is the reference customs value, not the purchase price ([VERIFY] with a broker):**
+  encar.youcar.kz states "Растаможка считается по справочной стоимости ГТС", and the 14.11 cards match that. BMW 630i GT 2023: Korea
+  $40 054, ETS "48% от стоимости" = $33 556, i.e. 48% of ≈$69 900, so the reference value is **above** the price paid. Genesis GV80 2.5T 2024:
+  Korea $49 048, ETS = the 5.5 €/cm³ minimum ($15 590), so the reference value is **below** the price paid. That explains the
+  "48% doesn't match" notes of 11–12.11. Our calculator applies 48% to the purchase price, so for cars under 3 years our ETS can be off
+  in either direction. Until a broker confirms which base KGD uses, tell under-3-year clients the ETS line is based on the price paid and
+  may change after customs valuation. **Code not changed.**
+- **2026-11-15, Kazakhstan registration (youcar shift is systematic):** youcar's 14.11 cards charge 50 MRP (216 250 ₸) for a **2025** Avante,
+  500 MRP for 2024 cars (Jetta, GV80) and 250 MRP for a 2024 EV (Ioniq 5). That is the calendar-year rule applied as of 2027 (one band older than
+  2026). So youcar prices every order as if registration happens after 01.01.2027. Same advice as on 14.11: quote both bands for 2024–2025 cars.
+  Our `landed_cost.py` (day count) is still the outlier. **Owner decision pending, code not changed.**
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
