@@ -147,6 +147,19 @@ Things that are often forgotten. Always check them:
   500 MRP for 2024 cars (Jetta, GV80) and 250 MRP for a 2024 EV (Ioniq 5). That is the calendar-year rule applied as of 2027 (one band older than
   2026). So youcar prices every order as if registration happens after 01.01.2027. Same advice as on 14.11: quote both bands for 2024–2025 cars.
   Our `landed_cost.py` (day count) is still the outlier. **Owner decision pending, code not changed.**
+- **2026-11-16, Kazakhstan/EAEU customs value base for personal-use cars (legal text found; practice [VERIFY] with a broker):**
+  EAEU Customs Code **art. 267** ("Стоимость товаров для личного пользования", consultant.ru): p. 1 says the value is declared from the
+  purchase documents (receipts, invoices etc.) and **transport and insurance are NOT included**. P. 3 lets customs set the value from its
+  own price information only when (1) the documents are missing, (2) the goods can't be matched to the documents, (3) there are reasonable
+  grounds to doubt the documents and the person does not prove them, or (4) **the declared value does not match the market value of similar goods
+  in the country of purchase**. P. 4 says the sources are catalogs and websites of foreign sellers. KGD practice (nur.kz/kapital.kz explainers,
+  undated in search): if the declared price is far below the KGD range, the declarant must show the export declaration, invoice, contract,
+  bank transfer and auction sheet, and then the declarant's value is accepted. So youcar's "справочная стоимость ГТС" (15.11 entry) is a
+  conservative assumption, not the only legal base. A fully documented purchase price should stand **unless it is below the Korean market**
+  (e.g. a cheap auction buy), in which case customs can lift it to the market level. Our calculator (ETS on the car price only, no freight
+  or insurance) **matches p. 1**. How to quote under-3-year cars: give the ETS on the documented price and warn that it can rise to the
+  market/reference value if the price is below the Korean market. Keep the invoice, export declaration, contract, bank transfer and auction sheet.
+  The old tks.ru Eurotax rule for *new* cars is Russian practice and is not applied here. **Code not changed** (owner decision pending).
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
