@@ -160,6 +160,16 @@ Things that are often forgotten. Always check them:
   or insurance) **matches p. 1**. How to quote under-3-year cars: give the ETS on the documented price and warn that it can rise to the
   market/reference value if the price is below the Korean market. Keep the invoice, export declaration, contract, bank transfer and auction sheet.
   The old tks.ru Eurotax rule for *new* cars is Russian practice and is not applied here. **Code not changed** (owner decision pending).
+- **2026-11-17, Kazakhstan (youcar cards created 17.11 Seoul, rate 443.20 ₸/$; findings only, code not changed):**
+  (1) **Hybrids again get EV registration rates:** Carnival 1.6T HEV 2025 — 108 125 ₸ (25 MRP, the EV rate for 2–3 years, i.e. the 2027 band),
+  Grandeur IG 2.4 HEV 2021 — 1 081 250 ₸ (250 MRP, half of 500). kolesa.kz's table excludes hybrids from the EV discount, so quote hybrids at the
+  full ICE rate unless a broker confirms otherwise [VERIFY]. (2) **2023 cars already priced as "3–5 years"** (S 580 L 2023: 3.6 €/cm³;
+  M240i 2023: 3 €/cm³), so the age at clearance, not the model year, decides the ETS bracket — same as our day-count logic. (3) **Young big
+  engines hit the minimum:** X7 40d 2026 ($104 357 in Korea) pays ETS $50 666 = "не менее 15 €/см³", well above 48% of the price.
+  (4) **BMW M2 G87 2026:** ETS $22 164 labelled "48% от стоимости" is only ≈34% of the $65 790 Korean price, so youcar's base is not the purchase
+  price here [VERIFY with a broker; compare our task 004 quote before reusing it]. (5) **Payment order for individuals** (Ministry of Industry
+  via zakon.kz, 01.10.2026): СБКТС → recycling fee **and first-registration fee** → customs clearance → state registration. If the registration
+  fee is paid before customs, the fee band may be fixed on the payment date, which matters for 2024–2025 cars around 01.01.2027 [VERIFY].
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
