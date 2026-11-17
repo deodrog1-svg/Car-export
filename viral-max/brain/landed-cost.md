@@ -170,6 +170,17 @@ Things that are often forgotten. Always check them:
   price here [VERIFY with a broker; compare our task 004 quote before reusing it]. (5) **Payment order for individuals** (Ministry of Industry
   via zakon.kz, 01.10.2026): СБКТС → recycling fee **and first-registration fee** → customs clearance → state registration. If the registration
   fee is paid before customs, the fee band may be fixed on the payment date, which matters for 2024–2025 cars around 01.01.2027 [VERIFY].
+- **2026-11-18, Kazakhstan (youcar cards 13–18.11 Seoul, rate 442.48 ₸/$; findings only, code not changed):**
+  (1) **Hybrids pay far less ETS than the €/cm³ minimum in youcar cards:** Grandeur 1.6T HEV 2026 ($39 349): ETS $6 012 (≈15% of price);
+  Sorento 1.6T HEV 4WD 2026 ($41 248): ETS $6 994 (≈17%). The diesel Sorento 2.2D 2026 ($34 588) pays $13 366 (min 5.5 €/cm³), so the hybrid ends
+  **cheaper turnkey (24.60 vs 24.79 M ₸)** although it costs $6.7k more in Korea. ETS (Decision 107) covers all of heading 8703 and the cards
+  give no legal basis for the lower hybrid line. Our calculator applies normal ETS to hybrids. Ask a broker before quoting a hybrid below the
+  €/cm³ minimum [VERIFY]. (2) **ETS lines that don't match their labels:** Audi Q8 50 TDI 2026 ($95 363): ETS $36 159 labelled "48%" (≈38%,
+  and below the 15 €/cm³ minimum youcar used for X7 40d on 17.11); Kia K5 1.6T 2023 ($14 759): $4 915 labelled "54%" (≈33%). Treat youcar
+  ETS lines as unreliable for young cars. (3) **Registration bands seen today:** 2026 cars — 1 082 ₸ (0.25 MRP); 2023 cars — 2 162 500 ₸
+  (500 MRP), which is above the K5's whole ETS. (4) **Over-5-year cars "только на ИП":** S 560 L 2018 — customs (ИП) $15 975, GLS 580 2020 — $25 104,
+  both with registration 2 162 500 ₸ + recycling fee 2 486 875 ₸ (4.0 L). Our calculator has no ИП mode. Don't quote over-5-year cars to
+  individuals after 30.12.2026.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
