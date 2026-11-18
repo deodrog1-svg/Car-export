@@ -181,6 +181,19 @@ Things that are often forgotten. Always check them:
   (500 MRP), which is above the K5's whole ETS. (4) **Over-5-year cars "только на ИП":** S 560 L 2018 — customs (ИП) $15 975, GLS 580 2020 — $25 104,
   both with registration 2 162 500 ₸ + recycling fee 2 486 875 ₸ (4.0 L). Our calculator has no ИП mode. Don't quote over-5-year cars to
   individuals after 30.12.2026.
+- **2026-11-19, Kazakhstan hybrids — is there an official lower duty? (legal check; findings only, code not changed):**
+  **No official reduced ETS line for hybrids imported by individuals was found.** Decision 107 ETS covers heading 8703 by engine volume, and
+  KZ explainers (kolesa.kz 30.09/07.10.2026) list no hybrid exception. Only two official hybrid rules exist, both for declaration on a ДТ
+  (goods declaration), not the ПТД/ETS route: (1) **serial hybrids EREV, codes 8703 80 000 3/4/5/8 — 0% duty under the KZ WTO exemption list
+  from 22.01.2026** (EEC Council decision of 23.12.2025; kolesa.kz) + VAT 16%, recycling fee and registration still due; (2) **parallel hybrids
+  where the ICE is stronger than the 30-minute electric-motor power go under a code with 15% duty** — KGD back-charged 421 importers for
+  563 BYD Destroyer 05 cars declared at 0% (newtimes.kz, 01.07.2026). Korean 1.6T HEVs (180 hp ICE, ~44–54 kW motor) are parallel hybrids
+  with the stronger ICE, so neither 0% nor anything below the normal ETS applies on the ETS route. New youcar cards (19.11 Seoul, 443.32 ₸/$):
+  Grand Koleos 1.5 E-Tech 2024 ($25 755) — ETS $6 080 (≈24%), Staria HEV 2025 ($24 543) — $7 006 (≈29%); no VAT line, so this is not a
+  "15% + VAT 16%" ДТ calculation either; registration again at EV rates (250 / 25 MRP). Per cm³ the youcar hybrid lines are ≈3.4–4.0 €/cm³,
+  i.e. they look like a per-cm³ rate rather than 48% of price, with no legal basis found [VERIFY with a broker]. **Quote hybrids with normal
+  ETS (as the calculator does) and warn about back-charge risk if a competitor quotes lower.** Same day, a 3–5-year car beats a young one on
+  ETS: X5 30d 2022 ($54 539) pays $10 153 (3 €/cm³) vs GLB 200d 2025 ($39 389) $17 631 (48%) — consistent with our calculator's age brackets.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
