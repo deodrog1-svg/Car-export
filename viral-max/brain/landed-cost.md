@@ -194,6 +194,20 @@ Things that are often forgotten. Always check them:
   i.e. they look like a per-cm³ rate rather than 48% of price, with no legal basis found [VERIFY with a broker]. **Quote hybrids with normal
   ETS (as the calculator does) and warn about back-charge risk if a competitor quotes lower.** Same day, a 3–5-year car beats a young one on
   ETS: X5 30d 2022 ($54 539) pays $10 153 (3 €/cm³) vs GLB 200d 2025 ($39 389) $17 631 (48%) — consistent with our calculator's age brackets.
+- **2026-11-20, Kazakhstan (youcar cards created 20.11 Seoul, rate 448.87 ₸/$; findings only, code not changed):**
+  (1) **Same year, same body, 13 M ₸ apart because of the ETS base.** Mercedes E 250 W213 2023 ($31 014) shows ETS **$36 788** labelled
+  "до 3 лет · 48%" — more than the car's price (48% of the invoice would be ≈$14 900), so the base must be ≈$76.6k, i.e. the reference
+  customs value, not the purchase price (same pattern as 630i GT 2023 on 15.11) [VERIFY with youcar/broker]. Total 35.88 M ₸ vs
+  E 350 4MATIC 2023 ($25 395, ETS $12 911) at 22.64 M ₸. Our calculator uses the purchase price (ТК ЕАЭС art. 267); before quoting a young
+  Mercedes/BMW, warn the client that KGD may apply a higher reference value. (2) **Registration by year confirmed again:** 530i G60 2024
+  ($37 914) pays 2 162 500 ₸ (500 MRP), 530i G60 2025 ($45 117) 216 250 ₸ (50 MRP); ETS identical ($12 415, 5.5 €/cm³). Turnkey gap
+  only 1.29 M ₸ for a $7.2k price gap. (3) **Hybrids again at half registration:** Sorento 1.6T HEV 2023 — 1 081 250 ₸ vs 2 162 500 ₸ for
+  petrol E 350 2023; ETS $4 618 "по возрасту и объёму" (≈16% of price). No legal basis found (see 19.11) [VERIFY]. (4) **>3.0 L pays twice:**
+  Palisade 3.8 2022 ($18 115): ETS $15 352 (3.6 €/cm³) + recycling 2 486 875 ₸ + registration 2 162 500 ₸ → 22.2 M ₸ (×2.73);
+  Carnival 3.5 2024 ($26 919): ETS $13 715 (labelled "до 3 лет, не менее 3.5 €/cm³") → 26.09 M ₸. Palisade 2.5T HEV 2025 ($40 568):
+  ETS $11 130, registration 108 125 ₸ → 26.93 M ₸ (+48%). (5) FX: youcar moved 443.32 → 448.87 ₸/$ (+1.25%); NBK 20.11 = 448.72 ₸/$
+  (+0.9% vs 12.11). EUR/USD vs 12.11: +1.1–1.45% depending on source (CBR 20.11 0.912 €/$, ECB 19.11 0.910) — under the 1.5% threshold,
+  `costs.json` unchanged.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
