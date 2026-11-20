@@ -1,13 +1,13 @@
 {
   "_note": "YOUR OWN COSTS. Update with real numbers (use /teach), then set korea_check/service_check to \"official\". fx = units of each currency per 1 USD; update before every quote.",
-  "fx_date": "2026-11-12",
+  "fx_date": "2026-11-18",
   "fx": {
     "USD": 1,
-    "KRW": 1337,
-    "EUR": 0.8987,
+    "KRW": 1335,
+    "EUR": 0.9079,
     "KZT": 444.76,
     "KGS": 87.4496,
-    "RUB": 82.66,
+    "RUB": 82.4529,
     "GEL": 2.5949
   },
   "korea_side_krw": {
@@ -24,7 +24,8 @@
     "KRW ≈1337 и EUR 0,8987: кросс по референсным курсам ЕЦБ на 11.11.2026 (1 € = 1,1127 $ = 1 487,57 ₩; https://data-api.ecb.europa.eu/service/data/EXR/D.KRW+USD.EUR.SP00.A). Вона укрепилась на ≈1,6% к 06.11 (1 359). Кросс ЦБ РФ на 12.11 даёт ≈1 343 ₩/$, НБ РК — ≈1 334 ₩/$",
     "KGS: НБКР, официальный курс на 12.11.2026 — 87,4496 сом/$ (https://www.nbkr.kg/XML/daily.xml)",
     "RUB: ЦБ РФ, официальный курс на 12.11.2026 — 82,6617 ₽/$ (https://www.cbr-xml-daily.ru/daily_json.js, данные cbr.ru)",
-    "GEL: Нацбанк Грузии, официальный курс на 07.11.2026 — 2,5949 ₾/$ (https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD; 12.11 сайт НБГ не ответил, кросс ЦБ РФ на 12.11 — 2,594 ₾/$, изменение <0,1%)"
+    "GEL: Нацбанк Грузии, официальный курс на 07.11.2026 — 2,5949 ₾/$ (https://nbg.gov.ge/gw/api/ct/monetarypolicy/currencies/en/json/?currencies=USD; 12.11 сайт НБГ не ответил, кросс ЦБ РФ на 12.11 — 2,594 ₾/$, изменение <0,1%)",
+    "2026-11-20: RUB/EUR — ЦБ РФ на 18.11.2026 (82,4529 ₽/$, 90,8136 ₽/€; myfin.by); KRW ≈1335 (закрытие 11.11: 1333,6–1337,5, etoday/Hana)"
   ],
   "korea_check": "estimate",
   "service_check": "estimate"
