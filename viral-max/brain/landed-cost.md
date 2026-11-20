@@ -208,6 +208,28 @@ Things that are often forgotten. Always check them:
   ETS $11 130, registration 108 125 ₸ → 26.93 M ₸ (+48%). (5) FX: youcar moved 443.32 → 448.87 ₸/$ (+1.25%); NBK 20.11 = 448.72 ₸/$
   (+0.9% vs 12.11). EUR/USD vs 12.11: +1.1–1.45% depending on source (CBR 20.11 0.912 €/$, ECB 19.11 0.910) — under the 1.5% threshold,
   `costs.json` unchanged.
+- **2026-11-21, Kazakhstan / Kyrgyzstan / Georgia / Russia (youcar cards created 20–21.11 Seoul, rate 454.27 ₸/$; findings only, code and JSON not changed):**
+  (1) **2027–2029 budget law passed parliament:** Kurultai approved it in 2nd and adopted it in 3rd reading on 18.11.2026 (zakon.kz,
+  forbes.kz); MZP raised to 110 000 ₸ in the 2nd reading. MRP 4 693 ₸ from 01.01.2027 is confirmed only in the Minfin draft; the
+  adoption news does not quote it and no presidential signature was found [VERIFY]. When confirmed: registration >3 yrs 500 MRP =
+  2 346 500 ₸, recycling fee 2–3 L 175 MRP = 821 275 ₸ — update `kazakhstan.json` for vehicles released from customs in 2027.
+  (2) **Petrol vs hybrid, same model, same price in Korea:** Palisade LX3 2.5T 2026 ($40 800) — ETS $18 777 ("до 3 лет · 48%"), total
+  30.71 M ₸; Palisade 2.5T HEV 2025 ($40 568, 20.11) — ETS $11 130, total 26.93 M ₸. Sorento HEV 2024 ($33 867) — ETS $5 301 (≈16%),
+  registration 1 081 250 ₸ (half). Still no legal basis for the lower hybrid line (see 19.11) — keep quoting hybrids with normal ETS.
+  (3) **ETS below the stated 48%:** X5 30d 2026 ($70 460) shows $28 951 "48% от стоимости" = 41% of the card price; Palisade 2026 46%.
+  Base appears to differ from the card price (maybe price excl. something or a different FX) [VERIFY]. Our calculator is more conservative here.
+  (4) **New car registration again 1 082 ₸ (0.25 MRP)** for 2026 cars; 2025 — 216 250 ₸; 2024 (E 450) — 2 162 500 ₸, consistent with
+  20.11. **520i G30 2021 is already shown as "Таможенный платёж (ИП)" $4 956** — youcar treats a 2021 car as over 5 years for individuals.
+  (5) **FX:** youcar 448.87 → 454.27 ₸/$ (+1.2% in a day, +2.5% since 19.11). No NBK figure for 21.11 found; `costs.json` untouched
+  (owner updated it).
+  (6) **Kyrgyzstan body-import ban:** no signed extension found by 21.11. Resolution No. 357 (20.05.2026) was published 22.05 and the
+  ban starts 3 days after entry into force for 6 months (kaktus.media, 24.05), so the end could be ≈25.11, not 22.11 [VERIFY]. Affects
+  only bodies (8707 10 900 0), not whole cars — `kyrgyzstan.json` unchanged.
+  (7) **Georgia:** from 16.11.2026 a 450 ₾ fee per car for customs clearance of **re-export** (Minfin of Georgia, Revenue Service;
+  lada.kz 18.11 citing NewsGeorgia); exempt — cars sold abroad after first registration in Georgia and after temporary import. Does not
+  apply to import into Georgia (our Tbilisi quotes unchanged), but adds ≈$173 to Korea → Poti → Central Asia transit deals.
+  (8) **Russia:** exporters already print two prices — TAauto BMW X4 20i 2022: 5.53 M ₽ now, 5.73 M ₽ from 01.01.2027 (+3.6%), in line
+  with the +10–20% recycling-fee indexation (decree 1255). Draft rules of 10.11 unchanged.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
