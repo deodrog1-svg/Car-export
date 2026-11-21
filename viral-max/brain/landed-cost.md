@@ -230,6 +230,27 @@ Things that are often forgotten. Always check them:
   apply to import into Georgia (our Tbilisi quotes unchanged), but adds ≈$173 to Korea → Poti → Central Asia transit deals.
   (8) **Russia:** exporters already print two prices — TAauto BMW X4 20i 2022: 5.53 M ₽ now, 5.73 M ₽ from 01.01.2027 (+3.6%), in line
   with the +10–20% recycling-fee indexation (decree 1255). Draft rules of 10.11 unchanged.
+- **2026-11-22, Kazakhstan / Kyrgyzstan / Russia (youcar cards created 20–21.11 Seoul, rate 453.83 ₸/$; findings only, code and
+  country JSON not changed; `costs.json` KZT only):**
+  (1) **FX:** NBK official rate 21.11 and 22.11.2026 = **455.00 ₸/$** (nationalbank.kz rss; 12.11 was 444.76, +2.3% > 1.5% threshold)
+  → `costs.json` KZT set to 455.0. Other rates untouched (owner updated them 20.11).
+  (2) **Budget 2027–2029:** still no presidential signature found; MRP 4 693 ₸ remains a draft figure [VERIFY]. Order No. 293
+  (Euro-5, ≤5 yrs from 30.12.2026): no new text found. `kazakhstan.json` unchanged.
+  (3) **youcar ETS base ≠ purchase price (strongest evidence so far):** E 200 W214 2026 ($43 529) — ETS $55 920 labelled
+  "до 3 лет · 48%" (= 48% of ≈$116.5k, total 48.45 M ₸); E 450 W214 2026 ($63 792) — ETS $19 606 (48% of ≈$40.8k, 41.49 M ₸);
+  X5 40i 2026 ($99 066) — $27 897 (48% of ≈$58.1k); Sorento 2.2D 2025 new ($43 454) — $8 744 (48% of ≈$18.2k); Palisade HEV 2WD
+  2026 ($42 403) — $13 083. The base is clearly an internal/reference valuation, not the card price, in both directions. Under
+  TC EAEU art. 267 the base is the transaction value with documents [VERIFY KGD practice]. **Our calculator keeps the purchase price.**
+  When a client shows a competitor's quote, compare the implied base (ETS ÷ 0.48) first.
+  (4) **Minimum €/cm³ applied instead of 48%:** X5 30d 2025 ($64 543) — $25 274 "не менее 7.5 €/см³" (= 7.5 × 2 993 cm³ at ≈1.126 $/€),
+  although 48% of the card price would be ≈$31k. Same for X5 M60i 2024 (4.4 L) — $37 086 "не менее 7.5 €/см³"; recycling fee for
+  >3 L 2 486 875 ₸ and registration 2 162 500 ₸.
+  (5) **Over-5-year car:** X5 30d 2020 — "Оформление только на ИП", line "Таможенный платёж (ИП)" $8 749, registration 2 162 500 ₸.
+  Registration pattern unchanged: 2026 — 1 082 ₸, 2025 — 216 250 ₸ (HEV 2025 — 108 125 ₸), 2023 — 2 162 500 ₸.
+  (6) **Kyrgyzstan body ban:** no signed extension found on 22.11 (only the Minekonomiki draft of 20.10: new resolution would enter
+  into force 10 days after publication + 3 days). Check again 24–26.11 [VERIFY]. `kyrgyzstan.json` unchanged (bodies only).
+  (7) **Russia sanity check:** ASIA EXPRESS Sonata 2.0 2022 (160 hp) — 2.30 M ₽ turnkey RF; our real deal Sonata 2023 — 2.35 M ₽
+  (Vladivostok). TAauto K3 1.6 2023 — 1.78 M ₽ Vladivostok (broker fee absorbed until 31.12.2026).
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
