@@ -251,6 +251,19 @@ Things that are often forgotten. Always check them:
   into force 10 days after publication + 3 days). Check again 24–26.11 [VERIFY]. `kyrgyzstan.json` unchanged (bodies only).
   (7) **Russia sanity check:** ASIA EXPRESS Sonata 2.0 2022 (160 hp) — 2.30 M ₽ turnkey RF; our real deal Sonata 2023 — 2.35 M ₽
   (Vladivostok). TAauto K3 1.6 2023 — 1.78 M ₽ Vladivostok (broker fee absorbed until 31.12.2026).
+- **2026-11-23, all markets (findings only; code, country JSON and `costs.json` not changed):**
+  (1) **FX:** NBK official rate 23.11.2026 = 455.00 ₸/$ (unchanged vs 21–22.11; KRW 33.98 ₸/100 → ≈1 339 ₩/$). CBR 21.11:
+  82.19 ₽/$, KGS 87.45, GEL 2.593, EUR 0.910, KRW ≈1 331. All within 0.5% of `costs.json` → no update.
+  (2) **Kazakhstan:** budget 2027–2029 still not signed in search results (last step: Kurultai 18.11); MRP 4 693 ₸ stays a draft
+  [VERIFY]. Order No. 293 (Euro-5, ≤5 yrs from 30.12.2026): no new text. `kazakhstan.json` unchanged.
+  (3) **Kyrgyzstan body ban (8707 10 900 0):** no signed extension found on 23.11 (Seoul). The kaktus.media "Кабмин продлил запрет…"
+  hit is the old 07.10.2025 article (Resolution No. 633), not a new one. Ban under No. 357 ends 22–25.11; check 24–26.11 [VERIFY].
+  Whole cars are not affected. `kyrgyzstan.json` unchanged.
+  (4) **Georgia / Russia:** no new rules (Georgia excise since 02.04.2026, re-export fee 450 ₾ since 16.11; Russia: +10–20% recycling
+  fee from 01.01.2027 per the 2024 schedule, Minpromtorg draft of 10–12.11 still a draft).
+  (5) **Market check, Kazakhstan resale vs exporter quotes:** kolesa.kz "из Кореи" listings 22.11: Santa Fe MX5 2.5 05/2025 (24.5k km) —
+  21.0 M ₸ resale vs youcar turnkey Santa Fe MX5 2024 — 22.9 M ₸ (16.11). Already-imported Korean cars are now priced near the
+  turnkey level, so the import argument for Almaty is "newer/cleaner + your own documents", not "much cheaper" [VERIFY per model].
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
