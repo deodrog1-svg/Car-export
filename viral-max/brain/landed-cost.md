@@ -264,6 +264,29 @@ Things that are often forgotten. Always check them:
   (5) **Market check, Kazakhstan resale vs exporter quotes:** kolesa.kz "из Кореи" listings 22.11: Santa Fe MX5 2.5 05/2025 (24.5k km) —
   21.0 M ₸ resale vs youcar turnkey Santa Fe MX5 2024 — 22.9 M ₸ (16.11). Already-imported Korean cars are now priced near the
   turnkey level, so the import argument for Almaty is "newer/cleaner + your own documents", not "much cheaper" [VERIFY per model].
+- **2026-11-24, all markets (youcar cards created 23–24.11 Seoul, rate 453.85 ₸/$; findings only, code, country JSON and
+  `costs.json` not changed):**
+  (1) **FX:** NBK official rate 24.11.2026 = 455.12 ₸/$ (KRW 33.81 ₸/100 → ≈1 346 ₩/$); CBR 24.11: 82.15 ₽/$, KGS 87.45, GEL 2.593,
+  EUR 0.910, KRW ≈1 337. All within 1% of `costs.json` → no update.
+  (2) **Kazakhstan:** budget 2027–2029 still not signed in search results (24.11; last year's was signed 08.12.2025); MRP 4 693 ₸
+  stays a draft [VERIFY]. Order No. 293 (Euro-5, ≤5 yrs from 30.12.2026): nothing new. `kazakhstan.json` unchanged.
+  (3) **youcar.kz is back (HTTP 200 on 24.11).** Fixed lines unchanged: Korea costs $800, freight $2 600 (sedan/SUV) or $2 800
+  (minivan, X6, GLS), broker $300, SBKTS + GLONASS $400, SVH $100 + $100, import $70, transfer $100, recycling check $100, EPTS $200,
+  plates 12 000 ₸, tech passport 5 000 ₸, company fee $700 (≈$2 000 local services + fee on top of duty/recycling/registration).
+  (4) **ETS base again ≠ purchase price:** BMW Z4 sDrive20i 2025 ($37 586) — ETS $38 457 "до 3 лет · 48%" (= 48% of ≈$80.1k, more
+  than the car itself; total 38.09 M ₸, ×2.23). Kia K8 3.5 2025 ($28 941) — $21 472 "не менее 5.5 €/см³" (= 5.5 × 3 470 cm³), plus
+  recycling fee >3 L 2 486 875 ₸ (total ×2.15). GLS 580 2024 — $67 078 "не менее 15 €/см³". Meanwhile 3–5-year cars pay by volume:
+  Cayenne 3.0 2023 ($69 159) — ETS $10 139, total 41.84 M ₸ (+33%); X6 40i 2022 — $10 149 (+54%). Practical rule for Almaty quotes:
+  **2022–2023 cars with 2–3 L engines have the lowest markup; young cars over 3 L or with a high reference value are ×2+.**
+  (5) **Registration anomalies [VERIFY]:** Audi Q3 2024 charged 500 MRP (2 162 500 ₸) although "до 3 лет" ETS was applied — possibly
+  an early production date. Hybrids 2023 (Grandeur 1.6 HEV, Panamera 4 E-Hybrid) — 1 081 250 ₸ (250 MRP, half rate), same pattern as
+  before; our calculator still treats hybrids as ICE.
+  (6) **Over-5-year cars ("только на ИП"):** Carnival 2.2D 2021 — "Таможенный платёж (ИП)" $2 922; G80 2.5T 2020 — $6 105.
+  (7) **Kyrgyzstan body ban (8707 10 900 0):** term under Resolution No. 357 ended 22.11 (economist.kg); no signed extension found on
+  24.11 (24.kg, economist.kg, kaktus.media) — status "lapsed or not yet published" [VERIFY cbd.minjust.gov.kg]. Whole cars are not
+  affected. `kyrgyzstan.json` unchanged.
+  (8) **Georgia / Russia:** no new rules. Russia: Minpromtorg draft of 10.11 still a draft; +10–20% recycling fee from 01.01.2027 per
+  the 2024 schedule.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
