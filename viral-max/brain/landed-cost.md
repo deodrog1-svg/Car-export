@@ -287,6 +287,27 @@ Things that are often forgotten. Always check them:
   affected. `kyrgyzstan.json` unchanged.
   (8) **Georgia / Russia:** no new rules. Russia: Minpromtorg draft of 10.11 still a draft; +10–20% recycling fee from 01.01.2027 per
   the 2024 schedule.
+- **2026-11-25, all markets (youcar cards created 25.11 Seoul, rate 458.35 ₸/$; findings only, code, country JSON and
+  `costs.json` not changed):**
+  (1) **FX:** NBK official rate 25.11.2026 = 458.28 ₸/$ (EUR 501.45, RUB 5.59, KRW 34.13 ₸/100 → ≈1 343 ₩/$, ≈0.914 €/$, ≈82.0 ₽/$).
+  KZT +0.7% vs `costs.json` (455.0), KRW +0.6%, EUR +0.7% → below the 1.5% threshold, no update.
+  (2) **Kazakhstan:** budget 2027–2029 still not signed in search results on 25.11 (forbes.kz, prg.kz; last stage — Kurultai 18.11);
+  MRP 4 693 ₸ stays a draft [VERIFY]. Euro-5 / ≤5 yrs order (in force 30.12.2026): only old retellings (Interfax 02.11, lada.kz);
+  the number 293 still not confirmed by an open source [VERIFY adilet]. `kazakhstan.json` unchanged.
+  (3) **youcar: big engine vs year, same model (Carnival 3.5 V6 petrol).** 2023 Noblesse ($22 157) — ETS "3–5 лет · 3.6 €/см³"
+  $14 067, recycling >3 L 2 486 875 ₸, total 23.97 M ₸ (×2.36). 2021 Signature ($20 655, "только на ИП") — customs payment (IP)
+  only $4 945, total 19.10 M ₸ (×2.02). For over-3-L engines the 3–5-year ETS per cm³ is far above youcar's IP line [VERIFY the IP
+  rate basis with a broker]. Hyundai Staria 3.5 LPi Cargo 2024 ($18 402): ETS "до 3 лет · не менее 5.5 €/см³" $21 461 > car price,
+  total 25.64 M ₸ (×3.04); youcar treats the cargo van as M1 with the >3 L recycling fee [VERIFY N1 category].
+  (4) **Over-5-year cars via IP (youcar 25.11):** GLS 400 d 2020 — IP payment $24 059 (≈63% of the $38 298 price, diesel 2.9 L);
+  S 350 d 2017 — $9 225; Cayenne GTS 3.6 2017 — $11 669; A5 45 TFSI 2020 — $4 706; Tucson 1.6T 2021 — $3 112. The IP line is not a
+  flat €/cm³; our calculator has no IP mode (owner decision).
+  (5) **EV check:** Casper Electric 2024 ($17 651) — ETS $2 612 (≈15%), recycling 0, registration 1 081 250 ₸ (half rate), total
+  13.0 M ₸ (+61%) — consistent with the EV notes of 04.11.
+  (6) **Kyrgyzstan body ban (8707 10 900 0):** still no signed extension in search results on 25.11 (24.kg, economist.kg,
+  kaktus.media — only the 20.10 draft). Status "lapsed or not yet published" [VERIFY cbd.minjust.gov.kg]. `kyrgyzstan.json` unchanged.
+  (7) **Georgia / Russia:** no new rules (Georgia: excise since 02.04.2026, re-export fee since 16.11; Russia: draft of 10.11 still a
+  draft, +10–20% from 01.01.2027 per the 2024 schedule).
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
