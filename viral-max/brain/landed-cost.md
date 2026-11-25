@@ -308,6 +308,26 @@ Things that are often forgotten. Always check them:
   kaktus.media — only the 20.10 draft). Status "lapsed or not yet published" [VERIFY cbd.minjust.gov.kg]. `kyrgyzstan.json` unchanged.
   (7) **Georgia / Russia:** no new rules (Georgia: excise since 02.04.2026, re-export fee since 16.11; Russia: draft of 10.11 still a
   draft, +10–20% from 01.01.2027 per the 2024 schedule).
+- **2026-11-26, all markets (youcar cards created 26.11 Seoul, rate 455.98 ₸/$; findings only, code, country JSON and
+  `costs.json` not changed):**
+  (1) **FX:** NBK official rate 26.11.2026 = 458.57 ₸/$ (KRW 34.13 ₸/100); CBR 26.11: 82.31 ₽/$, 87.45 KGS/$, 2.592 GEL/$,
+  ≈1 344 ₩/$, 0.912 €/$. All within 1% of `costs.json` (KZT +0.8%, KRW +0.6%, EUR +0.5%) → no update.
+  (2) **Kazakhstan rules:** budget 2027–2029 still not signed in search results on 26.11 (only Kurultai 18.11); MRP 4 693 ₸ stays a
+  draft [VERIFY]. Euro-5 / ≤5 yrs order: nothing new (30.12 per Interfax, 31.12 per lada.kz). `kazakhstan.json` unchanged.
+  (3) **ETS check, 3–5 years per cm³ — matches:** Palisade 3.8 2021 (3 778 cm³) — youcar ETS "3–5 лет · 3.6 €/см³" $15 298
+  (3 778 × 3.6 = 13 601 € → implied ≈1.125 $/€). Our table gives the same line.
+  (4) **ETS lines youcar does not explain [VERIFY with a broker]:** BMW 520i G60 2026 ($41 217) — label "до 3 лет · 48%", but the
+  line is $14 217 (≈34.5% of price; implied base ≈$29.6k). 520i G60 2025 ($38 969) — "не менее 5.5 €/см³" $12 371 (1 998 cm³ × 5.5 =
+  10 989 € ✓). Palisade LX3 HEV 2025 ($32 599) — ETS $11 129 (≈34%; below the 5.5 €/cm³ minimum of ≈$15.5k for 2 497 cm³),
+  registration 108 125 ₸ (EV/hybrid half rate). Santa Fe TM 1.6 HEV 2023 — $3 907 (≈2.2 €/cm³; table 3–5 yrs 1.5–1.8 L says
+  2.5 €/cm³). Panamera 4 E-Hybrid 2021 (2 894 cm³) — $13 721 (≈4.2 €/cm³; table says 3.0 €/cm³ for 2.3–3.0 L), registration
+  1 081 250 ₸ (half rate). Hybrids keep getting non-table ETS lines and half-rate registration in youcar cards; our calculator
+  treats hybrids as ICE — keep it until a broker confirms.
+  (5) **IP-only cars (youcar 26.11):** GLE 450 2019 — IP payment $9 521 (≈36% of $26 604); Santa Fe 2.2D 2019 — $2 593;
+  G 63 2021 — $33 534 (≈28% of $118 031); Carnival 2.2D 2018 — $2 388 (but registration 2 162 500 ₸ + recycling 1 081 250 ₸ =
+  $7 114 ≈ the car price $7 194). Still no IP mode in the calculator (owner decision).
+  (6) **Kyrgyzstan / Georgia / Russia:** no new rules (no signed body-ban extension found on 26.11 [VERIFY cbd.minjust.gov.kg];
+  Georgia excise since 02.04, re-export fee since 16.11; Russia draft of 10.11 still a draft).
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
