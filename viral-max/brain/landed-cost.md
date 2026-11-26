@@ -328,6 +328,29 @@ Things that are often forgotten. Always check them:
   $7 114 ≈ the car price $7 194). Still no IP mode in the calculator (owner decision).
   (6) **Kyrgyzstan / Georgia / Russia:** no new rules (no signed body-ban extension found on 26.11 [VERIFY cbd.minjust.gov.kg];
   Georgia excise since 02.04, re-export fee since 16.11; Russia draft of 10.11 still a draft).
+- **2026-11-27, all markets (youcar cards created 27.11 Seoul 03:23–03:32, rate 456.32 ₸/$; findings only, code, country JSON and
+  `costs.json` not changed):**
+  (1) **FX:** NBK official rate 27.11.2026 = 458.85 ₸/$ (EUR 503.5 ₸, KRW 34.14 ₸/100 → ≈1 344 ₩/$, RUB 5.59 ₸, KGS 5.25 ₸,
+  GEL 179.24 ₸). Vs `costs.json`: KZT +0.85%, KRW +0.7%, EUR +0.4%, RUB −0.4% → all under 1.5%, no update.
+  (2) **Kazakhstan rules:** budget law 2027–2029 still not signed in search results on 27.11 (Kurultai 18.11; only the decree on the
+  2 trn ₸ National Fund transfer is signed, kapital.kz). MRP 4 693 ₸ stays a draft [VERIFY]. Euro-5 / ≤5 yrs order: nothing new.
+  `kazakhstan.json` unchanged.
+  (3) **Registration 500 MRP on 2024 cars:** youcar charges 2 162 500 ₸ registration on K5 2024 and Casper 2024 (same as for 3+
+  years). Our note of 13–14.11 ("by year of manufacture incl. that year, 2024 car released before 31.12.2026 pays 50 MRP") is not
+  what youcar applies [VERIFY with a broker, art. 615 of the new Tax Code]. Calculator logic unchanged (owner decision).
+  (4) **ETS checks:** K8 2.5 2023 (2 497 cm³) — "3–5 лет · 3 €/см³" $8 468 (2 497 × 3 = 7 491 € → ≈1.13 $/€) ✓ matches our table.
+  K5 2.0 2024 — "до 3 лет · не менее 3.5 €/см³" $7 913 (1 999 × 3.5 = 6 997 € ✓). Casper 1.0 2024 — label "до 3 лет · 54%" but
+  $4 188 ≈ 37% of $11 275 [VERIFY base]. Grandeur GN7 1.6 HEV 2023 (3–5 yrs) — $3 971 ≈ 2.5 $/cm³ (≈2.2 €/cm³; table 1.5–1.8 L
+  says 2.5 €/cm³) + half-rate registration 1 081 250 ₸: hybrids again below the table [VERIFY]. G80 Electrified 2022 — customs
+  $6 709 (≈18% of $37 508), recycling 0, half registration.
+  (5) **IP-only cars (27.11):** S 580 L 2021 — IP payment $23 688 (≈39% of $60 134); X6 30d 2018 — $9 392 (≈45%); GLC 300 e 2020 —
+  $6 562 (≈25%); Porsche 718 GTS 2018 — $6 562; 740Li 2018 — $9 884; Carnival 2.2D 2021 — $2 921 (≈18%); Morning 1.0 2021 —
+  $1 012 (≈12%). Still no IP mode in the calculator (owner decision).
+  (6) **Korea → UAE origin (MOEF/KCS, 18.11):** from 01.04.2027 customs will issue certificates of origin for used cars to the UAE
+  by VIN (CEPA preference). Not relevant for EAEU/Georgia quotes.
+  (7) **Kyrgyzstan / Georgia / Russia:** no new rules (no signed body-ban extension found on 27.11 [VERIFY cbd.minjust.gov.kg];
+  Georgia excise since 02.04, re-export fee since 16.11 — autobridge.ge Sportage 2022 / Tucson 2021 "in Korea": excise 2 400 ₾ =
+  1.5 ₾/cm³ ✓ matches `georgia.json`; Russia draft of 10.11 still a draft).
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
