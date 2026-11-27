@@ -351,6 +351,27 @@ Things that are often forgotten. Always check them:
   (7) **Kyrgyzstan / Georgia / Russia:** no new rules (no signed body-ban extension found on 27.11 [VERIFY cbd.minjust.gov.kg];
   Georgia excise since 02.04, re-export fee since 16.11 — autobridge.ge Sportage 2022 / Tucson 2021 "in Korea": excise 2 400 ₾ =
   1.5 ₾/cm³ ✓ matches `georgia.json`; Russia draft of 10.11 still a draft).
+- **2026-11-28, all markets (youcar cards created 28.11 Seoul 03:16–03:26, rate 456.86 ₸/$; findings only, code, country JSON and
+  `costs.json` not changed):**
+  (1) **FX:** NBK official rate 28.11.2026 = 458.13 ₸/$ (EUR 502.29 ₸, KRW 34.35 ₸/100 → ≈1 334 ₩/$, RUB 5.58 ₸ → ≈82.1 ₽/$,
+  KGS 5.24 ₸ → ≈87.4 сом/$, GEL 178.96 ₸ → ≈2.56 ₾/$; https://nationalbank.kz/rss/get_rates.cfm?fdate=28.11.2026). Vs `costs.json`:
+  KZT +0.7%, KRW −0.1%, EUR +0.5%, RUB −0.4%, KGS 0%, GEL −1.3% (NBK cross, not NBG) → all under 1.5%, no update.
+  (2) **Kazakhstan rules:** budget law 2027–2029 still not signed in search results on 28.11 (only Kurultai adoption 18.11). MRP
+  4 693 ₸ stays a draft [VERIFY akorda.kz]. Euro-5 / ≤5 yrs order (from 30.12.2026): nothing new (today's results repeat 02.11 reports
+  and do not name № 293 of 28.10.2026; full text on adilet still not found [VERIFY]). `kazakhstan.json` unchanged.
+  (3) **ETS 3–5 years — all four checks match our table (≈1.13 $/€):** A6 45 TDI 2022 (2 967 cm³ × 3 €) $10 047 ✓; K5 2.0 2022 and
+  X3 20i 2022 (1 998–1 999 cm³ × 2.7 €) $6 111–6 114 ✓; Staria 2.2D 2023 (2 199 × 2.7 €) $6 720 ✓.
+  (4) **ETS "до 3 лет · 50%" on 2026 cars does NOT follow one base:** C200 2026 $22 557 = 58.6% of $38 517; G 450 d 2026 $97 117 =
+  53.9% of $180 097; GV80 Coupe 2026 $30 542 = 43.4% of $70 374. E 200 2026 card shows $58 247 = 129% of $45 024 → treated as broken
+  data, not added to the CSV. For new cars always quote ETS with [VERIFY base] until a broker confirms how customs value is built.
+  (5) **New-car registration:** all 2026 cards charge 1 082 ₸ (0.25 MRP) vs 2 162 500 ₸ (500 MRP) on 2019–2023 cars. Recycling fee
+  2 486 875 ₸ on >3.0 L petrol (GV80 3.5, G90 3.8), 1 081 250 ₸ on 3.0 L diesel (G 450 d, A6) and 2.2 diesel, 756 875 ₸ on 2.0 petrol.
+  (6) **IP-only cars (28.11):** Sorento 2.2D 2020 — IP payment $3 062 (≈19% of $15 891); Sorento 2.2D 2021 — $3 513 (≈29%);
+  G90 3.8 2019 — $6 349 (≈31%). Still no IP mode in the calculator (owner decision).
+  (7) **Kyrgyzstan / Georgia / Russia:** no new signed rules on 28.11 (KG body ban: last signed act still № 357 of 20.05.2026
+  [VERIFY]; Georgia: excise since 02.04, re-export fee 450 ₾ since 16.11; Russia: utilization draft of 10.11 still a draft, +10% from
+  01.01.2027 per decree № 1713). autobridge.ge Kona 1.6 HEV 2021 "in Korea": excise 960 ₾ (hybrid −60%, vs 2 400 ₾ for 1.6 petrol)
+  ✓ matches the hybrid rule already in `georgia.json`.
 - **2026-11-04, Kyrgyzstan sanity check:** an exporter's published itemized example (SH GLOBAL, 10.04.2026) — Tucson 2.0 2022,
   FOB $15 500 → ≈$25 430 landed in Bishkek (ETS €2.7/cm³ ≈ $5 830). Our calculator: $26 608 (+4.6%); the ETS line matches, the gap is
   freight ($3 000 vs $2 300) and our $800 service fee. The Kyrgyzstan profile is in the right range.
